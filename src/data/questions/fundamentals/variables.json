@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.fundamentals.variables.001",
+    "text": "¿Cuál es un nombre de variable válido?",
+    "options": [
+      "2var",
+      "var_2",
+      "var-2",
+      "class"
+    ],
+    "correct": "var_2",
+    "area": "fundamentals/variables",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "nombres"
+    ],
+    "explanation": "Los nombres deben iniciar con letra/_ y usar snake_case (PEP8). Ver: https://docs.python.org/3/tutorial/introduction.html"
+  },
+  {
+    "id": "py.fundamentals.variables.002",
+    "text": "¿Qué sucede al hacer x = y en Python?",
+    "options": [
+      "Copia el valor de y",
+      "Crea una referencia a y",
+      "Clona y en memoria",
+      "Intercambia valores"
+    ],
+    "correct": "Crea una referencia a y",
+    "area": "fundamentals/variables",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "referencias"
+    ],
+    "explanation": "La asignación ata el nombre al mismo objeto (no copia). Ver: https://docs.python.org/3/tutorial/introduction.html"
+  },
+  {
+    "id": "py.fundamentals.variables.003",
+    "text": "¿Qué palabra clave declara una variable global dentro de una función?",
+    "options": [
+      "global",
+      "extern",
+      "public",
+      "var"
+    ],
+    "correct": "global",
+    "area": "fundamentals/variables",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "scope"
+    ],
+    "explanation": "global declara que el nombre se refiere al ámbito del módulo. Ver: https://docs.python.org/3/tutorial/introduction.html"
+  },
+  {
+    "id": "py.fundamentals.variables.004",
+    "text": "¿Cuál es el valor por defecto de una variable no inicializada?",
+    "options": [
+      "None",
+      "0",
+      "",
+      "False"
+    ],
+    "correct": "None",
+    "area": "fundamentals/variables",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "none"
+    ],
+    "explanation": "Se usa None como valor nulo; referenciar sin asignar produce NameError. Ver: https://docs.python.org/3/tutorial/introduction.html"
+  },
+  {
+    "id": "py.fundamentals.variables.005",
+    "text": "¿Qué convención recomienda PEP8 para nombres de variables?",
+    "options": [
+      "camelCase",
+      "PascalCase",
+      "snake_case",
+      "kebab-case"
+    ],
+    "correct": "snake_case",
+    "area": "fundamentals/variables",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "pep8"
+    ],
+    "explanation": "PEP8 recomienda snake_case para nombres de variables y funciones. Ver: https://docs.python.org/3/tutorial/introduction.html"
+  },
+  {
+    "id": "py.fundamentals.variables.006",
+    "text": "¿Qué sucede con los tipos en Python?",
+    "options": [
+      "Estáticos",
+      "Dinámicos",
+      "Dependen del intérprete",
+      "No hay tipos"
+    ],
+    "correct": "Dinámicos",
+    "area": "fundamentals/variables",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "tipado dinámico"
+    ],
+    "explanation": "Python es de tipado dinámico: el tipo pertenece al objeto, no al nombre. Ver: https://docs.python.org/3/tutorial/introduction.html"
+  }
+]
