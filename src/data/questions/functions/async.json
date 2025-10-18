@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.functions.async.001",
+    "text": "¿Cómo se define una función asíncrona?",
+    "options": [
+      "async def",
+      "def async",
+      "await def",
+      "def await"
+    ],
+    "correct": "async def",
+    "area": "functions/async",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "async"
+    ],
+    "explanation": "Las funciones asíncronas se declaran con 'async def'. Ver: https://docs.python.org/3/library/asyncio-task.html"
+  },
+  {
+    "id": "py.functions.async.002",
+    "text": "¿Qué hace 'await'?",
+    "options": [
+      "Crea hilo",
+      "Suspende hasta resultado de awaitable",
+      "Bloquea proceso",
+      "Termina función"
+    ],
+    "correct": "Suspende hasta resultado de awaitable",
+    "area": "functions/async",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "await"
+    ],
+    "explanation": "await cede el control hasta que el awaitable complete. Ver: https://docs.python.org/3/library/asyncio-task.html"
+  },
+  {
+    "id": "py.functions.async.003",
+    "text": "¿Qué librería estándar gestiona el loop?",
+    "options": [
+      "trio",
+      "asyncio",
+      "gevent",
+      "uvicorn"
+    ],
+    "correct": "asyncio",
+    "area": "functions/async",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "asyncio"
+    ],
+    "explanation": "La librería estándar para async/await es asyncio. Ver: https://docs.python.org/3/library/asyncio-task.html"
+  },
+  {
+    "id": "py.functions.async.004",
+    "text": "¿Qué devuelve una función 'async def' al llamarse?",
+    "options": [
+      "Coroutine",
+      "Thread",
+      "Resultado",
+      "Future ejecutado"
+    ],
+    "correct": "Coroutine",
+    "area": "functions/async",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "coroutine"
+    ],
+    "explanation": "Llamar a una función async devuelve una coroutine (no ejecuta). Ver: https://docs.python.org/3/library/asyncio-task.html"
+  },
+  {
+    "id": "py.functions.async.005",
+    "text": "¿Cómo se ejecuta una coroutine en consola?",
+    "options": [
+      "await f()",
+      "asyncio.run(f())",
+      "f().run()",
+      "uvloop.run(f())"
+    ],
+    "correct": "asyncio.run(f())",
+    "area": "functions/async",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "asyncio.run"
+    ],
+    "explanation": "La opción 'asyncio.run(f())' es la correcta para este concepto.. Ver: https://docs.python.org/3/library/asyncio-task.html"
+  },
+  {
+    "id": "py.functions.async.006",
+    "text": "¿Qué hace asyncio.gather(a,b)?",
+    "options": [
+      "Secuencial",
+      "Paralelo cooperativo",
+      "Hilos",
+      "Procesos"
+    ],
+    "correct": "Paralelo cooperativo",
+    "area": "functions/async",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "gather"
+    ],
+    "explanation": "asyncio.gather ejecuta awaitables concurrentemente y agrega resultados. Ver: https://docs.python.org/3/library/asyncio-task.html"
+  }
+]
