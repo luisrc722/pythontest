@@ -1,6 +1,6 @@
 # Guía Rápida
 
-Sigue estos pasos para ejecutar un examen en cualquier equipo.
+Sigue estos pasos para ejecutar un examen con el motor en cualquier equipo.
 
 Requisitos
 - Python 3.10 o superior
