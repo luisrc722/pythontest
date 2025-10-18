@@ -1,0 +1,111 @@
+[
+  {
+    "id": "py.data_science.pandas.001",
+    "text": "¿Qué objeto representa una columna etiquetada?",
+    "options": [
+      "DataFrame",
+      "Series",
+      "Panel",
+      "Array"
+    ],
+    "correct": "Series",
+    "area": "data_science/pandas",
+    "difficulty": "basica",
+    "domain": "pandas",
+    "tags": [
+      "Series"
+    ],
+    "explanation": "Series representa una secuencia etiquetada (columna). Ver: https://pandas.pydata.org/docs/"
+  },
+  {
+    "id": "py.data_science.pandas.002",
+    "text": "¿Qué método lee un CSV?",
+    "options": [
+      "pd.read_csv",
+      "pd.load_csv",
+      "pd.csv",
+      "pd.import_csv"
+    ],
+    "correct": "pd.read_csv",
+    "area": "data_science/pandas",
+    "difficulty": "basica",
+    "domain": "pandas",
+    "tags": [
+      "csv"
+    ],
+    "explanation": "La opción 'pd.read_csv' es la correcta para este concepto.. Ver: https://pandas.pydata.org/docs/"
+  },
+  {
+    "id": "py.data_science.pandas.003",
+    "text": "¿Diferencia principal entre .loc y .iloc?",
+    "options": [
+      "loc por posición, iloc por etiqueta",
+      "loc por etiqueta, iloc por posición",
+      "Ambas por posición",
+      "Ambas por etiqueta"
+    ],
+    "correct": "loc por etiqueta, iloc por posición",
+    "area": "data_science/pandas",
+    "difficulty": "intermedia",
+    "domain": "pandas",
+    "tags": [
+      "loc",
+      "iloc"
+    ],
+    "explanation": "loc indexa por etiquetas; iloc por posición. Ver: https://pandas.pydata.org/docs/"
+  },
+  {
+    "id": "py.data_science.pandas.004",
+    "text": "¿Qué hace df.head(3)?",
+    "options": [
+      "Últimas 3 filas",
+      "Primeras 3 filas",
+      "3 columnas",
+      "Nada"
+    ],
+    "correct": "Primeras 3 filas",
+    "area": "data_science/pandas",
+    "difficulty": "basica",
+    "domain": "pandas",
+    "tags": [
+      "head"
+    ],
+    "explanation": "head(n) devuelve las primeras n filas. Ver: https://pandas.pydata.org/docs/"
+  },
+  {
+    "id": "py.data_science.pandas.005",
+    "text": "¿Qué hace df.dropna()?",
+    "options": [
+      "Llena nulos",
+      "Elimina filas/cols con nulos",
+      "Cambia tipo",
+      "Reindexa"
+    ],
+    "correct": "Elimina filas/cols con nulos",
+    "area": "data_science/pandas",
+    "difficulty": "intermedia",
+    "domain": "pandas",
+    "tags": [
+      "NaN"
+    ],
+    "explanation": "dropna elimina filas/columnas con valores nulos. Ver: https://pandas.pydata.org/docs/"
+  },
+  {
+    "id": "py.data_science.pandas.006",
+    "text": "¿Qué hace df.merge(a, on='id')?",
+    "options": [
+      "Concatena filas",
+      "Une por clave",
+      "Apila columnas",
+      "Ordena"
+    ],
+    "correct": "Une por clave",
+    "area": "data_science/pandas",
+    "difficulty": "avanzada",
+    "domain": "pandas",
+    "tags": [
+      "merge"
+    ],
+    "explanation": "merge une DataFrames por claves comunes (join). Ver: https://pandas.pydata.org/docs/"
+  }
+]
