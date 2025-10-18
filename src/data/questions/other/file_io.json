@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.other.file_io.001",
+    "text": "¿Cómo abrir archivo para lectura de texto?",
+    "options": [
+      "open('f','r')",
+      "open('f','w')",
+      "open('f','rb')",
+      "open('f','a')"
+    ],
+    "correct": "open('f','r')",
+    "area": "other/file_io",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "open"
+    ],
+    "explanation": "La opción 'open('f','r')' es la correcta para este concepto.. Ver: https://docs.python.org/3/tutorial/inputoutput.html"
+  },
+  {
+    "id": "py.other.file_io.002",
+    "text": "¿Qué asegura cerrar el archivo automáticamente?",
+    "options": [
+      "try",
+      "with",
+      "finally",
+      "close()"
+    ],
+    "correct": "with",
+    "area": "other/file_io",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "context manager"
+    ],
+    "explanation": "with garantiza cerrar el archivo al salir del bloque. Ver: https://docs.python.org/3/tutorial/inputoutput.html"
+  },
+  {
+    "id": "py.other.file_io.003",
+    "text": "¿Qué modo abre para añadir sin truncar?",
+    "options": [
+      "'w'",
+      "'a'",
+      "'r+'",
+      "'x'"
+    ],
+    "correct": "'a'",
+    "area": "other/file_io",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "modo a"
+    ],
+    "explanation": "'a' abre para agregar al final sin truncar. Ver: https://docs.python.org/3/tutorial/inputoutput.html"
+  },
+  {
+    "id": "py.other.file_io.004",
+    "text": "¿Qué hace readlines()?",
+    "options": [
+      "Escribe líneas",
+      "Lee todas las líneas",
+      "Cierra archivo",
+      "Nada"
+    ],
+    "correct": "Lee todas las líneas",
+    "area": "other/file_io",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "readlines"
+    ],
+    "explanation": "readlines() devuelve una lista con todas las líneas. Ver: https://docs.python.org/3/tutorial/inputoutput.html"
+  },
+  {
+    "id": "py.other.file_io.005",
+    "text": "¿Cómo escribir texto?",
+    "options": [
+      "f.write('txt')",
+      "f.put('txt')",
+      "f.print('txt')",
+      "print('txt', f)"
+    ],
+    "correct": "f.write('txt')",
+    "area": "other/file_io",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "write"
+    ],
+    "explanation": "La opción 'f.write('txt')' es la correcta para este concepto.. Ver: https://docs.python.org/3/tutorial/inputoutput.html"
+  },
+  {
+    "id": "py.other.file_io.006",
+    "text": "¿Qué error al abrir un archivo inexistente con 'r'?",
+    "options": [
+      "FileNotFoundError",
+      "IOError",
+      "KeyError",
+      "OSError"
+    ],
+    "correct": "FileNotFoundError",
+    "area": "other/file_io",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "FileNotFoundError"
+    ],
+    "explanation": "Abrir en modo 'r' un archivo inexistente lanza FileNotFoundError. Ver: https://docs.python.org/3/tutorial/inputoutput.html"
+  }
+]
