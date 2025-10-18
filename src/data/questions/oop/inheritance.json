@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.oop.inheritance.001",
+    "text": "¿Cómo hereda B de A?",
+    "options": [
+      "class B(A):",
+      "class B<A>",
+      "class B:A",
+      "class B inherit A"
+    ],
+    "correct": "class B(A):",
+    "area": "oop/inheritance",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "herencia"
+    ],
+    "explanation": "class B(A): declara herencia de A. Ver: https://docs.python.org/3/tutorial/classes.html#inheritance"
+  },
+  {
+    "id": "py.oop.inheritance.002",
+    "text": "¿Qué hace super()?",
+    "options": [
+      "Accede a padre",
+      "Crea padre",
+      "Elimina padre",
+      "No aplica"
+    ],
+    "correct": "Accede a padre",
+    "area": "oop/inheritance",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "super"
+    ],
+    "explanation": "super() accede a métodos/atributos de la clase base en el MRO. Ver: https://docs.python.org/3/tutorial/classes.html#inheritance"
+  },
+  {
+    "id": "py.oop.inheritance.003",
+    "text": "¿Qué es MRO?",
+    "options": [
+      "Orden de resolución de métodos",
+      "Modelo de referencia de objetos",
+      "Memoria RAM óptima",
+      "Nada"
+    ],
+    "correct": "Orden de resolución de métodos",
+    "area": "oop/inheritance",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "mro"
+    ],
+    "explanation": "MRO define el orden en que se buscan atributos/métodos en herencia múltiple. Ver: https://docs.python.org/3/tutorial/classes.html#inheritance"
+  },
+  {
+    "id": "py.oop.inheritance.004",
+    "text": "¿Qué sucede al sobreescribir un método?",
+    "options": [
+      "Se suma",
+      "Reemplaza el del padre",
+      "Lanza error",
+      "Nada"
+    ],
+    "correct": "Reemplaza el del padre",
+    "area": "oop/inheritance",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "override"
+    ],
+    "explanation": "Redefinir un método en el hijo reemplaza el del padre. Ver: https://docs.python.org/3/tutorial/classes.html#inheritance"
+  },
+  {
+    "id": "py.oop.inheritance.005",
+    "text": "¿Qué indica 'abc.ABC'?",
+    "options": [
+      "Clases abstractas",
+      "Clases privadas",
+      "Decoradores",
+      "Mixins"
+    ],
+    "correct": "Clases abstractas",
+    "area": "oop/inheritance",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "abc"
+    ],
+    "explanation": "abc.ABC permite definir clases abstractas y métodos abstractmethod. Ver: https://docs.python.org/3/tutorial/classes.html#inheritance"
+  },
+  {
+    "id": "py.oop.inheritance.006",
+    "text": "¿Qué permite 'multiple inheritance'?",
+    "options": [
+      "Herencia de múltiples padres",
+      "Multiplicar clases",
+      "Herencia circular",
+      "No existe"
+    ],
+    "correct": "Herencia de múltiples padres",
+    "area": "oop/inheritance",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "multiple inheritance"
+    ],
+    "explanation": "Python soporta herencia múltiple; el MRO resuelve conflictos. Ver: https://docs.python.org/3/tutorial/classes.html#inheritance"
+  }
+]
