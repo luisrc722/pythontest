@@ -1,4 +1,4 @@
-# Taxonomía de Temas
+# Taxonomía de Temas (agnóstico al dominio)
 
 La taxonomía define las “leaves” o temas atómicos del banco de preguntas.
 
@@ -10,10 +10,10 @@ Convenciones
 - Mantén nombres estables; evita renombrar leaves sin migrar preguntas
 
 Ejemplos
-- `fundamentals/data_structures`
-- `control_flow/loops`
-- `functions/definitions`
-- `data_science/numpy`
+- `fundamentals/data_structures` (programación)
+- `anatomy/cardiovascular` (medicina)
+- `law/civil_contracts` (derecho)
+- `math/calculus/limits` (matemáticas)
 
 Agregar un tema
 1) Añade el leaf a `taxonomy.json`
