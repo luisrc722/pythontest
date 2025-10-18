@@ -1,4 +1,4 @@
-# Guía para alimentar el examen
+# Guía para alimentar el examen (motor agnóstico)
 
 Este directorio contiene el banco de preguntas y la taxonomía usada para seleccionar preguntas de forma estratificada por temas (leaves).
 
@@ -14,7 +14,7 @@ Esquema de una pregunta (campos y reglas)
 - `correct`: opción correcta (debe existir en `options`).
 - `area`: ruta jerárquica a un leaf de `taxonomy.json` (p.ej., `functions/definitions`). Debe coincidir exactamente con un leaf de `taxonomy.json`.
 - `difficulty`: una de `basica` | `intermedia` | `avanzada`.
-- `domain`: ámbito (p.ej., `python`, `numpy`, `django`, `cuda`).
+- `domain`: ámbito o materia (p.ej., `python`, `anatomy`, `law`).
 - `tags`: etiquetas libres.
 - `source` (opcional): referencia, autor o nota.
 - `explanation` (opcional, recomendado): breve justificación que se muestra al fallar.
