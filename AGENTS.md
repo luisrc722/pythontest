@@ -3,18 +3,18 @@
 Contexto operativo para trabajar en este repositorio. Mantén este documento alineado con el código y los datos.
 
 ## Resumen del Proyecto
-- Propósito: Simulador/quiz en consola con muestreo estratificado por temas para Python (extendible a CUDA/DLI, web y data science).
-- Alcance: CLI interactiva, dataset unificado en JSON, taxonomía jerárquica, mínimos por leaf (blueprint) y mezcla de dificultad.
+- Propósito: Motor de examen/quiz en consola, agnóstico al dominio, con muestreo estratificado por temas y dificultad.
+- Alcance: CLI interactiva, dataset unificado en JSON (con edición modular por leaf), taxonomía jerárquica, mínimos por leaf (blueprint), mezcla de dificultad y rúbricas.
 - Estado: MVP funcional con banco base completo y tooling de validación/cobertura.
 
 ## Stack y Requisitos
 - Python: 3.10+
 - Gestor: pip + venv local (`.venv`)
-- Dependencias: ver `requirements.txt` (incluye numpy, pytest, jupyterlab, rich, black, isort, flake8, pydantic, click, toml, inquirer, streamlit, fastapi, uvicorn, pandas, matplotlib)
+- Dependencias: ver `requirements.txt` (click/rich/pydantic/toml/inquirer para CLI/UX/validación; pytest/pytest-cov; pandas/matplotlib para stats; otras opcionales listadas)
 
 ## Estructura del Repositorio
-- `src/` código de la app
-  - `src/main.py` CLI principal (Click; `--mode [exam|formative]`, `--seed`)
+- `src/` código del motor
+  - `src/main.py` CLI principal (Click; `--mode`, `--seed`, perfiles, `stats`, `add`)
   - `src/models/` Question, Test, Result (dataclasses, feedback y resumen)
   - `src/utils/` loader, sampler (estratificado), taxonomy, blueprint
   - `src/data/` questions.json (banco), taxonomy.json (índice), blueprint.json (mínimos), README.md (guía)
@@ -51,7 +51,7 @@ Contexto operativo para trabajar en este repositorio. Mantén este documento ali
 - Añadir pruebas unitarias para muestreo, validación y utilidades según evolucione.
 
 ## Datos y Persistencia
-- Banco unificado: `src/data/questions.json`. Reglas en `src/data/README.md`.
+- Banco unificado: `src/data/questions.json` (generado desde `src/data/questions/`). Reglas en `src/data/README.md`.
 - Cada pregunta debe incluir: `id`, `text`, `options`, `correct`, `area` (leaf exacto), `difficulty` ∈ {basica, intermedia, avanzada}. `explanation` recomendado.
 - IDs estables (`py.<grupo>.<leaf>.<nnn>`). Sin duplicados. Español neutro.
 - Validación obligatoria: `make data-check` (falla si algún leaf < mínimo del blueprint).
