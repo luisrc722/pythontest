@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.data_science.visualization.001",
+    "text": "¿Qué biblioteca base es común para gráficos en Python?",
+    "options": [
+      "Matplotlib",
+      "Seaborn",
+      "Plotly",
+      "Bokeh"
+    ],
+    "correct": "Matplotlib",
+    "area": "data_science/visualization",
+    "difficulty": "basica",
+    "domain": "data_science",
+    "tags": [
+      "matplotlib"
+    ],
+    "explanation": "Matplotlib es la base; Seaborn y otras se apoyan en ella. Ver: https://matplotlib.org/stable/tutorials/introductory/pyplot.html"
+  },
+  {
+    "id": "py.data_science.visualization.002",
+    "text": "¿Qué hace plt.show()?",
+    "options": [
+      "Guarda imagen",
+      "Muestra la figura",
+      "Crea figura",
+      "Limpia ejes"
+    ],
+    "correct": "Muestra la figura",
+    "area": "data_science/visualization",
+    "difficulty": "basica",
+    "domain": "data_science",
+    "tags": [
+      "plt.show"
+    ],
+    "explanation": "plt.show() muestra la figura en pantalla. Ver: https://matplotlib.org/stable/tutorials/introductory/pyplot.html"
+  },
+  {
+    "id": "py.data_science.visualization.003",
+    "text": "¿Qué parámetro controla el tamaño de la figura?",
+    "options": [
+      "figsize",
+      "dpi",
+      "size",
+      "scale"
+    ],
+    "correct": "figsize",
+    "area": "data_science/visualization",
+    "difficulty": "intermedia",
+    "domain": "data_science",
+    "tags": [
+      "figsize"
+    ],
+    "explanation": "La opción 'figsize' es la correcta para este concepto.. Ver: https://matplotlib.org/stable/tutorials/introductory/pyplot.html"
+  },
+  {
+    "id": "py.data_science.visualization.004",
+    "text": "¿Qué mejora Seaborn sobre Matplotlib?",
+    "options": [
+      "Interactividad",
+      "Estética y estadísticas",
+      "3D",
+      "Animaciones"
+    ],
+    "correct": "Estética y estadísticas",
+    "area": "data_science/visualization",
+    "difficulty": "intermedia",
+    "domain": "data_science",
+    "tags": [
+      "seaborn"
+    ],
+    "explanation": "Seaborn añade estilos y utilidades estadísticas sobre Matplotlib. Ver: https://matplotlib.org/stable/tutorials/introductory/pyplot.html"
+  },
+  {
+    "id": "py.data_science.visualization.005",
+    "text": "¿Qué hace ax.plot([1,2,3])?",
+    "options": [
+      "Histograma",
+      "Línea",
+      "Barra",
+      "Dispersión"
+    ],
+    "correct": "Línea",
+    "area": "data_science/visualization",
+    "difficulty": "basica",
+    "domain": "data_science",
+    "tags": [
+      "line plot"
+    ],
+    "explanation": "ax.plot crea una gráfica de líneas. Ver: https://matplotlib.org/stable/tutorials/introductory/pyplot.html"
+  },
+  {
+    "id": "py.data_science.visualization.006",
+    "text": "¿Qué es un heatmap?",
+    "options": [
+      "Gráfico de árbol",
+      "Mapa de calor",
+      "Gráfico de velas",
+      "Diagrama de caja"
+    ],
+    "correct": "Mapa de calor",
+    "area": "data_science/visualization",
+    "difficulty": "intermedia",
+    "domain": "data_science",
+    "tags": [
+      "heatmap"
+    ],
+    "explanation": "Un heatmap utiliza colores para representar intensidades en una matriz. Ver: https://matplotlib.org/stable/tutorials/introductory/pyplot.html"
+  }
+]
