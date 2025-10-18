@@ -1,5 +1,7 @@
 # Simulador CUDA Python – NVIDIA DLI
 
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg) ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+
 Pequeño simulador/quiz en consola para practicar fundamentos de Python (y extensible a CUDA/NVIDIA DLI) a partir de bancos de preguntas en JSON.
 
 Atajos de documentación
