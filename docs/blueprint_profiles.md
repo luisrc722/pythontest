@@ -1,4 +1,4 @@
-# Blueprint y Perfiles
+# Blueprint y Perfiles (cualquier materia)
 
 Blueprint
 - Archivo: `src/data/blueprint.json`
