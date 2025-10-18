@@ -1,6 +1,6 @@
-# Documentación del Proyecto
+# Documentación del Motor de Exámenes
 
-Este directorio reúne guías prácticas para instalar, usar, redactar preguntas y mantener evaluaciones para cualquier nivel educativo.
+Este directorio reúne guías prácticas para instalar, usar, redactar preguntas y mantener evaluaciones para cualquier materia y nivel educativo.
 
 Índice
 - Guía rápida: `docs/quickstart.md`
