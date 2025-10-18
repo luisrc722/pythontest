@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.control_flow.comprehensions.001",
+    "text": "¿Qué crea [x*x for x in range(3)]?",
+    "options": [
+      "[1,4,9]",
+      "[0,1,4]",
+      "[0,1,4,9]",
+      "Error"
+    ],
+    "correct": "[0,1,4]",
+    "area": "control_flow/comprehensions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "list comprehension"
+    ],
+    "explanation": "range(3) da 0..2; el cuadrado produce [0,1,4]. Ver: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+  },
+  {
+    "id": "py.control_flow.comprehensions.002",
+    "text": "¿Qué hace {x:x*x for x in [1,2]}?",
+    "options": [
+      "{1:1,2:4}",
+      "[1,4]",
+      "(1,4)",
+      "{1,2,4}"
+    ],
+    "correct": "{1:1,2:4}",
+    "area": "control_flow/comprehensions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "dict comprehension"
+    ],
+    "explanation": "Dict comprehension genera pares clave:valor por cada elemento. Ver: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+  },
+  {
+    "id": "py.control_flow.comprehensions.003",
+    "text": "¿Qué filtra [x for x in range(5) if x%2==0]?",
+    "options": [
+      "Impares",
+      "Pares",
+      "Todos",
+      "Ninguno"
+    ],
+    "correct": "Pares",
+    "area": "control_flow/comprehensions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "if en comprehension"
+    ],
+    "explanation": "El filtro 'if' mantiene solo pares. Ver: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+  },
+  {
+    "id": "py.control_flow.comprehensions.004",
+    "text": "¿Qué crea {x for x in 'abca'}?",
+    "options": [
+      "{'a','b','c'}",
+      "['a','b','c']",
+      "('a','b','c')",
+      "{'a','b','c','a'}"
+    ],
+    "correct": "{'a','b','c'}",
+    "area": "control_flow/comprehensions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "set comprehension"
+    ],
+    "explanation": "Set comprehension elimina duplicados al construir el conjunto. Ver: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+  },
+  {
+    "id": "py.control_flow.comprehensions.005",
+    "text": "¿Cuál es la ventaja principal de comprehensions?",
+    "options": [
+      "Mayor verbosidad",
+      "Legibilidad y concisión",
+      "Más lentas",
+      "No tienen ventaja"
+    ],
+    "correct": "Legibilidad y concisión",
+    "area": "control_flow/comprehensions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "ventajas"
+    ],
+    "explanation": "Comprehensions condensan mapeo/filtrado en una sola expresión legible. Ver: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+  },
+  {
+    "id": "py.control_flow.comprehensions.006",
+    "text": "¿Qué produce (x for x in range(2))?",
+    "options": [
+      "Lista",
+      "Generador",
+      "Set",
+      "Dict"
+    ],
+    "correct": "Generador",
+    "area": "control_flow/comprehensions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "generator expression"
+    ],
+    "explanation": "Una generator expression crea un generador lazily evaluated. Ver: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+  }
+]
