@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.other.modules_packages.001",
+    "text": "¿Qué archivo convierte una carpeta en paquete?",
+    "options": [
+      "__init__.py",
+      "package.json",
+      "setup.py",
+      "__main__.py"
+    ],
+    "correct": "__init__.py",
+    "area": "other/modules_packages",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "paquetes"
+    ],
+    "explanation": "__init__.py marca un directorio como paquete importable. Ver: https://docs.python.org/3/tutorial/modules.html"
+  },
+  {
+    "id": "py.other.modules_packages.002",
+    "text": "¿Qué hace 'from . import x'?",
+    "options": [
+      "Importa absoluto",
+      "Importa relativo",
+      "Exporta módulo",
+      "Nada"
+    ],
+    "correct": "Importa relativo",
+    "area": "other/modules_packages",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "import relativo"
+    ],
+    "explanation": "El punto indica importación relativa dentro del mismo paquete. Ver: https://docs.python.org/3/tutorial/modules.html"
+  },
+  {
+    "id": "py.other.modules_packages.003",
+    "text": "¿Dónde se buscan módulos por defecto?",
+    "options": [
+      "PYTHONPATH",
+      "sys.path",
+      "PATH",
+      "HOME"
+    ],
+    "correct": "sys.path",
+    "area": "other/modules_packages",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "sys.path"
+    ],
+    "explanation": "sys.path lista las rutas donde Python busca módulos. Ver: https://docs.python.org/3/tutorial/modules.html"
+  },
+  {
+    "id": "py.other.modules_packages.004",
+    "text": "¿Qué archivo permite ejecutar un paquete con -m?",
+    "options": [
+      "__init__.py",
+      "__main__.py",
+      "run.py",
+      "main.py"
+    ],
+    "correct": "__main__.py",
+    "area": "other/modules_packages",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "-m"
+    ],
+    "explanation": "__main__.py permite ejecutar el paquete con 'python -m paquete'. Ver: https://docs.python.org/3/tutorial/modules.html"
+  },
+  {
+    "id": "py.other.modules_packages.005",
+    "text": "¿Qué herramienta crea paquetes distribuibles?",
+    "options": [
+      "pip",
+      "setuptools",
+      "virtualenv",
+      "pyenv"
+    ],
+    "correct": "setuptools",
+    "area": "other/modules_packages",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "packaging"
+    ],
+    "explanation": "setuptools y wheel construyen paquetes distribuibles. Ver: https://docs.python.org/3/tutorial/modules.html"
+  },
+  {
+    "id": "py.other.modules_packages.006",
+    "text": "¿Qué hace __all__ en un módulo?",
+    "options": [
+      "Define exports de from *",
+      "Define imports",
+      "Nada",
+      "Compila el módulo"
+    ],
+    "correct": "Define exports de from *",
+    "area": "other/modules_packages",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "__all__"
+    ],
+    "explanation": "__all__ controla los nombres exportados por from paquete import *. Ver: https://docs.python.org/3/tutorial/modules.html"
+  }
+]
