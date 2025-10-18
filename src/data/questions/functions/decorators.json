@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.functions.decorators.001",
+    "text": "¿Qué es un decorador en Python?",
+    "options": [
+      "Una clase",
+      "Una función que envuelve otra",
+      "Un módulo",
+      "Una variable global"
+    ],
+    "correct": "Una función que envuelve otra",
+    "area": "functions/decorators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "decorators"
+    ],
+    "explanation": "Un decorador toma una función y devuelve otra, añadiendo comportamiento. Ver: https://docs.python.org/3/library/functools.html#functools.wraps"
+  },
+  {
+    "id": "py.functions.decorators.002",
+    "text": "¿Qué imprime @decorator sobre una función?",
+    "options": [
+      "Aplica decorator(func)",
+      "Crea una clase",
+      "No hace nada",
+      "Devuelve None"
+    ],
+    "correct": "Aplica decorator(func)",
+    "area": "functions/decorators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "decorators"
+    ],
+    "explanation": "La sintaxis @decorator aplica decorator(func) al definirla. Ver: https://docs.python.org/3/library/functools.html#functools.wraps"
+  },
+  {
+    "id": "py.functions.decorators.003",
+    "text": "¿Cuál es el patrón para preservar metadata?",
+    "options": [
+      "functools.wraps",
+      "copy.copy",
+      "__doc__ =",
+      "__name__ ="
+    ],
+    "correct": "functools.wraps",
+    "area": "functions/decorators",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "wraps"
+    ],
+    "explanation": "La opción 'functools.wraps' es la correcta para este concepto.. Ver: https://docs.python.org/3/library/functools.html#functools.wraps"
+  },
+  {
+    "id": "py.functions.decorators.004",
+    "text": "¿Qué hace @staticmethod?",
+    "options": [
+      "Crea método ligado a instancia",
+      "Crea método sin self",
+      "Crea propiedad",
+      "Registra señal"
+    ],
+    "correct": "Crea método sin self",
+    "area": "functions/decorators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "staticmethod"
+    ],
+    "explanation": "@staticmethod define un método sin self ni cls. Ver: https://docs.python.org/3/library/functools.html#functools.wraps"
+  },
+  {
+    "id": "py.functions.decorators.005",
+    "text": "¿Qué hace @property?",
+    "options": [
+      "Decora funciones async",
+      "Transforma método en atributo de solo lectura",
+      "Crea evento",
+      "Cambia herencia"
+    ],
+    "correct": "Transforma método en atributo de solo lectura",
+    "area": "functions/decorators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "property"
+    ],
+    "explanation": "@property expone un método como atributo de solo lectura. Ver: https://docs.python.org/3/library/functools.html#functools.wraps"
+  },
+  {
+    "id": "py.functions.decorators.006",
+    "text": "¿Qué orden aplica en múltiples decoradores?",
+    "options": [
+      "De abajo hacia arriba",
+      "De arriba hacia abajo",
+      "Alfabético",
+      "Indefinido"
+    ],
+    "correct": "De abajo hacia arriba",
+    "area": "functions/decorators",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "orden decoradores"
+    ],
+    "explanation": "Se aplican de abajo hacia arriba (el más cercano primero). Ver: https://docs.python.org/3/library/functools.html#functools.wraps"
+  }
+]
