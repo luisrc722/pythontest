@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.web.fastapi.001",
+    "text": "¿Cómo se define una ruta GET en FastAPI?",
+    "options": [
+      "@app.get",
+      "@app.route",
+      "def get",
+      "route.get"
+    ],
+    "correct": "@app.get",
+    "area": "web/fastapi",
+    "difficulty": "basica",
+    "domain": "fastapi",
+    "tags": [
+      "get"
+    ],
+    "explanation": "@app.get define una ruta HTTP GET. Ver: https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": "py.web.fastapi.002",
+    "text": "¿Qué usa FastAPI para validación de datos?",
+    "options": [
+      "Marshmallow",
+      "Pydantic",
+      "Cerberus",
+      "dataclasses"
+    ],
+    "correct": "Pydantic",
+    "area": "web/fastapi",
+    "difficulty": "intermedia",
+    "domain": "fastapi",
+    "tags": [
+      "pydantic"
+    ],
+    "explanation": "FastAPI usa Pydantic para validación y serialización de datos. Ver: https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": "py.web.fastapi.003",
+    "text": "¿Cómo iniciar el server?",
+    "options": [
+      "uvicorn app:app",
+      "fastapi run",
+      "python app.py",
+      "runserver"
+    ],
+    "correct": "uvicorn app:app",
+    "area": "web/fastapi",
+    "difficulty": "basica",
+    "domain": "fastapi",
+    "tags": [
+      "uvicorn"
+    ],
+    "explanation": "La opción 'uvicorn app:app' es la correcta para este concepto.. Ver: https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": "py.web.fastapi.004",
+    "text": "¿Dónde vive la documentación automática?",
+    "options": [
+      "/docs",
+      "/swagger",
+      "/openapi",
+      "/redoc-only"
+    ],
+    "correct": "/docs",
+    "area": "web/fastapi",
+    "difficulty": "basica",
+    "domain": "fastapi",
+    "tags": [
+      "docs"
+    ],
+    "explanation": "FastAPI expone documentación interactiva Swagger UI en /docs. Ver: https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": "py.web.fastapi.005",
+    "text": "¿Qué es un APIRouter?",
+    "options": [
+      "Cliente HTTP",
+      "Agrupador de rutas",
+      "Middleware",
+      "Servidor"
+    ],
+    "correct": "Agrupador de rutas",
+    "area": "web/fastapi",
+    "difficulty": "intermedia",
+    "domain": "fastapi",
+    "tags": [
+      "APIRouter"
+    ],
+    "explanation": "APIRouter permite modularizar rutas y middlewares. Ver: https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": "py.web.fastapi.006",
+    "text": "¿Qué devuelve una función async sin await?",
+    "options": [
+      "Resultado",
+      "Coroutine",
+      "Future resuelto",
+      "String"
+    ],
+    "correct": "Coroutine",
+    "area": "web/fastapi",
+    "difficulty": "intermedia",
+    "domain": "fastapi",
+    "tags": [
+      "async"
+    ],
+    "explanation": "Una función async devuelve una coroutine si no se await-ea. Ver: https://fastapi.tiangolo.com/"
+  }
+]
