@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.other.async_programming.001",
+    "text": "¿Qué es el event loop?",
+    "options": [
+      "Hilo de sistema",
+      "Planificador de tareas async",
+      "Un socket",
+      "Una coroutine"
+    ],
+    "correct": "Planificador de tareas async",
+    "area": "other/async_programming",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "event loop"
+    ],
+    "explanation": "El event loop coordina la ejecución de tareas async. Ver: https://docs.python.org/3/library/asyncio.html"
+  },
+  {
+    "id": "py.other.async_programming.002",
+    "text": "¿Qué hace await en async?",
+    "options": [
+      "Bloquea hilo",
+      "Cede el control hasta completar",
+      "Crea proceso",
+      "Termina programa"
+    ],
+    "correct": "Cede el control hasta completar",
+    "area": "other/async_programming",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "await"
+    ],
+    "explanation": "await cede el control al loop hasta completar. Ver: https://docs.python.org/3/library/asyncio.html"
+  },
+  {
+    "id": "py.other.async_programming.003",
+    "text": "¿Qué permite asyncio.create_task?",
+    "options": [
+      "Crear hilos",
+      "Programar coroutine concurrente",
+      "Crear proceso",
+      "Cerrar loop"
+    ],
+    "correct": "Programar coroutine concurrente",
+    "area": "other/async_programming",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "create_task"
+    ],
+    "explanation": "asyncio.create_task agenda la coroutine para ejecución concurrente. Ver: https://docs.python.org/3/library/asyncio.html"
+  },
+  {
+    "id": "py.other.async_programming.004",
+    "text": "¿Qué hace asyncio.sleep(0)?",
+    "options": [
+      "Duerme indefinido",
+      "Cede inmediatamente",
+      "Bloquea CPU",
+      "Error"
+    ],
+    "correct": "Cede inmediatamente",
+    "area": "other/async_programming",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "sleep"
+    ],
+    "explanation": "asyncio.sleep(0) cede inmediatamente al event loop. Ver: https://docs.python.org/3/library/asyncio.html"
+  },
+  {
+    "id": "py.other.async_programming.005",
+    "text": "¿Qué es un awaitable?",
+    "options": [
+      "obj con __await__",
+      "Solo Future",
+      "Solo Task",
+      "Solo coroutine"
+    ],
+    "correct": "obj con __await__",
+    "area": "other/async_programming",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "awaitable"
+    ],
+    "explanation": "Un awaitable implementa el protocolo __await__ (Future/Task/Coroutine). Ver: https://docs.python.org/3/library/asyncio.html"
+  },
+  {
+    "id": "py.other.async_programming.006",
+    "text": "¿Qué hace asyncio.gather?",
+    "options": [
+      "Secuencia",
+      "Ejecuta awaitables en paralelo cooperativo",
+      "Hilos",
+      "Procesos"
+    ],
+    "correct": "Ejecuta awaitables en paralelo cooperativo",
+    "area": "other/async_programming",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "gather"
+    ],
+    "explanation": "asyncio.gather corre awaitables en paralelo cooperativo. Ver: https://docs.python.org/3/library/asyncio.html"
+  }
+]
