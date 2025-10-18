@@ -1,0 +1,111 @@
+[
+  {
+    "id": "py.other.best_practices.001",
+    "text": "¿Qué herramienta formatea PEP8 automáticamente?",
+    "options": [
+      "pytest",
+      "black",
+      "mypy",
+      "flake8"
+    ],
+    "correct": "black",
+    "area": "other/best_practices",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "pep8",
+      "black"
+    ],
+    "explanation": "black formatea código automáticamente siguiendo PEP8. Ver: https://peps.python.org/pep-0008/"
+  },
+  {
+    "id": "py.other.best_practices.002",
+    "text": "¿Qué herramienta verifica tipos estáticos?",
+    "options": [
+      "black",
+      "flake8",
+      "mypy",
+      "pytest"
+    ],
+    "correct": "mypy",
+    "area": "other/best_practices",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "typing"
+    ],
+    "explanation": "mypy verifica tipos estáticos a partir de anotaciones PEP484. Ver: https://peps.python.org/pep-0008/"
+  },
+  {
+    "id": "py.other.best_practices.003",
+    "text": "¿Qué archivo define dependencias en proyectos modernos?",
+    "options": [
+      "requirements.txt",
+      "pyproject.toml",
+      "Pipfile",
+      "setup.py"
+    ],
+    "correct": "pyproject.toml",
+    "area": "other/best_practices",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "pyproject"
+    ],
+    "explanation": "pyproject.toml centraliza config de build/deps en proyectos modernos. Ver: https://peps.python.org/pep-0008/"
+  },
+  {
+    "id": "py.other.best_practices.004",
+    "text": "¿Qué convención de nombres recomienda PEP8 para funciones?",
+    "options": [
+      "camelCase",
+      "snake_case",
+      "PascalCase",
+      "SCREAMING_SNAKE"
+    ],
+    "correct": "snake_case",
+    "area": "other/best_practices",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "pep8"
+    ],
+    "explanation": "PEP8 recomienda snake_case para funciones y variables. Ver: https://peps.python.org/pep-0008/"
+  },
+  {
+    "id": "py.other.best_practices.005",
+    "text": "¿Qué ventaja aportan las pruebas automatizadas?",
+    "options": [
+      "Más lentitud",
+      "Confianza en cambios",
+      "Mayor complejidad",
+      "Ninguna"
+    ],
+    "correct": "Confianza en cambios",
+    "area": "other/best_practices",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "testing"
+    ],
+    "explanation": "Las pruebas automatizadas previenen regresiones al refactorizar. Ver: https://peps.python.org/pep-0008/"
+  },
+  {
+    "id": "py.other.best_practices.006",
+    "text": "¿Qué docstring estándar se sugiere?",
+    "options": [
+      "Google/NumPy",
+      "Markdown",
+      "YAML",
+      "ReST únicamente"
+    ],
+    "correct": "Google/NumPy",
+    "area": "other/best_practices",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "docstring"
+    ],
+    "explanation": "Los estilos Google/NumPy facilitan documentación consistente. Ver: https://peps.python.org/pep-0008/"
+  }
+]
