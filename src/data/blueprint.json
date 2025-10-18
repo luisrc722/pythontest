@@ -1,0 +1,7 @@
+{
+  "per_leaf_min": 6,
+  "difficulty_mix": {"basica": 0.5, "intermedia": 0.35, "avanzada": 0.15},
+  "overrides": {
+    "data_science/numpy": 8
+  }
+}
