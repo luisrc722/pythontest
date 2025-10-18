@@ -1,6 +1,6 @@
-# Autoría de Preguntas
+# Autoría de Preguntas (agnóstico al tema)
 
-Objetivo: redactar preguntas de calidad, validadas automáticamente y fáciles de mantener.
+Objetivo: redactar preguntas de calidad para cualquier materia, validadas automáticamente y fáciles de mantener.
 
 Esquema mínimo
 ```
@@ -23,7 +23,7 @@ Campos recomendados
 - `area`: hoja válida en `src/data/taxonomy.json`
 - `difficulty`: `basica|intermedia|avanzada`
 - `explanation`: breve “por qué” (se muestra al fallar y en modo formativo)
-- Opcionales: `domain`, `tags`, `cognitive_level` (Bloom), `outcomes` (LOs)
+- Opcionales: `domain` (p. ej., `python`, `anatomy`, `law`), `tags`, `cognitive_level` (Bloom), `outcomes` (LOs)
 
 Buenas prácticas
 - 4 opciones es un punto óptimo
