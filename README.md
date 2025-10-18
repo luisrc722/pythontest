@@ -1,8 +1,8 @@
-# Simulador CUDA Python – NVIDIA DLI
+# Motor de Exámenes (CLI)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg) ![Python](https://img.shields.io/badge/python-3.10%2B-blue) [![Docs](https://img.shields.io/badge/docs-README-green)](docs/README.md)
 
-Pequeño simulador/quiz en consola para practicar fundamentos de Python (y extensible a CUDA/NVIDIA DLI) a partir de bancos de preguntas en JSON.
+Motor de examen/quiz en consola, agnóstico al tema, basado en bancos de preguntas en JSON con taxonomía jerárquica, perfiles de evaluación y rúbricas. Incluye un dataset de ejemplo (Python) para empezar de inmediato.
 
 Atajos de documentación
 - Guía rápida: docs/quickstart.md
@@ -15,10 +15,11 @@ Atajos de documentación
 - FAQ: docs/faq.md
 
 ## Características
-- Carga preguntas desde `src/data/*.json`.
-- Selección aleatoria de N preguntas por ejecución.
-- Interfaz de línea de comandos simple con feedback inmediato.
-- Resumen de resultados y cálculo de nivel.
+- Motor agnóstico al dominio (sirve para cualquier materia).
+- Banco modular por tema (leaf) + empaquetado unificado.
+- Muestreo estratificado por área/tema y dificultad con perfiles (global/topic/quick/module).
+- Rúbricas de aprobación (umbral global y por tema).
+- Interfaz CLI con feedback (modo examen/formativo) y resumen con desglose.
 
 ## Requisitos
 - Python 3.10+
@@ -29,15 +30,17 @@ Instalación rápida:
 - Instalar dependencias: `pip install -r requirements.txt`
 
 ## Estructura
-- `src/main.py`: punto de entrada de la app y política por áreas.
-- `src/utils/loader.py`: carga unificada desde `src/data/questions.json` (con fallback legacy).
-- `src/utils/sampler.py`: muestreo estratificado por área y dificultad.
-- `src/utils/taxonomy.py`: carga y utilidades para la taxonomía jerárquica.
-- `src/utils/blueprint.py`: carga la política de mínimos por leaf y mezcla de dificultad.
+- `src/main.py`: CLI y políticas de muestreo/ejecución.
+- `src/utils/loader.py`: carga unificada desde `src/data/questions.json` (y modular por leaf).
+- `src/utils/sampler.py`: muestreo estratificado por tema y dificultad.
+- `src/utils/taxonomy.py`: utilidades para la taxonomía jerárquica.
+- `src/utils/blueprint.py`: mínimos por tema y mezcla de dificultad; rúbrica opcional.
+- `src/utils/persistence.py`: persistencia de intentos (JSONL) y metadatos.
 - `src/models/`: clases `Question`, `Test`, `Result`.
-- `src/data/questions.json`: banco unificado (recomendado). Legacy: `python_basics.json`, `numpy_basics.json`, `cuda_intro.json`.
-- `src/data/taxonomy.json`: Índice Maestro de temas/rutas para escalar el banco.
-- `src/data/blueprint.json`: configuración de mínimos por leaf y mezcla de dificultad.
+- `src/data/questions.json`: banco unificado (generado desde `src/data/questions/`).
+- `src/data/taxonomy.json`: taxonomía (temario/índice maestro).
+- `src/data/blueprint.json`: política de cuotas y dificultad objetivo.
+- `src/data/questions/`: archivos por tema (leaf) para edición modular.
 - `tests/`: pruebas.
 
 ## Entorno y Portabilidad (venv)
@@ -66,7 +69,7 @@ Notas de portabilidad:
 - Las rutas de datos son relativas (`src/data/...`), por lo que no dependen del path absoluto del repo.
 
 ## Uso
-Ejecutar el simulador con muestreo estratificado por áreas:
+Ejecutar el motor con muestreo estratificado por temas:
 
 ```
 python -m src.main
@@ -84,7 +87,7 @@ Modos de ejecución:
 Reproducibilidad: fija la semilla de aleatoriedad con `--seed`.
 `python -m src.main --mode formative --seed 42`
 
-Perfiles educativos (dividir por uso)
+Perfiles de ejecución (educativos)
 - Global (acreditación): muestrea todas las leaves de `taxonomy.json` conforme a `blueprint.json`.
   - `python -m src.main --profile global`
   - Limitar total: `--max-total 60`
@@ -103,7 +106,7 @@ Orden del examen
 - `--order area`: agrupa por leaf para bloques temáticos.
 
 ## Formato de preguntas (unificado)
-Cada objeto incluye metadatos para escalar por dominios y dificultad:
+Esquema genérico y extensible para cualquier materia:
 
 ```
 {
@@ -113,7 +116,7 @@ Cada objeto incluye metadatos para escalar por dominios y dificultad:
   "correct": "Texto exacto de la opción correcta",
   "area": "fundamentals/data_structures",
   "difficulty": "basica",
-  "domain": "python",
+  "domain": "subject_code",
   "tags": ["tipos", "int", "float"],
   "source": "opcional",
   "explanation": "opcional: breve justificación que se muestra al fallar"
