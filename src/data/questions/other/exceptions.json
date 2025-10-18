@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.other.exceptions.001",
+    "text": "¿Qué palabra clave captura excepciones?",
+    "options": [
+      "catch",
+      "except",
+      "handle",
+      "rescue"
+    ],
+    "correct": "except",
+    "area": "other/exceptions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "try except"
+    ],
+    "explanation": "try/except captura excepciones manejables. Ver: https://docs.python.org/3/tutorial/errors.html"
+  },
+  {
+    "id": "py.other.exceptions.002",
+    "text": "¿Qué bloque se ejecuta siempre?",
+    "options": [
+      "except",
+      "finally",
+      "else",
+      "retry"
+    ],
+    "correct": "finally",
+    "area": "other/exceptions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "finally"
+    ],
+    "explanation": "finally se ejecuta siempre, útil para liberar recursos. Ver: https://docs.python.org/3/tutorial/errors.html"
+  },
+  {
+    "id": "py.other.exceptions.003",
+    "text": "¿Cómo se lanza una excepción?",
+    "options": [
+      "throw Error",
+      "raise Exception()",
+      "new Exception",
+      "except Exception"
+    ],
+    "correct": "raise Exception()",
+    "area": "other/exceptions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "raise"
+    ],
+    "explanation": "La opción 'raise Exception()' es la correcta para este concepto.. Ver: https://docs.python.org/3/tutorial/errors.html"
+  },
+  {
+    "id": "py.other.exceptions.004",
+    "text": "¿Qué captura 'except Exception as e'?",
+    "options": [
+      "Solo RuntimeError",
+      "Cualquier excepción derivada de Exception",
+      "Solo IOError",
+      "No captura nada"
+    ],
+    "correct": "Cualquier excepción derivada de Exception",
+    "area": "other/exceptions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "Exception"
+    ],
+    "explanation": "Captura cualquier excepción que herede de Exception. Ver: https://docs.python.org/3/tutorial/errors.html"
+  },
+  {
+    "id": "py.other.exceptions.005",
+    "text": "¿Cómo defines una excepción propia?",
+    "options": [
+      "class E(Exception):",
+      "def E():",
+      "raise E:",
+      "new E"
+    ],
+    "correct": "class E(Exception):",
+    "area": "other/exceptions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "custom exceptions"
+    ],
+    "explanation": "La opción 'class E(Exception):' es la correcta para este concepto.. Ver: https://docs.python.org/3/tutorial/errors.html"
+  },
+  {
+    "id": "py.other.exceptions.006",
+    "text": "¿Qué excepción por clave inexistente en dict?",
+    "options": [
+      "IndexError",
+      "KeyError",
+      "ValueError",
+      "TypeError"
+    ],
+    "correct": "KeyError",
+    "area": "other/exceptions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "KeyError"
+    ],
+    "explanation": "Acceder a una clave inexistente en dict lanza KeyError. Ver: https://docs.python.org/3/tutorial/errors.html"
+  }
+]
