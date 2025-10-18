@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.oop.magic_methods.001",
+    "text": "¿Qué método define representación legible?",
+    "options": [
+      "__repr__",
+      "__str__",
+      "__len__",
+      "__iter__"
+    ],
+    "correct": "__str__",
+    "area": "oop/magic_methods",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "__str__"
+    ],
+    "explanation": "__str__ devuelve una representación amigable para usuarios. Ver: https://docs.python.org/3/reference/datamodel.html"
+  },
+  {
+    "id": "py.oop.magic_methods.002",
+    "text": "¿Cuál se usa para depuración fiel?",
+    "options": [
+      "__repr__",
+      "__str__",
+      "__format__",
+      "__debug__"
+    ],
+    "correct": "__repr__",
+    "area": "oop/magic_methods",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "__repr__"
+    ],
+    "explanation": "__repr__ devuelve una representación precisa para desarrolladores. Ver: https://docs.python.org/3/reference/datamodel.html"
+  },
+  {
+    "id": "py.oop.magic_methods.003",
+    "text": "¿Qué método permite usar 'len(obj)'?",
+    "options": [
+      "__size__",
+      "__len__",
+      "__count__",
+      "__length__"
+    ],
+    "correct": "__len__",
+    "area": "oop/magic_methods",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "__len__"
+    ],
+    "explanation": "len(obj) invoca obj.__len__(). Ver: https://docs.python.org/3/reference/datamodel.html"
+  },
+  {
+    "id": "py.oop.magic_methods.004",
+    "text": "¿Qué método implementa igualdad '=='?",
+    "options": [
+      "__eq__",
+      "__cmp__",
+      "__is__",
+      "__equals__"
+    ],
+    "correct": "__eq__",
+    "area": "oop/magic_methods",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "__eq__"
+    ],
+    "explanation": "'==' invoca __eq__ para comparar igualdad de valor. Ver: https://docs.python.org/3/reference/datamodel.html"
+  },
+  {
+    "id": "py.oop.magic_methods.005",
+    "text": "¿Qué habilita iterar sobre un objeto?",
+    "options": [
+      "__iter__",
+      "__next__",
+      "__call__",
+      "__getitem__"
+    ],
+    "correct": "__iter__",
+    "area": "oop/magic_methods",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "__iter__"
+    ],
+    "explanation": "__iter__ devuelve un iterador para recorrer el objeto. Ver: https://docs.python.org/3/reference/datamodel.html"
+  },
+  {
+    "id": "py.oop.magic_methods.006",
+    "text": "¿Qué significa implementar __call__?",
+    "options": [
+      "Instancia invocable",
+      "Conversión a str",
+      "Creación de clase",
+      "Nada"
+    ],
+    "correct": "Instancia invocable",
+    "area": "oop/magic_methods",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "__call__"
+    ],
+    "explanation": "Definir __call__ hace que la instancia sea invocable como función. Ver: https://docs.python.org/3/reference/datamodel.html"
+  }
+]
