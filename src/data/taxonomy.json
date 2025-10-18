@@ -1,0 +1,44 @@
+{
+  "fundamentals": [
+    "data_structures",
+    "operators",
+    "variables"
+  ],
+  "control_flow": [
+    "conditionals",
+    "loops",
+    "comprehensions"
+  ],
+  "functions": [
+    "definitions",
+    "decorators",
+    "generators",
+    "async"
+  ],
+  "oop": [
+    "classes",
+    "inheritance",
+    "magic_methods"
+  ],
+  "data_science": [
+    "numpy",
+    "pandas",
+    "visualization"
+  ],
+  "web": [
+    "flask",
+    "django",
+    "fastapi"
+  ],
+  "courses": [
+    "cuda_python_course"
+  ],
+  "other": [
+    "modules_packages",
+    "exceptions",
+    "file_io",
+    "testing",
+    "async_programming",
+    "best_practices"
+  ]
+}
