@@ -1,0 +1,19 @@
+[
+  {
+    "text": "¿Qué tipo de dato devuelve type(3.0)?",
+    "options": ["int", "float", "str", "bool"],
+    "correct": "float",
+    "category": "python"
+  },
+  {
+    "text": "¿Qué hace la instrucción continue en un bucle?",
+    "options": [
+      "Finaliza el programa",
+      "Salta a la siguiente iteración",
+      "Detiene el bucle",
+      "Reinicia el bucle"
+    ],
+    "correct": "Salta a la siguiente iteración",
+    "category": "python"
+  }
+]
