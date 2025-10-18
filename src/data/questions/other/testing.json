@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.other.testing.001",
+    "text": "¿Qué framework de testing es común en Python?",
+    "options": [
+      "pytest",
+      "jest",
+      "junit",
+      "mocha"
+    ],
+    "correct": "pytest",
+    "area": "other/testing",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "pytest"
+    ],
+    "explanation": "pytest es el framework más usado en Python para testing. Ver: https://docs.pytest.org/en/stable/"
+  },
+  {
+    "id": "py.other.testing.002",
+    "text": "¿Cómo se expresa una verificación en pytest?",
+    "options": [
+      "assert",
+      "expect",
+      "check",
+      "verify"
+    ],
+    "correct": "assert",
+    "area": "other/testing",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "assert"
+    ],
+    "explanation": "pytest usa assert para aserciones simples y expresivas. Ver: https://docs.pytest.org/en/stable/"
+  },
+  {
+    "id": "py.other.testing.003",
+    "text": "¿Qué es una fixture?",
+    "options": [
+      "Un error",
+      "Un setup reusable",
+      "Un decorador de clase",
+      "Una excepción"
+    ],
+    "correct": "Un setup reusable",
+    "area": "other/testing",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "fixture"
+    ],
+    "explanation": "Las fixtures proveen datos/recursos reusables para tests. Ver: https://docs.pytest.org/en/stable/"
+  },
+  {
+    "id": "py.other.testing.004",
+    "text": "¿Qué hace -k en pytest?",
+    "options": [
+      "Seleciona tests por patrón",
+      "Mide cobertura",
+      "Corre en paralelo",
+      "Reintenta fallos"
+    ],
+    "correct": "Seleciona tests por patrón",
+    "area": "other/testing",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "-k"
+    ],
+    "explanation": "-k permite seleccionar tests por subcadena/expresión. Ver: https://docs.pytest.org/en/stable/"
+  },
+  {
+    "id": "py.other.testing.005",
+    "text": "¿Qué hace @pytest.mark.parametrize?",
+    "options": [
+      "Crea fixtures",
+      "Corre un test con múltiples entradas",
+      "Mide tiempo",
+      "Mockea funciones"
+    ],
+    "correct": "Corre un test con múltiples entradas",
+    "area": "other/testing",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "parametrize"
+    ],
+    "explanation": "@pytest.mark.parametrize ejecuta el test con múltiples entradas. Ver: https://docs.pytest.org/en/stable/"
+  },
+  {
+    "id": "py.other.testing.006",
+    "text": "¿Qué archivo configura pytest?",
+    "options": [
+      "pytest.ini",
+      "test.cfg",
+      "setup.cfg",
+      "pyproject.toml"
+    ],
+    "correct": "pytest.ini",
+    "area": "other/testing",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "config"
+    ],
+    "explanation": "pytest.ini centraliza configuración por proyecto. Ver: https://docs.pytest.org/en/stable/"
+  }
+]
