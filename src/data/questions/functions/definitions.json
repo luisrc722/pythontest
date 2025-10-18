@@ -1,0 +1,111 @@
+[
+  {
+    "id": "py.functions.definitions.001",
+    "text": "¿Qué palabra clave define una función?",
+    "options": [
+      "def",
+      "func",
+      "lambda",
+      "define"
+    ],
+    "correct": "def",
+    "area": "functions/definitions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "def"
+    ],
+    "explanation": "Las funciones se definen con la palabra clave 'def'. Ver: https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+  },
+  {
+    "id": "py.functions.definitions.002",
+    "text": "¿Qué sucede con parámetros por defecto mutables?",
+    "options": [
+      "Se evalúan en cada llamada",
+      "Se comparten entre llamadas",
+      "No son válidos",
+      "Se convierten a inmutables"
+    ],
+    "correct": "Se comparten entre llamadas",
+    "area": "functions/definitions",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "default mutable args"
+    ],
+    "explanation": "Los valores por defecto se crean una vez; si son mutables, comparten estado entre llamadas. Ver: https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+  },
+  {
+    "id": "py.functions.definitions.003",
+    "text": "¿Qué devuelve una función sin return explícito?",
+    "options": [
+      "0",
+      "False",
+      "None",
+      ""
+    ],
+    "correct": "None",
+    "area": "functions/definitions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "return"
+    ],
+    "explanation": "Una función sin return explícito devuelve None. Ver: https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+  },
+  {
+    "id": "py.functions.definitions.004",
+    "text": "¿Qué significan *args y **kwargs?",
+    "options": [
+      "Argumentos posicionales y de palabra clave variables",
+      "Argumentos obligatorios",
+      "Anotaciones de tipos",
+      "Decoradores"
+    ],
+    "correct": "Argumentos posicionales y de palabra clave variables",
+    "area": "functions/definitions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "args",
+      "kwargs"
+    ],
+    "explanation": "*args agrupa posicionales variables; **kwargs agrupa de palabra clave variables. Ver: https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+  },
+  {
+    "id": "py.functions.definitions.005",
+    "text": "¿Qué indica '-> int' en una firma?",
+    "options": [
+      "Documentación",
+      "Anotación de retorno",
+      "Conversión de tipo",
+      "Decorador"
+    ],
+    "correct": "Anotación de retorno",
+    "area": "functions/definitions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "typing"
+    ],
+    "explanation": "'-> T' es una anotación de tipo del valor de retorno. Ver: https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+  },
+  {
+    "id": "py.functions.definitions.006",
+    "text": "¿Qué hace 'nonlocal x' dentro de una función anidada?",
+    "options": [
+      "Crea x global",
+      "Refe a variable del scope exterior",
+      "No es válido",
+      "Crea nueva x local"
+    ],
+    "correct": "Refe a variable del scope exterior",
+    "area": "functions/definitions",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "nonlocal"
+    ],
+    "explanation": "nonlocal vincula el nombre al scope exterior inmediato (no global). Ver: https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+  }
+]
