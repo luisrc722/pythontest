@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.web.flask.001",
+    "text": "¿Cómo se define una ruta en Flask?",
+    "options": [
+      "@app.route",
+      "app.get",
+      "route()",
+      "@route"
+    ],
+    "correct": "@app.route",
+    "area": "web/flask",
+    "difficulty": "basica",
+    "domain": "flask",
+    "tags": [
+      "route"
+    ],
+    "explanation": "La opción '@app.route' es la correcta para este concepto.. Ver: https://flask.palletsprojects.com/"
+  },
+  {
+    "id": "py.web.flask.002",
+    "text": "¿Cómo se inicia la app en dev?",
+    "options": [
+      "flask run",
+      "python app.py",
+      "runflask",
+      "flask start"
+    ],
+    "correct": "flask run",
+    "area": "web/flask",
+    "difficulty": "basica",
+    "domain": "flask",
+    "tags": [
+      "run"
+    ],
+    "explanation": "El comando 'flask run' inicia el servidor de desarrollo. Ver: https://flask.palletsprojects.com/"
+  },
+  {
+    "id": "py.web.flask.003",
+    "text": "¿Qué motor de plantillas usa Flask por defecto?",
+    "options": [
+      "Jinja2",
+      "Mako",
+      "Django templates",
+      "Mustache"
+    ],
+    "correct": "Jinja2",
+    "area": "web/flask",
+    "difficulty": "intermedia",
+    "domain": "flask",
+    "tags": [
+      "jinja2"
+    ],
+    "explanation": "Flask usa Jinja2 como motor de plantillas por defecto. Ver: https://flask.palletsprojects.com/"
+  },
+  {
+    "id": "py.web.flask.004",
+    "text": "¿Cómo se obtienen parámetros de query?",
+    "options": [
+      "request.args",
+      "request.form",
+      "request.params",
+      "request.query"
+    ],
+    "correct": "request.args",
+    "area": "web/flask",
+    "difficulty": "intermedia",
+    "domain": "flask",
+    "tags": [
+      "request"
+    ],
+    "explanation": "request.args accede a parámetros de consulta (query string). Ver: https://flask.palletsprojects.com/"
+  },
+  {
+    "id": "py.web.flask.005",
+    "text": "¿Cómo habilitar modo debug?",
+    "options": [
+      "FLASK_DEBUG=1",
+      "DEBUG=1",
+      "flask --debug=1",
+      "app.debug()"
+    ],
+    "correct": "FLASK_DEBUG=1",
+    "area": "web/flask",
+    "difficulty": "intermedia",
+    "domain": "flask",
+    "tags": [
+      "debug"
+    ],
+    "explanation": "FLASK_DEBUG=1 activa recarga y depuración en desarrollo. Ver: https://flask.palletsprojects.com/"
+  },
+  {
+    "id": "py.web.flask.006",
+    "text": "¿Qué hace jsonify?",
+    "options": [
+      "Parsea JSON",
+      "Devuelve Response JSON",
+      "Valida JSON",
+      "Escribe archivo"
+    ],
+    "correct": "Devuelve Response JSON",
+    "area": "web/flask",
+    "difficulty": "basica",
+    "domain": "flask",
+    "tags": [
+      "jsonify"
+    ],
+    "explanation": "jsonify serializa a JSON y devuelve una Response con mimetype application/json. Ver: https://flask.palletsprojects.com/"
+  }
+]
