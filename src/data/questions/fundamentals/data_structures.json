@@ -1,0 +1,113 @@
+[
+  {
+    "id": "py.fundamentals.data_structures.001",
+    "text": "¿Cuál de las siguientes es una estructura mutable?",
+    "options": [
+      "tuple",
+      "list",
+      "str",
+      "int"
+    ],
+    "correct": "list",
+    "area": "fundamentals/data_structures",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "mutabilidad",
+      "list"
+    ],
+    "explanation": "list es mutable; tuple/str/int son inmutables. Ver: https://docs.python.org/3/tutorial/datastructures.html"
+  },
+  {
+    "id": "py.fundamentals.data_structures.002",
+    "text": "¿Qué método agrega un elemento al final de una lista?",
+    "options": [
+      "append",
+      "add",
+      "push",
+      "insert"
+    ],
+    "correct": "append",
+    "area": "fundamentals/data_structures",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "list",
+      "append"
+    ],
+    "explanation": "append agrega al final; insert posiciona; add/push no existen en listas. Ver: https://docs.python.org/3/tutorial/datastructures.html"
+  },
+  {
+    "id": "py.fundamentals.data_structures.003",
+    "text": "¿Qué estructura garantiza elementos únicos sin orden?",
+    "options": [
+      "list",
+      "tuple",
+      "set",
+      "dict"
+    ],
+    "correct": "set",
+    "area": "fundamentals/data_structures",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "set"
+    ],
+    "explanation": "set almacena elementos únicos sin orden. Ver: https://docs.python.org/3/tutorial/datastructures.html"
+  },
+  {
+    "id": "py.fundamentals.data_structures.004",
+    "text": "¿Qué devuelve dict.keys()?",
+    "options": [
+      "Una lista",
+      "Una vista de claves",
+      "Un iterador consumible",
+      "Un set fijo"
+    ],
+    "correct": "Una vista de claves",
+    "area": "fundamentals/data_structures",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "dict",
+      "keys"
+    ],
+    "explanation": "dict.keys() devuelve una vista dinámica de claves (no una lista). Ver: https://docs.python.org/3/tutorial/datastructures.html"
+  },
+  {
+    "id": "py.fundamentals.data_structures.005",
+    "text": "¿Qué crea list(range(3))?",
+    "options": [
+      "[1,2,3]",
+      "[0,1,2]",
+      "[0,1,2,3]",
+      "[3,2,1]"
+    ],
+    "correct": "[0,1,2]",
+    "area": "fundamentals/data_structures",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "range"
+    ],
+    "explanation": "range(n) genera 0..n-1; list materializa la secuencia. Ver: https://docs.python.org/3/tutorial/datastructures.html"
+  },
+  {
+    "id": "py.fundamentals.data_structures.006",
+    "text": "¿Qué hace 'a, b = b, a' con dos variables?",
+    "options": [
+      "Copia b en a",
+      "Intercambia a y b",
+      "Crea una tupla",
+      "No es válido"
+    ],
+    "correct": "Intercambia a y b",
+    "area": "fundamentals/data_structures",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "desempaquetado"
+    ],
+    "explanation": "El desempaquetado múltiple intercambia referencias en una sola expresión. Ver: https://docs.python.org/3/tutorial/datastructures.html"
+  }
+]
