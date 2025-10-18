@@ -1,0 +1,24 @@
+[areas]
+# Nota: esta sección es informativa; las áreas se declaran en la clave 'areas' inferior.
+
+areas = [
+  "fundamentals/data_structures",
+  "fundamentals/operators",
+  "fundamentals/variables",
+  "control_flow/conditionals",
+  "control_flow/loops",
+  "functions/definitions",
+]
+
+per_leaf_min = 4
+
+[overrides]
+"functions/definitions" = 5
+
+[difficulty_mix]
+basica = 0.6
+intermedia = 0.3
+avanzada = 0.1
+
+max_total = 24
+
