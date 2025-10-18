@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.web.django.001",
+    "text": "¿Qué comando crea un proyecto Django?",
+    "options": [
+      "django-admin startproject",
+      "manage.py startapp",
+      "django create",
+      "startdjango"
+    ],
+    "correct": "django-admin startproject",
+    "area": "web/django",
+    "difficulty": "basica",
+    "domain": "django",
+    "tags": [
+      "startproject"
+    ],
+    "explanation": "La opción 'django-admin startproject' es la correcta para este concepto.. Ver: https://docs.djangoproject.com/"
+  },
+  {
+    "id": "py.web.django.002",
+    "text": "¿Qué comando crea una app Django?",
+    "options": [
+      "django-admin startapp",
+      "manage.py startproject",
+      "django createapp",
+      "startapp.py"
+    ],
+    "correct": "django-admin startapp",
+    "area": "web/django",
+    "difficulty": "basica",
+    "domain": "django",
+    "tags": [
+      "startapp"
+    ],
+    "explanation": "La opción 'django-admin startapp' es la correcta para este concepto.. Ver: https://docs.djangoproject.com/"
+  },
+  {
+    "id": "py.web.django.003",
+    "text": "¿Qué archivo define modelos?",
+    "options": [
+      "models.py",
+      "views.py",
+      "urls.py",
+      "admin.py"
+    ],
+    "correct": "models.py",
+    "area": "web/django",
+    "difficulty": "basica",
+    "domain": "django",
+    "tags": [
+      "models"
+    ],
+    "explanation": "models.py define los modelos (tablas) del ORM. Ver: https://docs.djangoproject.com/"
+  },
+  {
+    "id": "py.web.django.004",
+    "text": "¿Qué comando aplica migraciones?",
+    "options": [
+      "python manage.py migrate",
+      "python manage.py makemigrations",
+      "django migrate",
+      "manage.py db"
+    ],
+    "correct": "python manage.py migrate",
+    "area": "web/django",
+    "difficulty": "intermedia",
+    "domain": "django",
+    "tags": [
+      "migrate"
+    ],
+    "explanation": "La opción 'python manage.py migrate' es la correcta para este concepto.. Ver: https://docs.djangoproject.com/"
+  },
+  {
+    "id": "py.web.django.005",
+    "text": "¿Dónde se configuran apps instaladas?",
+    "options": [
+      "settings.py",
+      "urls.py",
+      "apps.py",
+      "wsgi.py"
+    ],
+    "correct": "settings.py",
+    "area": "web/django",
+    "difficulty": "basica",
+    "domain": "django",
+    "tags": [
+      "settings"
+    ],
+    "explanation": "settings.py configura la aplicación, incluidas INSTALLED_APPS. Ver: https://docs.djangoproject.com/"
+  },
+  {
+    "id": "py.web.django.006",
+    "text": "¿Qué hace el ORM de Django?",
+    "options": [
+      "Rutas",
+      "Mapea objetos a BD",
+      "Sesiones",
+      "Plantillas"
+    ],
+    "correct": "Mapea objetos a BD",
+    "area": "web/django",
+    "difficulty": "intermedia",
+    "domain": "django",
+    "tags": [
+      "ORM"
+    ],
+    "explanation": "El ORM traduce objetos Python a operaciones SQL y viceversa. Ver: https://docs.djangoproject.com/"
+  }
+]
