@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.functions.generators.001",
+    "text": "¿Qué palabra clave crea un generador?",
+    "options": [
+      "yield",
+      "generate",
+      "return",
+      "async"
+    ],
+    "correct": "yield",
+    "area": "functions/generators",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "yield"
+    ],
+    "explanation": "yield convierte una función en generador y produce valores sucesivos. Ver: https://docs.python.org/3/reference/expressions.html#generator-expressions"
+  },
+  {
+    "id": "py.functions.generators.002",
+    "text": "¿Qué devuelve next(gen)?",
+    "options": [
+      "El generador",
+      "El siguiente valor",
+      "True/False",
+      "None"
+    ],
+    "correct": "El siguiente valor",
+    "area": "functions/generators",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "next"
+    ],
+    "explanation": "next(gen) obtiene el siguiente valor producido por yield. Ver: https://docs.python.org/3/reference/expressions.html#generator-expressions"
+  },
+  {
+    "id": "py.functions.generators.003",
+    "text": "¿Qué hace 'yield from'?",
+    "options": [
+      "Termina el generador",
+      "Delega a subgenerador",
+      "Convierte a lista",
+      "Bloquea el hilo"
+    ],
+    "correct": "Delega a subgenerador",
+    "area": "functions/generators",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "yield from"
+    ],
+    "explanation": "yield from delega a un subgenerador simplificando el código. Ver: https://docs.python.org/3/reference/expressions.html#generator-expressions"
+  },
+  {
+    "id": "py.functions.generators.004",
+    "text": "¿Qué tipo es (x for x in range(3))?",
+    "options": [
+      "list",
+      "generator",
+      "tuple",
+      "set"
+    ],
+    "correct": "generator",
+    "area": "functions/generators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "generator expr"
+    ],
+    "explanation": "(x for x in ...) es un generador (tipo generator). Ver: https://docs.python.org/3/reference/expressions.html#generator-expressions"
+  },
+  {
+    "id": "py.functions.generators.005",
+    "text": "¿Qué pasa si un generador no tiene 'yield'?",
+    "options": [
+      "Es función normal",
+      "Error de sintaxis",
+      "Bucle infinito",
+      "Devuelve None"
+    ],
+    "correct": "Es función normal",
+    "area": "functions/generators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "generator"
+    ],
+    "explanation": "Sin yield no es generador: se comporta como una función normal. Ver: https://docs.python.org/3/reference/expressions.html#generator-expressions"
+  },
+  {
+    "id": "py.functions.generators.006",
+    "text": "¿Qué excepción marca fin de un generador?",
+    "options": [
+      "StopIteration",
+      "GeneratorExit",
+      "ValueError",
+      "EOFError"
+    ],
+    "correct": "StopIteration",
+    "area": "functions/generators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "StopIteration"
+    ],
+    "explanation": "Al agotar un generador se lanza StopIteration. Ver: https://docs.python.org/3/reference/expressions.html#generator-expressions"
+  }
+]
