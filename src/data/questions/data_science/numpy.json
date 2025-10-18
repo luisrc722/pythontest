@@ -1,0 +1,146 @@
+[
+  {
+    "id": "py.data_science.numpy.001",
+    "text": "¿Qué crea numpy.arange(3)?",
+    "options": [
+      "[1,2,3]",
+      "[0,1,2]",
+      "[0,1,2,3]",
+      "[3,2,1]"
+    ],
+    "correct": "[0,1,2]",
+    "area": "data_science/numpy",
+    "difficulty": "basica",
+    "domain": "numpy",
+    "tags": [
+      "arange"
+    ],
+    "explanation": "np.arange(3) genera [0,1,2]; inclusivo en 0 y exclusivo en 3. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.002",
+    "text": "¿Qué propiedad da la forma de un array?",
+    "options": [
+      "len",
+      "shape",
+      "size",
+      "ndim"
+    ],
+    "correct": "shape",
+    "area": "data_science/numpy",
+    "difficulty": "basica",
+    "domain": "numpy",
+    "tags": [
+      "shape"
+    ],
+    "explanation": "El atributo shape retorna la forma (dimensiones) del array. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.003",
+    "text": "¿Qué es broadcasting en NumPy?",
+    "options": [
+      "Paralelismo",
+      "Reglas para operar con formas distintas",
+      "Compilación JIT",
+      "Serialización"
+    ],
+    "correct": "Reglas para operar con formas distintas",
+    "area": "data_science/numpy",
+    "difficulty": "intermedia",
+    "domain": "numpy",
+    "tags": [
+      "broadcasting"
+    ],
+    "explanation": "Broadcasting aplica reglas para operar arrays de formas compatibles. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.004",
+    "text": "¿Qué hace np.zeros((2,3)).dtype por defecto?",
+    "options": [
+      "int64",
+      "float64",
+      "bool",
+      "object"
+    ],
+    "correct": "float64",
+    "area": "data_science/numpy",
+    "difficulty": "intermedia",
+    "domain": "numpy",
+    "tags": [
+      "dtype"
+    ],
+    "explanation": "np.zeros usa float64 por defecto salvo que se indique dtype. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.005",
+    "text": "¿Qué devuelve np.array([1,2,3]).ndim?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "correct": "1",
+    "area": "data_science/numpy",
+    "difficulty": "basica",
+    "domain": "numpy",
+    "tags": [
+      "ndim"
+    ],
+    "explanation": "Un array 1D tiene ndim == 1. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.006",
+    "text": "¿Qué hace a[a>0] si a es un array?",
+    "options": [
+      "Copia profunda",
+      "Indexación booleana",
+      "Transposición",
+      "Lanzamiento de error"
+    ],
+    "correct": "Indexación booleana",
+    "area": "data_science/numpy",
+    "difficulty": "intermedia",
+    "domain": "numpy",
+    "tags": [
+      "boolean indexing"
+    ],
+    "explanation": "La indexación booleana selecciona elementos donde la condición es True. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.007",
+    "text": "¿Qué hace np.random.seed(0)?",
+    "options": [
+      "Acelera cálculos",
+      "Fija la aleatoriedad",
+      "Normaliza arrays",
+      "Nada"
+    ],
+    "correct": "Fija la aleatoriedad",
+    "area": "data_science/numpy",
+    "difficulty": "basica",
+    "domain": "numpy",
+    "tags": [
+      "random seed"
+    ],
+    "explanation": "np.random.seed fija la semilla para reproducibilidad. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.008",
+    "text": "¿Qué operación es vectorizada típicamente en NumPy?",
+    "options": [
+      "for sobre listas",
+      "Suma elemento a elemento",
+      "IO de archivos",
+      "Concatenación de strings"
+    ],
+    "correct": "Suma elemento a elemento",
+    "area": "data_science/numpy",
+    "difficulty": "intermedia",
+    "domain": "numpy",
+    "tags": [
+      "vectorization"
+    ],
+    "explanation": "Las operaciones NumPy están vectorizadas: se aplican elemento a elemento eficientemente. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  }
+]
