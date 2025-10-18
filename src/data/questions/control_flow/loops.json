@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.control_flow.loops.001",
+    "text": "¿Qué hace 'continue' dentro de un bucle?",
+    "options": [
+      "Termina el bucle",
+      "Salta a la siguiente iteración",
+      "Reinicia el bucle",
+      "No hace nada"
+    ],
+    "correct": "Salta a la siguiente iteración",
+    "area": "control_flow/loops",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "continue"
+    ],
+    "explanation": "continue omite el resto del bloque y salta a la siguiente iteración. Ver: https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+  },
+  {
+    "id": "py.control_flow.loops.002",
+    "text": "¿Qué imprime list(range(1,4))?",
+    "options": [
+      "[1,2,3]",
+      "[0,1,2]",
+      "[1,2,3,4]",
+      "[2,3,4]"
+    ],
+    "correct": "[1,2,3]",
+    "area": "control_flow/loops",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "range"
+    ],
+    "explanation": "La opción '[1,2,3]' es la correcta para este concepto.. Ver: https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+  },
+  {
+    "id": "py.control_flow.loops.003",
+    "text": "¿Qué hace 'break' en un bucle?",
+    "options": [
+      "Termina el bucle",
+      "Salta iteración",
+      "Pausa un ciclo",
+      "Sigue al else"
+    ],
+    "correct": "Termina el bucle",
+    "area": "control_flow/loops",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "break"
+    ],
+    "explanation": "break sale inmediatamente del bucle actual. Ver: https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+  },
+  {
+    "id": "py.control_flow.loops.004",
+    "text": "¿Qué devuelve enumerate(['a','b']) en la primera iteración?",
+    "options": [
+      "('a',0)",
+      "(0,'a')",
+      "('b',1)",
+      "(1,'b')"
+    ],
+    "correct": "(0,'a')",
+    "area": "control_flow/loops",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "enumerate"
+    ],
+    "explanation": "enumerate produce pares (indice, valor), iniciando en 0 por defecto. Ver: https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+  },
+  {
+    "id": "py.control_flow.loops.005",
+    "text": "¿Qué hace el else de un for si no hay break?",
+    "options": [
+      "No se ejecuta",
+      "Se ejecuta al final",
+      "Depende del for",
+      "Lanza error"
+    ],
+    "correct": "Se ejecuta al final",
+    "area": "control_flow/loops",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "for else"
+    ],
+    "explanation": "El else del for se ejecuta si el bucle no terminó por break. Ver: https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+  },
+  {
+    "id": "py.control_flow.loops.006",
+    "text": "¿Qué produce 'while False:'?",
+    "options": [
+      "Bucle infinito",
+      "Nunca entra",
+      "Una iteración",
+      "Depende de Python"
+    ],
+    "correct": "Nunca entra",
+    "area": "control_flow/loops",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "while"
+    ],
+    "explanation": "La condición False impide entrar al cuerpo del while. Ver: https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+  }
+]
