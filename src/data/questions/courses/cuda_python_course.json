@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.courses.cuda_python_course.001",
+    "text": "¿Qué es CUDA en términos generales?",
+    "options": [
+      "Un lenguaje",
+      "Una plataforma de cómputo paralelo",
+      "Una base de datos",
+      "Un framework web"
+    ],
+    "correct": "Una plataforma de cómputo paralelo",
+    "area": "courses/cuda_python_course",
+    "difficulty": "basica",
+    "domain": "cuda",
+    "tags": [
+      "cuda"
+    ],
+    "explanation": "CUDA es una plataforma y API para cómputo paralelo en GPU. Ver: https://developer.nvidia.com/cuda-zone"
+  },
+  {
+    "id": "py.courses.cuda_python_course.002",
+    "text": "¿Qué librería de Python permite kernels en GPU fácilmente?",
+    "options": [
+      "NumPy",
+      "CuPy",
+      "Pandas",
+      "Matplotlib"
+    ],
+    "correct": "CuPy",
+    "area": "courses/cuda_python_course",
+    "difficulty": "intermedia",
+    "domain": "cuda",
+    "tags": [
+      "cupy"
+    ],
+    "explanation": "CuPy replica API de NumPy pero ejecuta en GPU. Ver: https://developer.nvidia.com/cuda-zone"
+  },
+  {
+    "id": "py.courses.cuda_python_course.003",
+    "text": "¿Qué hace Numba @cuda.jit?",
+    "options": [
+      "Compila funciones para CPU",
+      "Compila funciones para GPU",
+      "Genera gráficos",
+      "Anota tipos"
+    ],
+    "correct": "Compila funciones para GPU",
+    "area": "courses/cuda_python_course",
+    "difficulty": "intermedia",
+    "domain": "cuda",
+    "tags": [
+      "numba"
+    ],
+    "explanation": "Numba @cuda.jit compila funciones Python para ejecutarse en la GPU. Ver: https://developer.nvidia.com/cuda-zone"
+  },
+  {
+    "id": "py.courses.cuda_python_course.004",
+    "text": "¿Qué es un kernel en CUDA?",
+    "options": [
+      "Un hilo",
+      "Función que ejecuta en la GPU",
+      "Un proceso",
+      "Un dataset"
+    ],
+    "correct": "Función que ejecuta en la GPU",
+    "area": "courses/cuda_python_course",
+    "difficulty": "basica",
+    "domain": "cuda",
+    "tags": [
+      "kernel"
+    ],
+    "explanation": "Un kernel es la función que corre en la GPU lanzada por bloques/hilos. Ver: https://developer.nvidia.com/cuda-zone"
+  },
+  {
+    "id": "py.courses.cuda_python_course.005",
+    "text": "¿Qué significa transferencia host-device?",
+    "options": [
+      "CPU a CPU",
+      "CPU a GPU o viceversa",
+      "GPU a GPU",
+      "Memoria a disco"
+    ],
+    "correct": "CPU a GPU o viceversa",
+    "area": "courses/cuda_python_course",
+    "difficulty": "intermedia",
+    "domain": "cuda",
+    "tags": [
+      "memoria"
+    ],
+    "explanation": "Transferir datos CPU↔GPU es costoso; minimizar copias mejora rendimiento. Ver: https://developer.nvidia.com/cuda-zone"
+  },
+  {
+    "id": "py.courses.cuda_python_course.006",
+    "text": "¿Qué factor impacta fuertemente el rendimiento?",
+    "options": [
+      "Colores",
+      "Coalescencia de memoria",
+      "Formato JSON",
+      "Nombre de variables"
+    ],
+    "correct": "Coalescencia de memoria",
+    "area": "courses/cuda_python_course",
+    "difficulty": "avanzada",
+    "domain": "cuda",
+    "tags": [
+      "rendimiento"
+    ],
+    "explanation": "La opción 'Coalescencia de memoria' es la correcta para este concepto.. Ver: https://developer.nvidia.com/cuda-zone"
+  }
+]
