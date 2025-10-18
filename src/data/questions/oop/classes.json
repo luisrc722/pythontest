@@ -1,0 +1,110 @@
+[
+  {
+    "id": "py.oop.classes.001",
+    "text": "¿Cómo se define una clase?",
+    "options": [
+      "class Nombre:",
+      "def class:",
+      "new class:",
+      "struct Nombre:"
+    ],
+    "correct": "class Nombre:",
+    "area": "oop/classes",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "class"
+    ],
+    "explanation": "class Nombre: define una clase. Ver: https://docs.python.org/3/tutorial/classes.html"
+  },
+  {
+    "id": "py.oop.classes.002",
+    "text": "¿Cuál es el primer parámetro de un método de instancia?",
+    "options": [
+      "self",
+      "cls",
+      "this",
+      "obj"
+    ],
+    "correct": "self",
+    "area": "oop/classes",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "self"
+    ],
+    "explanation": "Por convención, 'self' es el primer parámetro de métodos de instancia. Ver: https://docs.python.org/3/tutorial/classes.html"
+  },
+  {
+    "id": "py.oop.classes.003",
+    "text": "¿Qué diferencia un atributo de clase de uno de instancia?",
+    "options": [
+      "Nada",
+      "El de clase se comparte",
+      "El de instancia se comparte",
+      "Ninguno existe"
+    ],
+    "correct": "El de clase se comparte",
+    "area": "oop/classes",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "atributos"
+    ],
+    "explanation": "Los atributos de clase se comparten; los de instancia son por objeto. Ver: https://docs.python.org/3/tutorial/classes.html"
+  },
+  {
+    "id": "py.oop.classes.004",
+    "text": "¿Qué método inicializa una instancia?",
+    "options": [
+      "__init__",
+      "__new__",
+      "__start__",
+      "__create__"
+    ],
+    "correct": "__init__",
+    "area": "oop/classes",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "__init__"
+    ],
+    "explanation": "Los atributos de clase se comparten; los de instancia son por objeto. Ver: https://docs.python.org/3/tutorial/classes.html"
+  },
+  {
+    "id": "py.oop.classes.005",
+    "text": "¿Qué hace __new__?",
+    "options": [
+      "Inicializa",
+      "Crea instancia",
+      "Destruye",
+      "Copia"
+    ],
+    "correct": "Crea instancia",
+    "area": "oop/classes",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "__new__"
+    ],
+    "explanation": "__new__ crea la instancia; __init__ la inicializa. Ver: https://docs.python.org/3/tutorial/classes.html"
+  },
+  {
+    "id": "py.oop.classes.006",
+    "text": "¿Cómo defines un método de clase?",
+    "options": [
+      "@class_method",
+      "@classmethod",
+      "@staticmethod",
+      "@method"
+    ],
+    "correct": "@classmethod",
+    "area": "oop/classes",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "classmethod"
+    ],
+    "explanation": "@classmethod recibe 'cls' y opera a nivel de clase. Ver: https://docs.python.org/3/tutorial/classes.html"
+  }
+]
