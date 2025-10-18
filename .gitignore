@@ -44,3 +44,9 @@ src/data/results/
 src/data/reports/
 .streamlit/
 .streamlit/secrets.toml
+
+# === Paquetes Python y caches adicionales ===
+.eggs/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
