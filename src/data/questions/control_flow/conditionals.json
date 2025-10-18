@@ -1,0 +1,111 @@
+[
+  {
+    "id": "py.control_flow.conditionals.001",
+    "text": "¿Qué evalúa 'if x:' cuando x es una lista vacía?",
+    "options": [
+      "True",
+      "False",
+      "Error",
+      "None"
+    ],
+    "correct": "False",
+    "area": "control_flow/conditionals",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "truthy",
+      "falsy"
+    ],
+    "explanation": "Las secuencias vacías son falsy (bool([]) == False). Ver: https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+  },
+  {
+    "id": "py.control_flow.conditionals.002",
+    "text": "¿Qué operador condensa un if-else en una línea?",
+    "options": [
+      "?:",
+      "if-else",
+      "ternario",
+      "lambda"
+    ],
+    "correct": "ternario",
+    "area": "control_flow/conditionals",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "operador ternario"
+    ],
+    "explanation": "x if cond else y es la expresión condicional (ternaria) de Python. Ver: https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+  },
+  {
+    "id": "py.control_flow.conditionals.003",
+    "text": "¿Qué palabra clave cierra una cadena de if/elif?",
+    "options": [
+      "else",
+      "end",
+      "finally",
+      "break"
+    ],
+    "correct": "else",
+    "area": "control_flow/conditionals",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "if"
+    ],
+    "explanation": "Una cadena if/elif se cierra con else como caso por defecto. Ver: https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+  },
+  {
+    "id": "py.control_flow.conditionals.004",
+    "text": "¿Cuál es el resultado de 'a if False else b'?",
+    "options": [
+      "a",
+      "b",
+      "None",
+      "Error"
+    ],
+    "correct": "b",
+    "area": "control_flow/conditionals",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "ternario"
+    ],
+    "explanation": "condición False elige el operando del else. Ver: https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+  },
+  {
+    "id": "py.control_flow.conditionals.005",
+    "text": "¿Cuál es la prioridad correcta? if-elif-else",
+    "options": [
+      "if > elif > else",
+      "elif > if > else",
+      "else > if > elif",
+      "Todas iguales"
+    ],
+    "correct": "if > elif > else",
+    "area": "control_flow/conditionals",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "if"
+    ],
+    "explanation": "El flujo evalúa if, luego elif, y finalmente else si ninguno coincide. Ver: https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+  },
+  {
+    "id": "py.control_flow.conditionals.006",
+    "text": "¿Qué operador combina dos condiciones con 'y'?",
+    "options": [
+      "&",
+      "and",
+      "&&",
+      "+"
+    ],
+    "correct": "and",
+    "area": "control_flow/conditionals",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "and"
+    ],
+    "explanation": "and combina condiciones y cortocircuita al primer False. Ver: https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+  }
+]
