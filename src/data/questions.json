@@ -1,0 +1,2854 @@
+[
+  {
+    "id": "py.control_flow.comprehensions.001",
+    "text": "¿Qué crea [x*x for x in range(3)]?",
+    "options": [
+      "[1,4,9]",
+      "[0,1,4]",
+      "[0,1,4,9]",
+      "Error"
+    ],
+    "correct": "[0,1,4]",
+    "area": "control_flow/comprehensions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "list comprehension"
+    ],
+    "explanation": "range(3) da 0..2; el cuadrado produce [0,1,4]. Ver: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+  },
+  {
+    "id": "py.control_flow.comprehensions.002",
+    "text": "¿Qué hace {x:x*x for x in [1,2]}?",
+    "options": [
+      "{1:1,2:4}",
+      "[1,4]",
+      "(1,4)",
+      "{1,2,4}"
+    ],
+    "correct": "{1:1,2:4}",
+    "area": "control_flow/comprehensions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "dict comprehension"
+    ],
+    "explanation": "Dict comprehension genera pares clave:valor por cada elemento. Ver: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+  },
+  {
+    "id": "py.control_flow.comprehensions.003",
+    "text": "¿Qué filtra [x for x in range(5) if x%2==0]?",
+    "options": [
+      "Impares",
+      "Pares",
+      "Todos",
+      "Ninguno"
+    ],
+    "correct": "Pares",
+    "area": "control_flow/comprehensions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "if en comprehension"
+    ],
+    "explanation": "El filtro 'if' mantiene solo pares. Ver: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+  },
+  {
+    "id": "py.control_flow.comprehensions.004",
+    "text": "¿Qué crea {x for x in 'abca'}?",
+    "options": [
+      "{'a','b','c'}",
+      "['a','b','c']",
+      "('a','b','c')",
+      "{'a','b','c','a'}"
+    ],
+    "correct": "{'a','b','c'}",
+    "area": "control_flow/comprehensions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "set comprehension"
+    ],
+    "explanation": "Set comprehension elimina duplicados al construir el conjunto. Ver: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+  },
+  {
+    "id": "py.control_flow.comprehensions.005",
+    "text": "¿Cuál es la ventaja principal de comprehensions?",
+    "options": [
+      "Mayor verbosidad",
+      "Legibilidad y concisión",
+      "Más lentas",
+      "No tienen ventaja"
+    ],
+    "correct": "Legibilidad y concisión",
+    "area": "control_flow/comprehensions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "ventajas"
+    ],
+    "explanation": "Comprehensions condensan mapeo/filtrado en una sola expresión legible. Ver: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+  },
+  {
+    "id": "py.control_flow.comprehensions.006",
+    "text": "¿Qué produce (x for x in range(2))?",
+    "options": [
+      "Lista",
+      "Generador",
+      "Set",
+      "Dict"
+    ],
+    "correct": "Generador",
+    "area": "control_flow/comprehensions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "generator expression"
+    ],
+    "explanation": "Una generator expression crea un generador lazily evaluated. Ver: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+  },
+  {
+    "id": "py.control_flow.conditionals.001",
+    "text": "¿Qué evalúa 'if x:' cuando x es una lista vacía?",
+    "options": [
+      "True",
+      "False",
+      "Error",
+      "None"
+    ],
+    "correct": "False",
+    "area": "control_flow/conditionals",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "truthy",
+      "falsy"
+    ],
+    "explanation": "Las secuencias vacías son falsy (bool([]) == False). Ver: https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+  },
+  {
+    "id": "py.control_flow.conditionals.002",
+    "text": "¿Qué operador condensa un if-else en una línea?",
+    "options": [
+      "?:",
+      "if-else",
+      "ternario",
+      "lambda"
+    ],
+    "correct": "ternario",
+    "area": "control_flow/conditionals",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "operador ternario"
+    ],
+    "explanation": "x if cond else y es la expresión condicional (ternaria) de Python. Ver: https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+  },
+  {
+    "id": "py.control_flow.conditionals.003",
+    "text": "¿Qué palabra clave cierra una cadena de if/elif?",
+    "options": [
+      "else",
+      "end",
+      "finally",
+      "break"
+    ],
+    "correct": "else",
+    "area": "control_flow/conditionals",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "if"
+    ],
+    "explanation": "Una cadena if/elif se cierra con else como caso por defecto. Ver: https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+  },
+  {
+    "id": "py.control_flow.conditionals.004",
+    "text": "¿Cuál es el resultado de 'a if False else b'?",
+    "options": [
+      "a",
+      "b",
+      "None",
+      "Error"
+    ],
+    "correct": "b",
+    "area": "control_flow/conditionals",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "ternario"
+    ],
+    "explanation": "condición False elige el operando del else. Ver: https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+  },
+  {
+    "id": "py.control_flow.conditionals.005",
+    "text": "¿Cuál es la prioridad correcta? if-elif-else",
+    "options": [
+      "if > elif > else",
+      "elif > if > else",
+      "else > if > elif",
+      "Todas iguales"
+    ],
+    "correct": "if > elif > else",
+    "area": "control_flow/conditionals",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "if"
+    ],
+    "explanation": "El flujo evalúa if, luego elif, y finalmente else si ninguno coincide. Ver: https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+  },
+  {
+    "id": "py.control_flow.conditionals.006",
+    "text": "¿Qué operador combina dos condiciones con 'y'?",
+    "options": [
+      "&",
+      "and",
+      "&&",
+      "+"
+    ],
+    "correct": "and",
+    "area": "control_flow/conditionals",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "and"
+    ],
+    "explanation": "and combina condiciones y cortocircuita al primer False. Ver: https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+  },
+  {
+    "id": "py.control_flow.loops.001",
+    "text": "¿Qué hace 'continue' dentro de un bucle?",
+    "options": [
+      "Termina el bucle",
+      "Salta a la siguiente iteración",
+      "Reinicia el bucle",
+      "No hace nada"
+    ],
+    "correct": "Salta a la siguiente iteración",
+    "area": "control_flow/loops",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "continue"
+    ],
+    "explanation": "continue omite el resto del bloque y salta a la siguiente iteración. Ver: https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+  },
+  {
+    "id": "py.control_flow.loops.002",
+    "text": "¿Qué imprime list(range(1,4))?",
+    "options": [
+      "[1,2,3]",
+      "[0,1,2]",
+      "[1,2,3,4]",
+      "[2,3,4]"
+    ],
+    "correct": "[1,2,3]",
+    "area": "control_flow/loops",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "range"
+    ],
+    "explanation": "La opción '[1,2,3]' es la correcta para este concepto.. Ver: https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+  },
+  {
+    "id": "py.control_flow.loops.003",
+    "text": "¿Qué hace 'break' en un bucle?",
+    "options": [
+      "Termina el bucle",
+      "Salta iteración",
+      "Pausa un ciclo",
+      "Sigue al else"
+    ],
+    "correct": "Termina el bucle",
+    "area": "control_flow/loops",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "break"
+    ],
+    "explanation": "break sale inmediatamente del bucle actual. Ver: https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+  },
+  {
+    "id": "py.control_flow.loops.004",
+    "text": "¿Qué devuelve enumerate(['a','b']) en la primera iteración?",
+    "options": [
+      "('a',0)",
+      "(0,'a')",
+      "('b',1)",
+      "(1,'b')"
+    ],
+    "correct": "(0,'a')",
+    "area": "control_flow/loops",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "enumerate"
+    ],
+    "explanation": "enumerate produce pares (indice, valor), iniciando en 0 por defecto. Ver: https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+  },
+  {
+    "id": "py.control_flow.loops.005",
+    "text": "¿Qué hace el else de un for si no hay break?",
+    "options": [
+      "No se ejecuta",
+      "Se ejecuta al final",
+      "Depende del for",
+      "Lanza error"
+    ],
+    "correct": "Se ejecuta al final",
+    "area": "control_flow/loops",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "for else"
+    ],
+    "explanation": "El else del for se ejecuta si el bucle no terminó por break. Ver: https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+  },
+  {
+    "id": "py.control_flow.loops.006",
+    "text": "¿Qué produce 'while False:'?",
+    "options": [
+      "Bucle infinito",
+      "Nunca entra",
+      "Una iteración",
+      "Depende de Python"
+    ],
+    "correct": "Nunca entra",
+    "area": "control_flow/loops",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "while"
+    ],
+    "explanation": "La condición False impide entrar al cuerpo del while. Ver: https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+  },
+  {
+    "id": "py.courses.cuda_python_course.001",
+    "text": "¿Qué es CUDA en términos generales?",
+    "options": [
+      "Un lenguaje",
+      "Una plataforma de cómputo paralelo",
+      "Una base de datos",
+      "Un framework web"
+    ],
+    "correct": "Una plataforma de cómputo paralelo",
+    "area": "courses/cuda_python_course",
+    "difficulty": "basica",
+    "domain": "cuda",
+    "tags": [
+      "cuda"
+    ],
+    "explanation": "CUDA es una plataforma y API para cómputo paralelo en GPU. Ver: https://developer.nvidia.com/cuda-zone"
+  },
+  {
+    "id": "py.courses.cuda_python_course.002",
+    "text": "¿Qué librería de Python permite kernels en GPU fácilmente?",
+    "options": [
+      "NumPy",
+      "CuPy",
+      "Pandas",
+      "Matplotlib"
+    ],
+    "correct": "CuPy",
+    "area": "courses/cuda_python_course",
+    "difficulty": "intermedia",
+    "domain": "cuda",
+    "tags": [
+      "cupy"
+    ],
+    "explanation": "CuPy replica API de NumPy pero ejecuta en GPU. Ver: https://developer.nvidia.com/cuda-zone"
+  },
+  {
+    "id": "py.courses.cuda_python_course.003",
+    "text": "¿Qué hace Numba @cuda.jit?",
+    "options": [
+      "Compila funciones para CPU",
+      "Compila funciones para GPU",
+      "Genera gráficos",
+      "Anota tipos"
+    ],
+    "correct": "Compila funciones para GPU",
+    "area": "courses/cuda_python_course",
+    "difficulty": "intermedia",
+    "domain": "cuda",
+    "tags": [
+      "numba"
+    ],
+    "explanation": "Numba @cuda.jit compila funciones Python para ejecutarse en la GPU. Ver: https://developer.nvidia.com/cuda-zone"
+  },
+  {
+    "id": "py.courses.cuda_python_course.004",
+    "text": "¿Qué es un kernel en CUDA?",
+    "options": [
+      "Un hilo",
+      "Función que ejecuta en la GPU",
+      "Un proceso",
+      "Un dataset"
+    ],
+    "correct": "Función que ejecuta en la GPU",
+    "area": "courses/cuda_python_course",
+    "difficulty": "basica",
+    "domain": "cuda",
+    "tags": [
+      "kernel"
+    ],
+    "explanation": "Un kernel es la función que corre en la GPU lanzada por bloques/hilos. Ver: https://developer.nvidia.com/cuda-zone"
+  },
+  {
+    "id": "py.courses.cuda_python_course.005",
+    "text": "¿Qué significa transferencia host-device?",
+    "options": [
+      "CPU a CPU",
+      "CPU a GPU o viceversa",
+      "GPU a GPU",
+      "Memoria a disco"
+    ],
+    "correct": "CPU a GPU o viceversa",
+    "area": "courses/cuda_python_course",
+    "difficulty": "intermedia",
+    "domain": "cuda",
+    "tags": [
+      "memoria"
+    ],
+    "explanation": "Transferir datos CPU↔GPU es costoso; minimizar copias mejora rendimiento. Ver: https://developer.nvidia.com/cuda-zone"
+  },
+  {
+    "id": "py.courses.cuda_python_course.006",
+    "text": "¿Qué factor impacta fuertemente el rendimiento?",
+    "options": [
+      "Colores",
+      "Coalescencia de memoria",
+      "Formato JSON",
+      "Nombre de variables"
+    ],
+    "correct": "Coalescencia de memoria",
+    "area": "courses/cuda_python_course",
+    "difficulty": "avanzada",
+    "domain": "cuda",
+    "tags": [
+      "rendimiento"
+    ],
+    "explanation": "La opción 'Coalescencia de memoria' es la correcta para este concepto.. Ver: https://developer.nvidia.com/cuda-zone"
+  },
+  {
+    "id": "py.data_science.numpy.001",
+    "text": "¿Qué crea numpy.arange(3)?",
+    "options": [
+      "[1,2,3]",
+      "[0,1,2]",
+      "[0,1,2,3]",
+      "[3,2,1]"
+    ],
+    "correct": "[0,1,2]",
+    "area": "data_science/numpy",
+    "difficulty": "basica",
+    "domain": "numpy",
+    "tags": [
+      "arange"
+    ],
+    "explanation": "np.arange(3) genera [0,1,2]; inclusivo en 0 y exclusivo en 3. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.002",
+    "text": "¿Qué propiedad da la forma de un array?",
+    "options": [
+      "len",
+      "shape",
+      "size",
+      "ndim"
+    ],
+    "correct": "shape",
+    "area": "data_science/numpy",
+    "difficulty": "basica",
+    "domain": "numpy",
+    "tags": [
+      "shape"
+    ],
+    "explanation": "El atributo shape retorna la forma (dimensiones) del array. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.003",
+    "text": "¿Qué es broadcasting en NumPy?",
+    "options": [
+      "Paralelismo",
+      "Reglas para operar con formas distintas",
+      "Compilación JIT",
+      "Serialización"
+    ],
+    "correct": "Reglas para operar con formas distintas",
+    "area": "data_science/numpy",
+    "difficulty": "intermedia",
+    "domain": "numpy",
+    "tags": [
+      "broadcasting"
+    ],
+    "explanation": "Broadcasting aplica reglas para operar arrays de formas compatibles. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.004",
+    "text": "¿Qué hace np.zeros((2,3)).dtype por defecto?",
+    "options": [
+      "int64",
+      "float64",
+      "bool",
+      "object"
+    ],
+    "correct": "float64",
+    "area": "data_science/numpy",
+    "difficulty": "intermedia",
+    "domain": "numpy",
+    "tags": [
+      "dtype"
+    ],
+    "explanation": "np.zeros usa float64 por defecto salvo que se indique dtype. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.005",
+    "text": "¿Qué devuelve np.array([1,2,3]).ndim?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "correct": "1",
+    "area": "data_science/numpy",
+    "difficulty": "basica",
+    "domain": "numpy",
+    "tags": [
+      "ndim"
+    ],
+    "explanation": "Un array 1D tiene ndim == 1. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.006",
+    "text": "¿Qué hace a[a>0] si a es un array?",
+    "options": [
+      "Copia profunda",
+      "Indexación booleana",
+      "Transposición",
+      "Lanzamiento de error"
+    ],
+    "correct": "Indexación booleana",
+    "area": "data_science/numpy",
+    "difficulty": "intermedia",
+    "domain": "numpy",
+    "tags": [
+      "boolean indexing"
+    ],
+    "explanation": "La indexación booleana selecciona elementos donde la condición es True. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.007",
+    "text": "¿Qué hace np.random.seed(0)?",
+    "options": [
+      "Acelera cálculos",
+      "Fija la aleatoriedad",
+      "Normaliza arrays",
+      "Nada"
+    ],
+    "correct": "Fija la aleatoriedad",
+    "area": "data_science/numpy",
+    "difficulty": "basica",
+    "domain": "numpy",
+    "tags": [
+      "random seed"
+    ],
+    "explanation": "np.random.seed fija la semilla para reproducibilidad. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.numpy.008",
+    "text": "¿Qué operación es vectorizada típicamente en NumPy?",
+    "options": [
+      "for sobre listas",
+      "Suma elemento a elemento",
+      "IO de archivos",
+      "Concatenación de strings"
+    ],
+    "correct": "Suma elemento a elemento",
+    "area": "data_science/numpy",
+    "difficulty": "intermedia",
+    "domain": "numpy",
+    "tags": [
+      "vectorization"
+    ],
+    "explanation": "Las operaciones NumPy están vectorizadas: se aplican elemento a elemento eficientemente. Ver: https://numpy.org/doc/stable/user/whatisnumpy.html"
+  },
+  {
+    "id": "py.data_science.pandas.001",
+    "text": "¿Qué objeto representa una columna etiquetada?",
+    "options": [
+      "DataFrame",
+      "Series",
+      "Panel",
+      "Array"
+    ],
+    "correct": "Series",
+    "area": "data_science/pandas",
+    "difficulty": "basica",
+    "domain": "pandas",
+    "tags": [
+      "Series"
+    ],
+    "explanation": "Series representa una secuencia etiquetada (columna). Ver: https://pandas.pydata.org/docs/"
+  },
+  {
+    "id": "py.data_science.pandas.002",
+    "text": "¿Qué método lee un CSV?",
+    "options": [
+      "pd.read_csv",
+      "pd.load_csv",
+      "pd.csv",
+      "pd.import_csv"
+    ],
+    "correct": "pd.read_csv",
+    "area": "data_science/pandas",
+    "difficulty": "basica",
+    "domain": "pandas",
+    "tags": [
+      "csv"
+    ],
+    "explanation": "La opción 'pd.read_csv' es la correcta para este concepto.. Ver: https://pandas.pydata.org/docs/"
+  },
+  {
+    "id": "py.data_science.pandas.003",
+    "text": "¿Diferencia principal entre .loc y .iloc?",
+    "options": [
+      "loc por posición, iloc por etiqueta",
+      "loc por etiqueta, iloc por posición",
+      "Ambas por posición",
+      "Ambas por etiqueta"
+    ],
+    "correct": "loc por etiqueta, iloc por posición",
+    "area": "data_science/pandas",
+    "difficulty": "intermedia",
+    "domain": "pandas",
+    "tags": [
+      "loc",
+      "iloc"
+    ],
+    "explanation": "loc indexa por etiquetas; iloc por posición. Ver: https://pandas.pydata.org/docs/"
+  },
+  {
+    "id": "py.data_science.pandas.004",
+    "text": "¿Qué hace df.head(3)?",
+    "options": [
+      "Últimas 3 filas",
+      "Primeras 3 filas",
+      "3 columnas",
+      "Nada"
+    ],
+    "correct": "Primeras 3 filas",
+    "area": "data_science/pandas",
+    "difficulty": "basica",
+    "domain": "pandas",
+    "tags": [
+      "head"
+    ],
+    "explanation": "head(n) devuelve las primeras n filas. Ver: https://pandas.pydata.org/docs/"
+  },
+  {
+    "id": "py.data_science.pandas.005",
+    "text": "¿Qué hace df.dropna()?",
+    "options": [
+      "Llena nulos",
+      "Elimina filas/cols con nulos",
+      "Cambia tipo",
+      "Reindexa"
+    ],
+    "correct": "Elimina filas/cols con nulos",
+    "area": "data_science/pandas",
+    "difficulty": "intermedia",
+    "domain": "pandas",
+    "tags": [
+      "NaN"
+    ],
+    "explanation": "dropna elimina filas/columnas con valores nulos. Ver: https://pandas.pydata.org/docs/"
+  },
+  {
+    "id": "py.data_science.pandas.006",
+    "text": "¿Qué hace df.merge(a, on='id')?",
+    "options": [
+      "Concatena filas",
+      "Une por clave",
+      "Apila columnas",
+      "Ordena"
+    ],
+    "correct": "Une por clave",
+    "area": "data_science/pandas",
+    "difficulty": "avanzada",
+    "domain": "pandas",
+    "tags": [
+      "merge"
+    ],
+    "explanation": "merge une DataFrames por claves comunes (join). Ver: https://pandas.pydata.org/docs/"
+  },
+  {
+    "id": "py.data_science.visualization.001",
+    "text": "¿Qué biblioteca base es común para gráficos en Python?",
+    "options": [
+      "Matplotlib",
+      "Seaborn",
+      "Plotly",
+      "Bokeh"
+    ],
+    "correct": "Matplotlib",
+    "area": "data_science/visualization",
+    "difficulty": "basica",
+    "domain": "data_science",
+    "tags": [
+      "matplotlib"
+    ],
+    "explanation": "Matplotlib es la base; Seaborn y otras se apoyan en ella. Ver: https://matplotlib.org/stable/tutorials/introductory/pyplot.html"
+  },
+  {
+    "id": "py.data_science.visualization.002",
+    "text": "¿Qué hace plt.show()?",
+    "options": [
+      "Guarda imagen",
+      "Muestra la figura",
+      "Crea figura",
+      "Limpia ejes"
+    ],
+    "correct": "Muestra la figura",
+    "area": "data_science/visualization",
+    "difficulty": "basica",
+    "domain": "data_science",
+    "tags": [
+      "plt.show"
+    ],
+    "explanation": "plt.show() muestra la figura en pantalla. Ver: https://matplotlib.org/stable/tutorials/introductory/pyplot.html"
+  },
+  {
+    "id": "py.data_science.visualization.003",
+    "text": "¿Qué parámetro controla el tamaño de la figura?",
+    "options": [
+      "figsize",
+      "dpi",
+      "size",
+      "scale"
+    ],
+    "correct": "figsize",
+    "area": "data_science/visualization",
+    "difficulty": "intermedia",
+    "domain": "data_science",
+    "tags": [
+      "figsize"
+    ],
+    "explanation": "La opción 'figsize' es la correcta para este concepto.. Ver: https://matplotlib.org/stable/tutorials/introductory/pyplot.html"
+  },
+  {
+    "id": "py.data_science.visualization.004",
+    "text": "¿Qué mejora Seaborn sobre Matplotlib?",
+    "options": [
+      "Interactividad",
+      "Estética y estadísticas",
+      "3D",
+      "Animaciones"
+    ],
+    "correct": "Estética y estadísticas",
+    "area": "data_science/visualization",
+    "difficulty": "intermedia",
+    "domain": "data_science",
+    "tags": [
+      "seaborn"
+    ],
+    "explanation": "Seaborn añade estilos y utilidades estadísticas sobre Matplotlib. Ver: https://matplotlib.org/stable/tutorials/introductory/pyplot.html"
+  },
+  {
+    "id": "py.data_science.visualization.005",
+    "text": "¿Qué hace ax.plot([1,2,3])?",
+    "options": [
+      "Histograma",
+      "Línea",
+      "Barra",
+      "Dispersión"
+    ],
+    "correct": "Línea",
+    "area": "data_science/visualization",
+    "difficulty": "basica",
+    "domain": "data_science",
+    "tags": [
+      "line plot"
+    ],
+    "explanation": "ax.plot crea una gráfica de líneas. Ver: https://matplotlib.org/stable/tutorials/introductory/pyplot.html"
+  },
+  {
+    "id": "py.data_science.visualization.006",
+    "text": "¿Qué es un heatmap?",
+    "options": [
+      "Gráfico de árbol",
+      "Mapa de calor",
+      "Gráfico de velas",
+      "Diagrama de caja"
+    ],
+    "correct": "Mapa de calor",
+    "area": "data_science/visualization",
+    "difficulty": "intermedia",
+    "domain": "data_science",
+    "tags": [
+      "heatmap"
+    ],
+    "explanation": "Un heatmap utiliza colores para representar intensidades en una matriz. Ver: https://matplotlib.org/stable/tutorials/introductory/pyplot.html"
+  },
+  {
+    "id": "py.functions.async.001",
+    "text": "¿Cómo se define una función asíncrona?",
+    "options": [
+      "async def",
+      "def async",
+      "await def",
+      "def await"
+    ],
+    "correct": "async def",
+    "area": "functions/async",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "async"
+    ],
+    "explanation": "Las funciones asíncronas se declaran con 'async def'. Ver: https://docs.python.org/3/library/asyncio-task.html"
+  },
+  {
+    "id": "py.functions.async.002",
+    "text": "¿Qué hace 'await'?",
+    "options": [
+      "Crea hilo",
+      "Suspende hasta resultado de awaitable",
+      "Bloquea proceso",
+      "Termina función"
+    ],
+    "correct": "Suspende hasta resultado de awaitable",
+    "area": "functions/async",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "await"
+    ],
+    "explanation": "await cede el control hasta que el awaitable complete. Ver: https://docs.python.org/3/library/asyncio-task.html"
+  },
+  {
+    "id": "py.functions.async.003",
+    "text": "¿Qué librería estándar gestiona el loop?",
+    "options": [
+      "trio",
+      "asyncio",
+      "gevent",
+      "uvicorn"
+    ],
+    "correct": "asyncio",
+    "area": "functions/async",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "asyncio"
+    ],
+    "explanation": "La librería estándar para async/await es asyncio. Ver: https://docs.python.org/3/library/asyncio-task.html"
+  },
+  {
+    "id": "py.functions.async.004",
+    "text": "¿Qué devuelve una función 'async def' al llamarse?",
+    "options": [
+      "Coroutine",
+      "Thread",
+      "Resultado",
+      "Future ejecutado"
+    ],
+    "correct": "Coroutine",
+    "area": "functions/async",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "coroutine"
+    ],
+    "explanation": "Llamar a una función async devuelve una coroutine (no ejecuta). Ver: https://docs.python.org/3/library/asyncio-task.html"
+  },
+  {
+    "id": "py.functions.async.005",
+    "text": "¿Cómo se ejecuta una coroutine en consola?",
+    "options": [
+      "await f()",
+      "asyncio.run(f())",
+      "f().run()",
+      "uvloop.run(f())"
+    ],
+    "correct": "asyncio.run(f())",
+    "area": "functions/async",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "asyncio.run"
+    ],
+    "explanation": "La opción 'asyncio.run(f())' es la correcta para este concepto.. Ver: https://docs.python.org/3/library/asyncio-task.html"
+  },
+  {
+    "id": "py.functions.async.006",
+    "text": "¿Qué hace asyncio.gather(a,b)?",
+    "options": [
+      "Secuencial",
+      "Paralelo cooperativo",
+      "Hilos",
+      "Procesos"
+    ],
+    "correct": "Paralelo cooperativo",
+    "area": "functions/async",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "gather"
+    ],
+    "explanation": "asyncio.gather ejecuta awaitables concurrentemente y agrega resultados. Ver: https://docs.python.org/3/library/asyncio-task.html"
+  },
+  {
+    "id": "py.functions.decorators.001",
+    "text": "¿Qué es un decorador en Python?",
+    "options": [
+      "Una clase",
+      "Una función que envuelve otra",
+      "Un módulo",
+      "Una variable global"
+    ],
+    "correct": "Una función que envuelve otra",
+    "area": "functions/decorators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "decorators"
+    ],
+    "explanation": "Un decorador toma una función y devuelve otra, añadiendo comportamiento. Ver: https://docs.python.org/3/library/functools.html#functools.wraps"
+  },
+  {
+    "id": "py.functions.decorators.002",
+    "text": "¿Qué imprime @decorator sobre una función?",
+    "options": [
+      "Aplica decorator(func)",
+      "Crea una clase",
+      "No hace nada",
+      "Devuelve None"
+    ],
+    "correct": "Aplica decorator(func)",
+    "area": "functions/decorators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "decorators"
+    ],
+    "explanation": "La sintaxis @decorator aplica decorator(func) al definirla. Ver: https://docs.python.org/3/library/functools.html#functools.wraps"
+  },
+  {
+    "id": "py.functions.decorators.003",
+    "text": "¿Cuál es el patrón para preservar metadata?",
+    "options": [
+      "functools.wraps",
+      "copy.copy",
+      "__doc__ =",
+      "__name__ ="
+    ],
+    "correct": "functools.wraps",
+    "area": "functions/decorators",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "wraps"
+    ],
+    "explanation": "La opción 'functools.wraps' es la correcta para este concepto.. Ver: https://docs.python.org/3/library/functools.html#functools.wraps"
+  },
+  {
+    "id": "py.functions.decorators.004",
+    "text": "¿Qué hace @staticmethod?",
+    "options": [
+      "Crea método ligado a instancia",
+      "Crea método sin self",
+      "Crea propiedad",
+      "Registra señal"
+    ],
+    "correct": "Crea método sin self",
+    "area": "functions/decorators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "staticmethod"
+    ],
+    "explanation": "@staticmethod define un método sin self ni cls. Ver: https://docs.python.org/3/library/functools.html#functools.wraps"
+  },
+  {
+    "id": "py.functions.decorators.005",
+    "text": "¿Qué hace @property?",
+    "options": [
+      "Decora funciones async",
+      "Transforma método en atributo de solo lectura",
+      "Crea evento",
+      "Cambia herencia"
+    ],
+    "correct": "Transforma método en atributo de solo lectura",
+    "area": "functions/decorators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "property"
+    ],
+    "explanation": "@property expone un método como atributo de solo lectura. Ver: https://docs.python.org/3/library/functools.html#functools.wraps"
+  },
+  {
+    "id": "py.functions.decorators.006",
+    "text": "¿Qué orden aplica en múltiples decoradores?",
+    "options": [
+      "De abajo hacia arriba",
+      "De arriba hacia abajo",
+      "Alfabético",
+      "Indefinido"
+    ],
+    "correct": "De abajo hacia arriba",
+    "area": "functions/decorators",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "orden decoradores"
+    ],
+    "explanation": "Se aplican de abajo hacia arriba (el más cercano primero). Ver: https://docs.python.org/3/library/functools.html#functools.wraps"
+  },
+  {
+    "id": "py.functions.definitions.001",
+    "text": "¿Qué palabra clave define una función?",
+    "options": [
+      "def",
+      "func",
+      "lambda",
+      "define"
+    ],
+    "correct": "def",
+    "area": "functions/definitions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "def"
+    ],
+    "explanation": "Las funciones se definen con la palabra clave 'def'. Ver: https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+  },
+  {
+    "id": "py.functions.definitions.002",
+    "text": "¿Qué sucede con parámetros por defecto mutables?",
+    "options": [
+      "Se evalúan en cada llamada",
+      "Se comparten entre llamadas",
+      "No son válidos",
+      "Se convierten a inmutables"
+    ],
+    "correct": "Se comparten entre llamadas",
+    "area": "functions/definitions",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "default mutable args"
+    ],
+    "explanation": "Los valores por defecto se crean una vez; si son mutables, comparten estado entre llamadas. Ver: https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+  },
+  {
+    "id": "py.functions.definitions.003",
+    "text": "¿Qué devuelve una función sin return explícito?",
+    "options": [
+      "0",
+      "False",
+      "None",
+      ""
+    ],
+    "correct": "None",
+    "area": "functions/definitions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "return"
+    ],
+    "explanation": "Una función sin return explícito devuelve None. Ver: https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+  },
+  {
+    "id": "py.functions.definitions.004",
+    "text": "¿Qué significan *args y **kwargs?",
+    "options": [
+      "Argumentos posicionales y de palabra clave variables",
+      "Argumentos obligatorios",
+      "Anotaciones de tipos",
+      "Decoradores"
+    ],
+    "correct": "Argumentos posicionales y de palabra clave variables",
+    "area": "functions/definitions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "args",
+      "kwargs"
+    ],
+    "explanation": "*args agrupa posicionales variables; **kwargs agrupa de palabra clave variables. Ver: https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+  },
+  {
+    "id": "py.functions.definitions.005",
+    "text": "¿Qué indica '-> int' en una firma?",
+    "options": [
+      "Documentación",
+      "Anotación de retorno",
+      "Conversión de tipo",
+      "Decorador"
+    ],
+    "correct": "Anotación de retorno",
+    "area": "functions/definitions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "typing"
+    ],
+    "explanation": "'-> T' es una anotación de tipo del valor de retorno. Ver: https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+  },
+  {
+    "id": "py.functions.definitions.006",
+    "text": "¿Qué hace 'nonlocal x' dentro de una función anidada?",
+    "options": [
+      "Crea x global",
+      "Refe a variable del scope exterior",
+      "No es válido",
+      "Crea nueva x local"
+    ],
+    "correct": "Refe a variable del scope exterior",
+    "area": "functions/definitions",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "nonlocal"
+    ],
+    "explanation": "nonlocal vincula el nombre al scope exterior inmediato (no global). Ver: https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+  },
+  {
+    "id": "py.functions.generators.001",
+    "text": "¿Qué palabra clave crea un generador?",
+    "options": [
+      "yield",
+      "generate",
+      "return",
+      "async"
+    ],
+    "correct": "yield",
+    "area": "functions/generators",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "yield"
+    ],
+    "explanation": "yield convierte una función en generador y produce valores sucesivos. Ver: https://docs.python.org/3/reference/expressions.html#generator-expressions"
+  },
+  {
+    "id": "py.functions.generators.002",
+    "text": "¿Qué devuelve next(gen)?",
+    "options": [
+      "El generador",
+      "El siguiente valor",
+      "True/False",
+      "None"
+    ],
+    "correct": "El siguiente valor",
+    "area": "functions/generators",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "next"
+    ],
+    "explanation": "next(gen) obtiene el siguiente valor producido por yield. Ver: https://docs.python.org/3/reference/expressions.html#generator-expressions"
+  },
+  {
+    "id": "py.functions.generators.003",
+    "text": "¿Qué hace 'yield from'?",
+    "options": [
+      "Termina el generador",
+      "Delega a subgenerador",
+      "Convierte a lista",
+      "Bloquea el hilo"
+    ],
+    "correct": "Delega a subgenerador",
+    "area": "functions/generators",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "yield from"
+    ],
+    "explanation": "yield from delega a un subgenerador simplificando el código. Ver: https://docs.python.org/3/reference/expressions.html#generator-expressions"
+  },
+  {
+    "id": "py.functions.generators.004",
+    "text": "¿Qué tipo es (x for x in range(3))?",
+    "options": [
+      "list",
+      "generator",
+      "tuple",
+      "set"
+    ],
+    "correct": "generator",
+    "area": "functions/generators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "generator expr"
+    ],
+    "explanation": "(x for x in ...) es un generador (tipo generator). Ver: https://docs.python.org/3/reference/expressions.html#generator-expressions"
+  },
+  {
+    "id": "py.functions.generators.005",
+    "text": "¿Qué pasa si un generador no tiene 'yield'?",
+    "options": [
+      "Es función normal",
+      "Error de sintaxis",
+      "Bucle infinito",
+      "Devuelve None"
+    ],
+    "correct": "Es función normal",
+    "area": "functions/generators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "generator"
+    ],
+    "explanation": "Sin yield no es generador: se comporta como una función normal. Ver: https://docs.python.org/3/reference/expressions.html#generator-expressions"
+  },
+  {
+    "id": "py.functions.generators.006",
+    "text": "¿Qué excepción marca fin de un generador?",
+    "options": [
+      "StopIteration",
+      "GeneratorExit",
+      "ValueError",
+      "EOFError"
+    ],
+    "correct": "StopIteration",
+    "area": "functions/generators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "StopIteration"
+    ],
+    "explanation": "Al agotar un generador se lanza StopIteration. Ver: https://docs.python.org/3/reference/expressions.html#generator-expressions"
+  },
+  {
+    "id": "py.fundamentals.data_structures.001",
+    "text": "¿Cuál de las siguientes es una estructura mutable?",
+    "options": [
+      "tuple",
+      "list",
+      "str",
+      "int"
+    ],
+    "correct": "list",
+    "area": "fundamentals/data_structures",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "mutabilidad",
+      "list"
+    ],
+    "explanation": "list es mutable; tuple/str/int son inmutables. Ver: https://docs.python.org/3/tutorial/datastructures.html"
+  },
+  {
+    "id": "py.fundamentals.data_structures.002",
+    "text": "¿Qué método agrega un elemento al final de una lista?",
+    "options": [
+      "append",
+      "add",
+      "push",
+      "insert"
+    ],
+    "correct": "append",
+    "area": "fundamentals/data_structures",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "list",
+      "append"
+    ],
+    "explanation": "append agrega al final; insert posiciona; add/push no existen en listas. Ver: https://docs.python.org/3/tutorial/datastructures.html"
+  },
+  {
+    "id": "py.fundamentals.data_structures.003",
+    "text": "¿Qué estructura garantiza elementos únicos sin orden?",
+    "options": [
+      "list",
+      "tuple",
+      "set",
+      "dict"
+    ],
+    "correct": "set",
+    "area": "fundamentals/data_structures",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "set"
+    ],
+    "explanation": "set almacena elementos únicos sin orden. Ver: https://docs.python.org/3/tutorial/datastructures.html"
+  },
+  {
+    "id": "py.fundamentals.data_structures.004",
+    "text": "¿Qué devuelve dict.keys()?",
+    "options": [
+      "Una lista",
+      "Una vista de claves",
+      "Un iterador consumible",
+      "Un set fijo"
+    ],
+    "correct": "Una vista de claves",
+    "area": "fundamentals/data_structures",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "dict",
+      "keys"
+    ],
+    "explanation": "dict.keys() devuelve una vista dinámica de claves (no una lista). Ver: https://docs.python.org/3/tutorial/datastructures.html"
+  },
+  {
+    "id": "py.fundamentals.data_structures.005",
+    "text": "¿Qué crea list(range(3))?",
+    "options": [
+      "[1,2,3]",
+      "[0,1,2]",
+      "[0,1,2,3]",
+      "[3,2,1]"
+    ],
+    "correct": "[0,1,2]",
+    "area": "fundamentals/data_structures",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "range"
+    ],
+    "explanation": "range(n) genera 0..n-1; list materializa la secuencia. Ver: https://docs.python.org/3/tutorial/datastructures.html"
+  },
+  {
+    "id": "py.fundamentals.data_structures.006",
+    "text": "¿Qué hace 'a, b = b, a' con dos variables?",
+    "options": [
+      "Copia b en a",
+      "Intercambia a y b",
+      "Crea una tupla",
+      "No es válido"
+    ],
+    "correct": "Intercambia a y b",
+    "area": "fundamentals/data_structures",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "desempaquetado"
+    ],
+    "explanation": "El desempaquetado múltiple intercambia referencias en una sola expresión. Ver: https://docs.python.org/3/tutorial/datastructures.html"
+  },
+  {
+    "id": "py.fundamentals.operators.001",
+    "text": "¿Cuál es el resultado de 7 // 2?",
+    "options": [
+      "3",
+      "3.5",
+      "4",
+      "2"
+    ],
+    "correct": "3",
+    "area": "fundamentals/operators",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "floor division"
+    ],
+    "explanation": "// realiza división entera (descarta decimales). Ver: https://docs.python.org/3/reference/expressions.html"
+  },
+  {
+    "id": "py.fundamentals.operators.002",
+    "text": "¿Cuál es el resultado de 7 % 3?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "correct": "1",
+    "area": "fundamentals/operators",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "modulo"
+    ],
+    "explanation": "% devuelve el resto de la división. Ver: https://docs.python.org/3/reference/expressions.html"
+  },
+  {
+    "id": "py.fundamentals.operators.003",
+    "text": "¿Qué operador tiene mayor precedencia?",
+    "options": [
+      "*",
+      "+",
+      "==",
+      "and"
+    ],
+    "correct": "*",
+    "area": "fundamentals/operators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "precedencia"
+    ],
+    "explanation": "La multiplicación tiene mayor precedencia que +, == y and. Ver: https://docs.python.org/3/reference/expressions.html"
+  },
+  {
+    "id": "py.fundamentals.operators.004",
+    "text": "¿Qué evalúa 'not (True and False)'?",
+    "options": [
+      "True",
+      "False",
+      "None",
+      "Error"
+    ],
+    "correct": "True",
+    "area": "fundamentals/operators",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "booleanos"
+    ],
+    "explanation": "True and False es False; not invierte a True. Ver: https://docs.python.org/3/reference/expressions.html"
+  },
+  {
+    "id": "py.fundamentals.operators.005",
+    "text": "¿Qué imprime print(1 < 2 < 3)?",
+    "options": [
+      "True",
+      "False",
+      "1 < 2",
+      "Error"
+    ],
+    "correct": "True",
+    "area": "fundamentals/operators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "comparaciones encadenadas"
+    ],
+    "explanation": "Las comparaciones encadenadas evalúan de izquierda a derecha. Ver: https://docs.python.org/3/reference/expressions.html"
+  },
+  {
+    "id": "py.fundamentals.operators.006",
+    "text": "¿Qué hace el operador 'is'?",
+    "options": [
+      "Compara igualdad de valor",
+      "Compara identidad de objeto",
+      "Asigna valor",
+      "Convierte tipo"
+    ],
+    "correct": "Compara identidad de objeto",
+    "area": "fundamentals/operators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "is",
+      "identidad"
+    ],
+    "explanation": "is compara identidad (mismo objeto), == compara igualdad de valor. Ver: https://docs.python.org/3/reference/expressions.html"
+  },
+  {
+    "id": "py.fundamentals.variables.001",
+    "text": "¿Cuál es un nombre de variable válido?",
+    "options": [
+      "2var",
+      "var_2",
+      "var-2",
+      "class"
+    ],
+    "correct": "var_2",
+    "area": "fundamentals/variables",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "nombres"
+    ],
+    "explanation": "Los nombres deben iniciar con letra/_ y usar snake_case (PEP8). Ver: https://docs.python.org/3/tutorial/introduction.html"
+  },
+  {
+    "id": "py.fundamentals.variables.002",
+    "text": "¿Qué sucede al hacer x = y en Python?",
+    "options": [
+      "Copia el valor de y",
+      "Crea una referencia a y",
+      "Clona y en memoria",
+      "Intercambia valores"
+    ],
+    "correct": "Crea una referencia a y",
+    "area": "fundamentals/variables",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "referencias"
+    ],
+    "explanation": "La asignación ata el nombre al mismo objeto (no copia). Ver: https://docs.python.org/3/tutorial/introduction.html"
+  },
+  {
+    "id": "py.fundamentals.variables.003",
+    "text": "¿Qué palabra clave declara una variable global dentro de una función?",
+    "options": [
+      "global",
+      "extern",
+      "public",
+      "var"
+    ],
+    "correct": "global",
+    "area": "fundamentals/variables",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "scope"
+    ],
+    "explanation": "global declara que el nombre se refiere al ámbito del módulo. Ver: https://docs.python.org/3/tutorial/introduction.html"
+  },
+  {
+    "id": "py.fundamentals.variables.004",
+    "text": "¿Cuál es el valor por defecto de una variable no inicializada?",
+    "options": [
+      "None",
+      "0",
+      "",
+      "False"
+    ],
+    "correct": "None",
+    "area": "fundamentals/variables",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "none"
+    ],
+    "explanation": "Se usa None como valor nulo; referenciar sin asignar produce NameError. Ver: https://docs.python.org/3/tutorial/introduction.html"
+  },
+  {
+    "id": "py.fundamentals.variables.005",
+    "text": "¿Qué convención recomienda PEP8 para nombres de variables?",
+    "options": [
+      "camelCase",
+      "PascalCase",
+      "snake_case",
+      "kebab-case"
+    ],
+    "correct": "snake_case",
+    "area": "fundamentals/variables",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "pep8"
+    ],
+    "explanation": "PEP8 recomienda snake_case para nombres de variables y funciones. Ver: https://docs.python.org/3/tutorial/introduction.html"
+  },
+  {
+    "id": "py.fundamentals.variables.006",
+    "text": "¿Qué sucede con los tipos en Python?",
+    "options": [
+      "Estáticos",
+      "Dinámicos",
+      "Dependen del intérprete",
+      "No hay tipos"
+    ],
+    "correct": "Dinámicos",
+    "area": "fundamentals/variables",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "tipado dinámico"
+    ],
+    "explanation": "Python es de tipado dinámico: el tipo pertenece al objeto, no al nombre. Ver: https://docs.python.org/3/tutorial/introduction.html"
+  },
+  {
+    "id": "py.oop.classes.001",
+    "text": "¿Cómo se define una clase?",
+    "options": [
+      "class Nombre:",
+      "def class:",
+      "new class:",
+      "struct Nombre:"
+    ],
+    "correct": "class Nombre:",
+    "area": "oop/classes",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "class"
+    ],
+    "explanation": "class Nombre: define una clase. Ver: https://docs.python.org/3/tutorial/classes.html"
+  },
+  {
+    "id": "py.oop.classes.002",
+    "text": "¿Cuál es el primer parámetro de un método de instancia?",
+    "options": [
+      "self",
+      "cls",
+      "this",
+      "obj"
+    ],
+    "correct": "self",
+    "area": "oop/classes",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "self"
+    ],
+    "explanation": "Por convención, 'self' es el primer parámetro de métodos de instancia. Ver: https://docs.python.org/3/tutorial/classes.html"
+  },
+  {
+    "id": "py.oop.classes.003",
+    "text": "¿Qué diferencia un atributo de clase de uno de instancia?",
+    "options": [
+      "Nada",
+      "El de clase se comparte",
+      "El de instancia se comparte",
+      "Ninguno existe"
+    ],
+    "correct": "El de clase se comparte",
+    "area": "oop/classes",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "atributos"
+    ],
+    "explanation": "Los atributos de clase se comparten; los de instancia son por objeto. Ver: https://docs.python.org/3/tutorial/classes.html"
+  },
+  {
+    "id": "py.oop.classes.004",
+    "text": "¿Qué método inicializa una instancia?",
+    "options": [
+      "__init__",
+      "__new__",
+      "__start__",
+      "__create__"
+    ],
+    "correct": "__init__",
+    "area": "oop/classes",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "__init__"
+    ],
+    "explanation": "Los atributos de clase se comparten; los de instancia son por objeto. Ver: https://docs.python.org/3/tutorial/classes.html"
+  },
+  {
+    "id": "py.oop.classes.005",
+    "text": "¿Qué hace __new__?",
+    "options": [
+      "Inicializa",
+      "Crea instancia",
+      "Destruye",
+      "Copia"
+    ],
+    "correct": "Crea instancia",
+    "area": "oop/classes",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "__new__"
+    ],
+    "explanation": "__new__ crea la instancia; __init__ la inicializa. Ver: https://docs.python.org/3/tutorial/classes.html"
+  },
+  {
+    "id": "py.oop.classes.006",
+    "text": "¿Cómo defines un método de clase?",
+    "options": [
+      "@class_method",
+      "@classmethod",
+      "@staticmethod",
+      "@method"
+    ],
+    "correct": "@classmethod",
+    "area": "oop/classes",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "classmethod"
+    ],
+    "explanation": "@classmethod recibe 'cls' y opera a nivel de clase. Ver: https://docs.python.org/3/tutorial/classes.html"
+  },
+  {
+    "id": "py.oop.inheritance.001",
+    "text": "¿Cómo hereda B de A?",
+    "options": [
+      "class B(A):",
+      "class B<A>",
+      "class B:A",
+      "class B inherit A"
+    ],
+    "correct": "class B(A):",
+    "area": "oop/inheritance",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "herencia"
+    ],
+    "explanation": "class B(A): declara herencia de A. Ver: https://docs.python.org/3/tutorial/classes.html#inheritance"
+  },
+  {
+    "id": "py.oop.inheritance.002",
+    "text": "¿Qué hace super()?",
+    "options": [
+      "Accede a padre",
+      "Crea padre",
+      "Elimina padre",
+      "No aplica"
+    ],
+    "correct": "Accede a padre",
+    "area": "oop/inheritance",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "super"
+    ],
+    "explanation": "super() accede a métodos/atributos de la clase base en el MRO. Ver: https://docs.python.org/3/tutorial/classes.html#inheritance"
+  },
+  {
+    "id": "py.oop.inheritance.003",
+    "text": "¿Qué es MRO?",
+    "options": [
+      "Orden de resolución de métodos",
+      "Modelo de referencia de objetos",
+      "Memoria RAM óptima",
+      "Nada"
+    ],
+    "correct": "Orden de resolución de métodos",
+    "area": "oop/inheritance",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "mro"
+    ],
+    "explanation": "MRO define el orden en que se buscan atributos/métodos en herencia múltiple. Ver: https://docs.python.org/3/tutorial/classes.html#inheritance"
+  },
+  {
+    "id": "py.oop.inheritance.004",
+    "text": "¿Qué sucede al sobreescribir un método?",
+    "options": [
+      "Se suma",
+      "Reemplaza el del padre",
+      "Lanza error",
+      "Nada"
+    ],
+    "correct": "Reemplaza el del padre",
+    "area": "oop/inheritance",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "override"
+    ],
+    "explanation": "Redefinir un método en el hijo reemplaza el del padre. Ver: https://docs.python.org/3/tutorial/classes.html#inheritance"
+  },
+  {
+    "id": "py.oop.inheritance.005",
+    "text": "¿Qué indica 'abc.ABC'?",
+    "options": [
+      "Clases abstractas",
+      "Clases privadas",
+      "Decoradores",
+      "Mixins"
+    ],
+    "correct": "Clases abstractas",
+    "area": "oop/inheritance",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "abc"
+    ],
+    "explanation": "abc.ABC permite definir clases abstractas y métodos abstractmethod. Ver: https://docs.python.org/3/tutorial/classes.html#inheritance"
+  },
+  {
+    "id": "py.oop.inheritance.006",
+    "text": "¿Qué permite 'multiple inheritance'?",
+    "options": [
+      "Herencia de múltiples padres",
+      "Multiplicar clases",
+      "Herencia circular",
+      "No existe"
+    ],
+    "correct": "Herencia de múltiples padres",
+    "area": "oop/inheritance",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "multiple inheritance"
+    ],
+    "explanation": "Python soporta herencia múltiple; el MRO resuelve conflictos. Ver: https://docs.python.org/3/tutorial/classes.html#inheritance"
+  },
+  {
+    "id": "py.oop.magic_methods.001",
+    "text": "¿Qué método define representación legible?",
+    "options": [
+      "__repr__",
+      "__str__",
+      "__len__",
+      "__iter__"
+    ],
+    "correct": "__str__",
+    "area": "oop/magic_methods",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "__str__"
+    ],
+    "explanation": "__str__ devuelve una representación amigable para usuarios. Ver: https://docs.python.org/3/reference/datamodel.html"
+  },
+  {
+    "id": "py.oop.magic_methods.002",
+    "text": "¿Cuál se usa para depuración fiel?",
+    "options": [
+      "__repr__",
+      "__str__",
+      "__format__",
+      "__debug__"
+    ],
+    "correct": "__repr__",
+    "area": "oop/magic_methods",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "__repr__"
+    ],
+    "explanation": "__repr__ devuelve una representación precisa para desarrolladores. Ver: https://docs.python.org/3/reference/datamodel.html"
+  },
+  {
+    "id": "py.oop.magic_methods.003",
+    "text": "¿Qué método permite usar 'len(obj)'?",
+    "options": [
+      "__size__",
+      "__len__",
+      "__count__",
+      "__length__"
+    ],
+    "correct": "__len__",
+    "area": "oop/magic_methods",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "__len__"
+    ],
+    "explanation": "len(obj) invoca obj.__len__(). Ver: https://docs.python.org/3/reference/datamodel.html"
+  },
+  {
+    "id": "py.oop.magic_methods.004",
+    "text": "¿Qué método implementa igualdad '=='?",
+    "options": [
+      "__eq__",
+      "__cmp__",
+      "__is__",
+      "__equals__"
+    ],
+    "correct": "__eq__",
+    "area": "oop/magic_methods",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "__eq__"
+    ],
+    "explanation": "'==' invoca __eq__ para comparar igualdad de valor. Ver: https://docs.python.org/3/reference/datamodel.html"
+  },
+  {
+    "id": "py.oop.magic_methods.005",
+    "text": "¿Qué habilita iterar sobre un objeto?",
+    "options": [
+      "__iter__",
+      "__next__",
+      "__call__",
+      "__getitem__"
+    ],
+    "correct": "__iter__",
+    "area": "oop/magic_methods",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "__iter__"
+    ],
+    "explanation": "__iter__ devuelve un iterador para recorrer el objeto. Ver: https://docs.python.org/3/reference/datamodel.html"
+  },
+  {
+    "id": "py.oop.magic_methods.006",
+    "text": "¿Qué significa implementar __call__?",
+    "options": [
+      "Instancia invocable",
+      "Conversión a str",
+      "Creación de clase",
+      "Nada"
+    ],
+    "correct": "Instancia invocable",
+    "area": "oop/magic_methods",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "__call__"
+    ],
+    "explanation": "Definir __call__ hace que la instancia sea invocable como función. Ver: https://docs.python.org/3/reference/datamodel.html"
+  },
+  {
+    "id": "py.other.async_programming.001",
+    "text": "¿Qué es el event loop?",
+    "options": [
+      "Hilo de sistema",
+      "Planificador de tareas async",
+      "Un socket",
+      "Una coroutine"
+    ],
+    "correct": "Planificador de tareas async",
+    "area": "other/async_programming",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "event loop"
+    ],
+    "explanation": "El event loop coordina la ejecución de tareas async. Ver: https://docs.python.org/3/library/asyncio.html"
+  },
+  {
+    "id": "py.other.async_programming.002",
+    "text": "¿Qué hace await en async?",
+    "options": [
+      "Bloquea hilo",
+      "Cede el control hasta completar",
+      "Crea proceso",
+      "Termina programa"
+    ],
+    "correct": "Cede el control hasta completar",
+    "area": "other/async_programming",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "await"
+    ],
+    "explanation": "await cede el control al loop hasta completar. Ver: https://docs.python.org/3/library/asyncio.html"
+  },
+  {
+    "id": "py.other.async_programming.003",
+    "text": "¿Qué permite asyncio.create_task?",
+    "options": [
+      "Crear hilos",
+      "Programar coroutine concurrente",
+      "Crear proceso",
+      "Cerrar loop"
+    ],
+    "correct": "Programar coroutine concurrente",
+    "area": "other/async_programming",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "create_task"
+    ],
+    "explanation": "asyncio.create_task agenda la coroutine para ejecución concurrente. Ver: https://docs.python.org/3/library/asyncio.html"
+  },
+  {
+    "id": "py.other.async_programming.004",
+    "text": "¿Qué hace asyncio.sleep(0)?",
+    "options": [
+      "Duerme indefinido",
+      "Cede inmediatamente",
+      "Bloquea CPU",
+      "Error"
+    ],
+    "correct": "Cede inmediatamente",
+    "area": "other/async_programming",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "sleep"
+    ],
+    "explanation": "asyncio.sleep(0) cede inmediatamente al event loop. Ver: https://docs.python.org/3/library/asyncio.html"
+  },
+  {
+    "id": "py.other.async_programming.005",
+    "text": "¿Qué es un awaitable?",
+    "options": [
+      "obj con __await__",
+      "Solo Future",
+      "Solo Task",
+      "Solo coroutine"
+    ],
+    "correct": "obj con __await__",
+    "area": "other/async_programming",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "awaitable"
+    ],
+    "explanation": "Un awaitable implementa el protocolo __await__ (Future/Task/Coroutine). Ver: https://docs.python.org/3/library/asyncio.html"
+  },
+  {
+    "id": "py.other.async_programming.006",
+    "text": "¿Qué hace asyncio.gather?",
+    "options": [
+      "Secuencia",
+      "Ejecuta awaitables en paralelo cooperativo",
+      "Hilos",
+      "Procesos"
+    ],
+    "correct": "Ejecuta awaitables en paralelo cooperativo",
+    "area": "other/async_programming",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "gather"
+    ],
+    "explanation": "asyncio.gather corre awaitables en paralelo cooperativo. Ver: https://docs.python.org/3/library/asyncio.html"
+  },
+  {
+    "id": "py.other.best_practices.001",
+    "text": "¿Qué herramienta formatea PEP8 automáticamente?",
+    "options": [
+      "pytest",
+      "black",
+      "mypy",
+      "flake8"
+    ],
+    "correct": "black",
+    "area": "other/best_practices",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "pep8",
+      "black"
+    ],
+    "explanation": "black formatea código automáticamente siguiendo PEP8. Ver: https://peps.python.org/pep-0008/"
+  },
+  {
+    "id": "py.other.best_practices.002",
+    "text": "¿Qué herramienta verifica tipos estáticos?",
+    "options": [
+      "black",
+      "flake8",
+      "mypy",
+      "pytest"
+    ],
+    "correct": "mypy",
+    "area": "other/best_practices",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "typing"
+    ],
+    "explanation": "mypy verifica tipos estáticos a partir de anotaciones PEP484. Ver: https://peps.python.org/pep-0008/"
+  },
+  {
+    "id": "py.other.best_practices.003",
+    "text": "¿Qué archivo define dependencias en proyectos modernos?",
+    "options": [
+      "requirements.txt",
+      "pyproject.toml",
+      "Pipfile",
+      "setup.py"
+    ],
+    "correct": "pyproject.toml",
+    "area": "other/best_practices",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "pyproject"
+    ],
+    "explanation": "pyproject.toml centraliza config de build/deps en proyectos modernos. Ver: https://peps.python.org/pep-0008/"
+  },
+  {
+    "id": "py.other.best_practices.004",
+    "text": "¿Qué convención de nombres recomienda PEP8 para funciones?",
+    "options": [
+      "camelCase",
+      "snake_case",
+      "PascalCase",
+      "SCREAMING_SNAKE"
+    ],
+    "correct": "snake_case",
+    "area": "other/best_practices",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "pep8"
+    ],
+    "explanation": "PEP8 recomienda snake_case para funciones y variables. Ver: https://peps.python.org/pep-0008/"
+  },
+  {
+    "id": "py.other.best_practices.005",
+    "text": "¿Qué ventaja aportan las pruebas automatizadas?",
+    "options": [
+      "Más lentitud",
+      "Confianza en cambios",
+      "Mayor complejidad",
+      "Ninguna"
+    ],
+    "correct": "Confianza en cambios",
+    "area": "other/best_practices",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "testing"
+    ],
+    "explanation": "Las pruebas automatizadas previenen regresiones al refactorizar. Ver: https://peps.python.org/pep-0008/"
+  },
+  {
+    "id": "py.other.best_practices.006",
+    "text": "¿Qué docstring estándar se sugiere?",
+    "options": [
+      "Google/NumPy",
+      "Markdown",
+      "YAML",
+      "ReST únicamente"
+    ],
+    "correct": "Google/NumPy",
+    "area": "other/best_practices",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "docstring"
+    ],
+    "explanation": "Los estilos Google/NumPy facilitan documentación consistente. Ver: https://peps.python.org/pep-0008/"
+  },
+  {
+    "id": "py.other.exceptions.001",
+    "text": "¿Qué palabra clave captura excepciones?",
+    "options": [
+      "catch",
+      "except",
+      "handle",
+      "rescue"
+    ],
+    "correct": "except",
+    "area": "other/exceptions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "try except"
+    ],
+    "explanation": "try/except captura excepciones manejables. Ver: https://docs.python.org/3/tutorial/errors.html"
+  },
+  {
+    "id": "py.other.exceptions.002",
+    "text": "¿Qué bloque se ejecuta siempre?",
+    "options": [
+      "except",
+      "finally",
+      "else",
+      "retry"
+    ],
+    "correct": "finally",
+    "area": "other/exceptions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "finally"
+    ],
+    "explanation": "finally se ejecuta siempre, útil para liberar recursos. Ver: https://docs.python.org/3/tutorial/errors.html"
+  },
+  {
+    "id": "py.other.exceptions.003",
+    "text": "¿Cómo se lanza una excepción?",
+    "options": [
+      "throw Error",
+      "raise Exception()",
+      "new Exception",
+      "except Exception"
+    ],
+    "correct": "raise Exception()",
+    "area": "other/exceptions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "raise"
+    ],
+    "explanation": "La opción 'raise Exception()' es la correcta para este concepto.. Ver: https://docs.python.org/3/tutorial/errors.html"
+  },
+  {
+    "id": "py.other.exceptions.004",
+    "text": "¿Qué captura 'except Exception as e'?",
+    "options": [
+      "Solo RuntimeError",
+      "Cualquier excepción derivada de Exception",
+      "Solo IOError",
+      "No captura nada"
+    ],
+    "correct": "Cualquier excepción derivada de Exception",
+    "area": "other/exceptions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "Exception"
+    ],
+    "explanation": "Captura cualquier excepción que herede de Exception. Ver: https://docs.python.org/3/tutorial/errors.html"
+  },
+  {
+    "id": "py.other.exceptions.005",
+    "text": "¿Cómo defines una excepción propia?",
+    "options": [
+      "class E(Exception):",
+      "def E():",
+      "raise E:",
+      "new E"
+    ],
+    "correct": "class E(Exception):",
+    "area": "other/exceptions",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "custom exceptions"
+    ],
+    "explanation": "La opción 'class E(Exception):' es la correcta para este concepto.. Ver: https://docs.python.org/3/tutorial/errors.html"
+  },
+  {
+    "id": "py.other.exceptions.006",
+    "text": "¿Qué excepción por clave inexistente en dict?",
+    "options": [
+      "IndexError",
+      "KeyError",
+      "ValueError",
+      "TypeError"
+    ],
+    "correct": "KeyError",
+    "area": "other/exceptions",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "KeyError"
+    ],
+    "explanation": "Acceder a una clave inexistente en dict lanza KeyError. Ver: https://docs.python.org/3/tutorial/errors.html"
+  },
+  {
+    "id": "py.other.file_io.001",
+    "text": "¿Cómo abrir archivo para lectura de texto?",
+    "options": [
+      "open('f','r')",
+      "open('f','w')",
+      "open('f','rb')",
+      "open('f','a')"
+    ],
+    "correct": "open('f','r')",
+    "area": "other/file_io",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "open"
+    ],
+    "explanation": "La opción 'open('f','r')' es la correcta para este concepto.. Ver: https://docs.python.org/3/tutorial/inputoutput.html"
+  },
+  {
+    "id": "py.other.file_io.002",
+    "text": "¿Qué asegura cerrar el archivo automáticamente?",
+    "options": [
+      "try",
+      "with",
+      "finally",
+      "close()"
+    ],
+    "correct": "with",
+    "area": "other/file_io",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "context manager"
+    ],
+    "explanation": "with garantiza cerrar el archivo al salir del bloque. Ver: https://docs.python.org/3/tutorial/inputoutput.html"
+  },
+  {
+    "id": "py.other.file_io.003",
+    "text": "¿Qué modo abre para añadir sin truncar?",
+    "options": [
+      "'w'",
+      "'a'",
+      "'r+'",
+      "'x'"
+    ],
+    "correct": "'a'",
+    "area": "other/file_io",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "modo a"
+    ],
+    "explanation": "'a' abre para agregar al final sin truncar. Ver: https://docs.python.org/3/tutorial/inputoutput.html"
+  },
+  {
+    "id": "py.other.file_io.004",
+    "text": "¿Qué hace readlines()?",
+    "options": [
+      "Escribe líneas",
+      "Lee todas las líneas",
+      "Cierra archivo",
+      "Nada"
+    ],
+    "correct": "Lee todas las líneas",
+    "area": "other/file_io",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "readlines"
+    ],
+    "explanation": "readlines() devuelve una lista con todas las líneas. Ver: https://docs.python.org/3/tutorial/inputoutput.html"
+  },
+  {
+    "id": "py.other.file_io.005",
+    "text": "¿Cómo escribir texto?",
+    "options": [
+      "f.write('txt')",
+      "f.put('txt')",
+      "f.print('txt')",
+      "print('txt', f)"
+    ],
+    "correct": "f.write('txt')",
+    "area": "other/file_io",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "write"
+    ],
+    "explanation": "La opción 'f.write('txt')' es la correcta para este concepto.. Ver: https://docs.python.org/3/tutorial/inputoutput.html"
+  },
+  {
+    "id": "py.other.file_io.006",
+    "text": "¿Qué error al abrir un archivo inexistente con 'r'?",
+    "options": [
+      "FileNotFoundError",
+      "IOError",
+      "KeyError",
+      "OSError"
+    ],
+    "correct": "FileNotFoundError",
+    "area": "other/file_io",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "FileNotFoundError"
+    ],
+    "explanation": "Abrir en modo 'r' un archivo inexistente lanza FileNotFoundError. Ver: https://docs.python.org/3/tutorial/inputoutput.html"
+  },
+  {
+    "id": "py.other.modules_packages.001",
+    "text": "¿Qué archivo convierte una carpeta en paquete?",
+    "options": [
+      "__init__.py",
+      "package.json",
+      "setup.py",
+      "__main__.py"
+    ],
+    "correct": "__init__.py",
+    "area": "other/modules_packages",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "paquetes"
+    ],
+    "explanation": "__init__.py marca un directorio como paquete importable. Ver: https://docs.python.org/3/tutorial/modules.html"
+  },
+  {
+    "id": "py.other.modules_packages.002",
+    "text": "¿Qué hace 'from . import x'?",
+    "options": [
+      "Importa absoluto",
+      "Importa relativo",
+      "Exporta módulo",
+      "Nada"
+    ],
+    "correct": "Importa relativo",
+    "area": "other/modules_packages",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "import relativo"
+    ],
+    "explanation": "El punto indica importación relativa dentro del mismo paquete. Ver: https://docs.python.org/3/tutorial/modules.html"
+  },
+  {
+    "id": "py.other.modules_packages.003",
+    "text": "¿Dónde se buscan módulos por defecto?",
+    "options": [
+      "PYTHONPATH",
+      "sys.path",
+      "PATH",
+      "HOME"
+    ],
+    "correct": "sys.path",
+    "area": "other/modules_packages",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "sys.path"
+    ],
+    "explanation": "sys.path lista las rutas donde Python busca módulos. Ver: https://docs.python.org/3/tutorial/modules.html"
+  },
+  {
+    "id": "py.other.modules_packages.004",
+    "text": "¿Qué archivo permite ejecutar un paquete con -m?",
+    "options": [
+      "__init__.py",
+      "__main__.py",
+      "run.py",
+      "main.py"
+    ],
+    "correct": "__main__.py",
+    "area": "other/modules_packages",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "-m"
+    ],
+    "explanation": "__main__.py permite ejecutar el paquete con 'python -m paquete'. Ver: https://docs.python.org/3/tutorial/modules.html"
+  },
+  {
+    "id": "py.other.modules_packages.005",
+    "text": "¿Qué herramienta crea paquetes distribuibles?",
+    "options": [
+      "pip",
+      "setuptools",
+      "virtualenv",
+      "pyenv"
+    ],
+    "correct": "setuptools",
+    "area": "other/modules_packages",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "packaging"
+    ],
+    "explanation": "setuptools y wheel construyen paquetes distribuibles. Ver: https://docs.python.org/3/tutorial/modules.html"
+  },
+  {
+    "id": "py.other.modules_packages.006",
+    "text": "¿Qué hace __all__ en un módulo?",
+    "options": [
+      "Define exports de from *",
+      "Define imports",
+      "Nada",
+      "Compila el módulo"
+    ],
+    "correct": "Define exports de from *",
+    "area": "other/modules_packages",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "__all__"
+    ],
+    "explanation": "__all__ controla los nombres exportados por from paquete import *. Ver: https://docs.python.org/3/tutorial/modules.html"
+  },
+  {
+    "id": "py.other.testing.001",
+    "text": "¿Qué framework de testing es común en Python?",
+    "options": [
+      "pytest",
+      "jest",
+      "junit",
+      "mocha"
+    ],
+    "correct": "pytest",
+    "area": "other/testing",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "pytest"
+    ],
+    "explanation": "pytest es el framework más usado en Python para testing. Ver: https://docs.pytest.org/en/stable/"
+  },
+  {
+    "id": "py.other.testing.002",
+    "text": "¿Cómo se expresa una verificación en pytest?",
+    "options": [
+      "assert",
+      "expect",
+      "check",
+      "verify"
+    ],
+    "correct": "assert",
+    "area": "other/testing",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "assert"
+    ],
+    "explanation": "pytest usa assert para aserciones simples y expresivas. Ver: https://docs.pytest.org/en/stable/"
+  },
+  {
+    "id": "py.other.testing.003",
+    "text": "¿Qué es una fixture?",
+    "options": [
+      "Un error",
+      "Un setup reusable",
+      "Un decorador de clase",
+      "Una excepción"
+    ],
+    "correct": "Un setup reusable",
+    "area": "other/testing",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "fixture"
+    ],
+    "explanation": "Las fixtures proveen datos/recursos reusables para tests. Ver: https://docs.pytest.org/en/stable/"
+  },
+  {
+    "id": "py.other.testing.004",
+    "text": "¿Qué hace -k en pytest?",
+    "options": [
+      "Seleciona tests por patrón",
+      "Mide cobertura",
+      "Corre en paralelo",
+      "Reintenta fallos"
+    ],
+    "correct": "Seleciona tests por patrón",
+    "area": "other/testing",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "-k"
+    ],
+    "explanation": "-k permite seleccionar tests por subcadena/expresión. Ver: https://docs.pytest.org/en/stable/"
+  },
+  {
+    "id": "py.other.testing.005",
+    "text": "¿Qué hace @pytest.mark.parametrize?",
+    "options": [
+      "Crea fixtures",
+      "Corre un test con múltiples entradas",
+      "Mide tiempo",
+      "Mockea funciones"
+    ],
+    "correct": "Corre un test con múltiples entradas",
+    "area": "other/testing",
+    "difficulty": "avanzada",
+    "domain": "python",
+    "tags": [
+      "parametrize"
+    ],
+    "explanation": "@pytest.mark.parametrize ejecuta el test con múltiples entradas. Ver: https://docs.pytest.org/en/stable/"
+  },
+  {
+    "id": "py.other.testing.006",
+    "text": "¿Qué archivo configura pytest?",
+    "options": [
+      "pytest.ini",
+      "test.cfg",
+      "setup.cfg",
+      "pyproject.toml"
+    ],
+    "correct": "pytest.ini",
+    "area": "other/testing",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "config"
+    ],
+    "explanation": "pytest.ini centraliza configuración por proyecto. Ver: https://docs.pytest.org/en/stable/"
+  },
+  {
+    "id": "py.web.django.001",
+    "text": "¿Qué comando crea un proyecto Django?",
+    "options": [
+      "django-admin startproject",
+      "manage.py startapp",
+      "django create",
+      "startdjango"
+    ],
+    "correct": "django-admin startproject",
+    "area": "web/django",
+    "difficulty": "basica",
+    "domain": "django",
+    "tags": [
+      "startproject"
+    ],
+    "explanation": "La opción 'django-admin startproject' es la correcta para este concepto.. Ver: https://docs.djangoproject.com/"
+  },
+  {
+    "id": "py.web.django.002",
+    "text": "¿Qué comando crea una app Django?",
+    "options": [
+      "django-admin startapp",
+      "manage.py startproject",
+      "django createapp",
+      "startapp.py"
+    ],
+    "correct": "django-admin startapp",
+    "area": "web/django",
+    "difficulty": "basica",
+    "domain": "django",
+    "tags": [
+      "startapp"
+    ],
+    "explanation": "La opción 'django-admin startapp' es la correcta para este concepto.. Ver: https://docs.djangoproject.com/"
+  },
+  {
+    "id": "py.web.django.003",
+    "text": "¿Qué archivo define modelos?",
+    "options": [
+      "models.py",
+      "views.py",
+      "urls.py",
+      "admin.py"
+    ],
+    "correct": "models.py",
+    "area": "web/django",
+    "difficulty": "basica",
+    "domain": "django",
+    "tags": [
+      "models"
+    ],
+    "explanation": "models.py define los modelos (tablas) del ORM. Ver: https://docs.djangoproject.com/"
+  },
+  {
+    "id": "py.web.django.004",
+    "text": "¿Qué comando aplica migraciones?",
+    "options": [
+      "python manage.py migrate",
+      "python manage.py makemigrations",
+      "django migrate",
+      "manage.py db"
+    ],
+    "correct": "python manage.py migrate",
+    "area": "web/django",
+    "difficulty": "intermedia",
+    "domain": "django",
+    "tags": [
+      "migrate"
+    ],
+    "explanation": "La opción 'python manage.py migrate' es la correcta para este concepto.. Ver: https://docs.djangoproject.com/"
+  },
+  {
+    "id": "py.web.django.005",
+    "text": "¿Dónde se configuran apps instaladas?",
+    "options": [
+      "settings.py",
+      "urls.py",
+      "apps.py",
+      "wsgi.py"
+    ],
+    "correct": "settings.py",
+    "area": "web/django",
+    "difficulty": "basica",
+    "domain": "django",
+    "tags": [
+      "settings"
+    ],
+    "explanation": "settings.py configura la aplicación, incluidas INSTALLED_APPS. Ver: https://docs.djangoproject.com/"
+  },
+  {
+    "id": "py.web.django.006",
+    "text": "¿Qué hace el ORM de Django?",
+    "options": [
+      "Rutas",
+      "Mapea objetos a BD",
+      "Sesiones",
+      "Plantillas"
+    ],
+    "correct": "Mapea objetos a BD",
+    "area": "web/django",
+    "difficulty": "intermedia",
+    "domain": "django",
+    "tags": [
+      "ORM"
+    ],
+    "explanation": "El ORM traduce objetos Python a operaciones SQL y viceversa. Ver: https://docs.djangoproject.com/"
+  },
+  {
+    "id": "py.web.fastapi.001",
+    "text": "¿Cómo se define una ruta GET en FastAPI?",
+    "options": [
+      "@app.get",
+      "@app.route",
+      "def get",
+      "route.get"
+    ],
+    "correct": "@app.get",
+    "area": "web/fastapi",
+    "difficulty": "basica",
+    "domain": "fastapi",
+    "tags": [
+      "get"
+    ],
+    "explanation": "@app.get define una ruta HTTP GET. Ver: https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": "py.web.fastapi.002",
+    "text": "¿Qué usa FastAPI para validación de datos?",
+    "options": [
+      "Marshmallow",
+      "Pydantic",
+      "Cerberus",
+      "dataclasses"
+    ],
+    "correct": "Pydantic",
+    "area": "web/fastapi",
+    "difficulty": "intermedia",
+    "domain": "fastapi",
+    "tags": [
+      "pydantic"
+    ],
+    "explanation": "FastAPI usa Pydantic para validación y serialización de datos. Ver: https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": "py.web.fastapi.003",
+    "text": "¿Cómo iniciar el server?",
+    "options": [
+      "uvicorn app:app",
+      "fastapi run",
+      "python app.py",
+      "runserver"
+    ],
+    "correct": "uvicorn app:app",
+    "area": "web/fastapi",
+    "difficulty": "basica",
+    "domain": "fastapi",
+    "tags": [
+      "uvicorn"
+    ],
+    "explanation": "La opción 'uvicorn app:app' es la correcta para este concepto.. Ver: https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": "py.web.fastapi.004",
+    "text": "¿Dónde vive la documentación automática?",
+    "options": [
+      "/docs",
+      "/swagger",
+      "/openapi",
+      "/redoc-only"
+    ],
+    "correct": "/docs",
+    "area": "web/fastapi",
+    "difficulty": "basica",
+    "domain": "fastapi",
+    "tags": [
+      "docs"
+    ],
+    "explanation": "FastAPI expone documentación interactiva Swagger UI en /docs. Ver: https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": "py.web.fastapi.005",
+    "text": "¿Qué es un APIRouter?",
+    "options": [
+      "Cliente HTTP",
+      "Agrupador de rutas",
+      "Middleware",
+      "Servidor"
+    ],
+    "correct": "Agrupador de rutas",
+    "area": "web/fastapi",
+    "difficulty": "intermedia",
+    "domain": "fastapi",
+    "tags": [
+      "APIRouter"
+    ],
+    "explanation": "APIRouter permite modularizar rutas y middlewares. Ver: https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": "py.web.fastapi.006",
+    "text": "¿Qué devuelve una función async sin await?",
+    "options": [
+      "Resultado",
+      "Coroutine",
+      "Future resuelto",
+      "String"
+    ],
+    "correct": "Coroutine",
+    "area": "web/fastapi",
+    "difficulty": "intermedia",
+    "domain": "fastapi",
+    "tags": [
+      "async"
+    ],
+    "explanation": "Una función async devuelve una coroutine si no se await-ea. Ver: https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": "py.web.flask.001",
+    "text": "¿Cómo se define una ruta en Flask?",
+    "options": [
+      "@app.route",
+      "app.get",
+      "route()",
+      "@route"
+    ],
+    "correct": "@app.route",
+    "area": "web/flask",
+    "difficulty": "basica",
+    "domain": "flask",
+    "tags": [
+      "route"
+    ],
+    "explanation": "La opción '@app.route' es la correcta para este concepto.. Ver: https://flask.palletsprojects.com/"
+  },
+  {
+    "id": "py.web.flask.002",
+    "text": "¿Cómo se inicia la app en dev?",
+    "options": [
+      "flask run",
+      "python app.py",
+      "runflask",
+      "flask start"
+    ],
+    "correct": "flask run",
+    "area": "web/flask",
+    "difficulty": "basica",
+    "domain": "flask",
+    "tags": [
+      "run"
+    ],
+    "explanation": "El comando 'flask run' inicia el servidor de desarrollo. Ver: https://flask.palletsprojects.com/"
+  },
+  {
+    "id": "py.web.flask.003",
+    "text": "¿Qué motor de plantillas usa Flask por defecto?",
+    "options": [
+      "Jinja2",
+      "Mako",
+      "Django templates",
+      "Mustache"
+    ],
+    "correct": "Jinja2",
+    "area": "web/flask",
+    "difficulty": "intermedia",
+    "domain": "flask",
+    "tags": [
+      "jinja2"
+    ],
+    "explanation": "Flask usa Jinja2 como motor de plantillas por defecto. Ver: https://flask.palletsprojects.com/"
+  },
+  {
+    "id": "py.web.flask.004",
+    "text": "¿Cómo se obtienen parámetros de query?",
+    "options": [
+      "request.args",
+      "request.form",
+      "request.params",
+      "request.query"
+    ],
+    "correct": "request.args",
+    "area": "web/flask",
+    "difficulty": "intermedia",
+    "domain": "flask",
+    "tags": [
+      "request"
+    ],
+    "explanation": "request.args accede a parámetros de consulta (query string). Ver: https://flask.palletsprojects.com/"
+  },
+  {
+    "id": "py.web.flask.005",
+    "text": "¿Cómo habilitar modo debug?",
+    "options": [
+      "FLASK_DEBUG=1",
+      "DEBUG=1",
+      "flask --debug=1",
+      "app.debug()"
+    ],
+    "correct": "FLASK_DEBUG=1",
+    "area": "web/flask",
+    "difficulty": "intermedia",
+    "domain": "flask",
+    "tags": [
+      "debug"
+    ],
+    "explanation": "FLASK_DEBUG=1 activa recarga y depuración en desarrollo. Ver: https://flask.palletsprojects.com/"
+  },
+  {
+    "id": "py.web.flask.006",
+    "text": "¿Qué hace jsonify?",
+    "options": [
+      "Parsea JSON",
+      "Devuelve Response JSON",
+      "Valida JSON",
+      "Escribe archivo"
+    ],
+    "correct": "Devuelve Response JSON",
+    "area": "web/flask",
+    "difficulty": "basica",
+    "domain": "flask",
+    "tags": [
+      "jsonify"
+    ],
+    "explanation": "jsonify serializa a JSON y devuelve una Response con mimetype application/json. Ver: https://flask.palletsprojects.com/"
+  }
+]
