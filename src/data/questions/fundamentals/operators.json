@@ -1,0 +1,111 @@
+[
+  {
+    "id": "py.fundamentals.operators.001",
+    "text": "¿Cuál es el resultado de 7 // 2?",
+    "options": [
+      "3",
+      "3.5",
+      "4",
+      "2"
+    ],
+    "correct": "3",
+    "area": "fundamentals/operators",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "floor division"
+    ],
+    "explanation": "// realiza división entera (descarta decimales). Ver: https://docs.python.org/3/reference/expressions.html"
+  },
+  {
+    "id": "py.fundamentals.operators.002",
+    "text": "¿Cuál es el resultado de 7 % 3?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "correct": "1",
+    "area": "fundamentals/operators",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "modulo"
+    ],
+    "explanation": "% devuelve el resto de la división. Ver: https://docs.python.org/3/reference/expressions.html"
+  },
+  {
+    "id": "py.fundamentals.operators.003",
+    "text": "¿Qué operador tiene mayor precedencia?",
+    "options": [
+      "*",
+      "+",
+      "==",
+      "and"
+    ],
+    "correct": "*",
+    "area": "fundamentals/operators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "precedencia"
+    ],
+    "explanation": "La multiplicación tiene mayor precedencia que +, == y and. Ver: https://docs.python.org/3/reference/expressions.html"
+  },
+  {
+    "id": "py.fundamentals.operators.004",
+    "text": "¿Qué evalúa 'not (True and False)'?",
+    "options": [
+      "True",
+      "False",
+      "None",
+      "Error"
+    ],
+    "correct": "True",
+    "area": "fundamentals/operators",
+    "difficulty": "basica",
+    "domain": "python",
+    "tags": [
+      "booleanos"
+    ],
+    "explanation": "True and False es False; not invierte a True. Ver: https://docs.python.org/3/reference/expressions.html"
+  },
+  {
+    "id": "py.fundamentals.operators.005",
+    "text": "¿Qué imprime print(1 < 2 < 3)?",
+    "options": [
+      "True",
+      "False",
+      "1 < 2",
+      "Error"
+    ],
+    "correct": "True",
+    "area": "fundamentals/operators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "comparaciones encadenadas"
+    ],
+    "explanation": "Las comparaciones encadenadas evalúan de izquierda a derecha. Ver: https://docs.python.org/3/reference/expressions.html"
+  },
+  {
+    "id": "py.fundamentals.operators.006",
+    "text": "¿Qué hace el operador 'is'?",
+    "options": [
+      "Compara igualdad de valor",
+      "Compara identidad de objeto",
+      "Asigna valor",
+      "Convierte tipo"
+    ],
+    "correct": "Compara identidad de objeto",
+    "area": "fundamentals/operators",
+    "difficulty": "intermedia",
+    "domain": "python",
+    "tags": [
+      "is",
+      "identidad"
+    ],
+    "explanation": "is compara identidad (mismo objeto), == compara igualdad de valor. Ver: https://docs.python.org/3/reference/expressions.html"
+  }
+]
