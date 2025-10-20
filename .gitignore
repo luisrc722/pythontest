@@ -1,4 +1,5 @@
 # === Carpetas y entornos locales ===
+.obsidian/
 .test/
 .env/
 .venv/
