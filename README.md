@@ -5,14 +5,14 @@
 Motor de examen/quiz en consola, agnóstico al tema, basado en bancos de preguntas en JSON con taxonomía jerárquica, perfiles de evaluación y rúbricas. Incluye un dataset de ejemplo (Python) para empezar de inmediato.
 
 Atajos de documentación
-- Guía rápida: docs/quickstart.md
-- Autoría (unificado/modular): docs/authoring.md
-- Taxonomía: docs/taxonomy.md
-- Blueprint y perfiles: docs/blueprint_profiles.md
-- Rúbricas: docs/rubrics.md
-- Estadísticas: docs/stats.md
-- Solución de problemas: docs/troubleshooting.md
-- FAQ: docs/faq.md
+- Guía rápida: docs/[[quickstart]].md
+- Autoría (unificado/modular): docs/[[authoring]].md
+- Taxonomía: docs/[[taxonomy]].md
+- Blueprint y perfiles: docs/[[blueprint_profiles]].md
+- Rúbricas: docs/[[rubrics]].md
+- Estadísticas: docs/[[stats]].md
+- Solución de problemas: docs/[[troubleshooting]].md
+- FAQ: docs/[[faq]].md
 
 ## Características
 - Motor agnóstico al dominio (sirve para cualquier materia).
