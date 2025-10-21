@@ -146,6 +146,7 @@ Orden del examen
 - `--order random` (por defecto): mezcla global.
 - `--order difficulty`: ordena por dificultad creciente (útil para evaluaciones ascendentes).
 - `--order area`: agrupa por leaf para bloques temáticos.
+- `--questions-file`: usar un archivo `questions.json` alternativo (el título se genera a partir del nombre del archivo).
 
 ## Formato de preguntas (unificado)
 Esquema genérico y extensible para cualquier materia:
@@ -313,6 +314,13 @@ bash scripts/workflow.sh
   - Empaquetar todo: `python scripts/bundle_questions.py` o `make bundle`
   - Validar: `python scripts/validate_questions.py --strict-coverage`
 - Asistente interactivo: `python -m src.main add` (requiere `inquirer`)
+
+Requisitos para que los scripts procesen bien el JSON
+- Cada archivo por leaf debe ser un arreglo JSON (`[ {...}, {...} ]`) codificado en UTF‑8, sin comas colgantes.
+- La ruta del archivo debe reflejar el leaf: `src/data/questions/functions/definitions.json` → `area`: `functions/definitions`.
+- Si omites `area` en los objetos, el bundler la infiere desde la ruta del archivo.
+- IDs únicos y estables. Convención sugerida: `xx.<leaf_con_puntos>.<nnn>` (p. ej., `py.functions.definitions.017`).
+- Tras editar archivos por leaf, ejecuta `make bundle` y luego `make validate` para asegurar consistencia.
 
 ## Contribución, Conducta, Seguridad y Licencia
 - Contribuir: lee `CONTRIBUTING.md`
