@@ -5,14 +5,14 @@
 Motor de examen/quiz en consola, agnóstico al tema, basado en bancos de preguntas en JSON con taxonomía jerárquica, perfiles de evaluación y rúbricas. Incluye un dataset de ejemplo (Python) para empezar de inmediato.
 
 Atajos de documentación
-- Guía rápida: docs/[[quickstart]].md
-- Autoría (unificado/modular): docs/[[authoring]].md
-- Taxonomía: docs/[[taxonomy]].md
-- Blueprint y perfiles: docs/[[blueprint_profiles]].md
-- Rúbricas: docs/[[rubrics]].md
-- Estadísticas: docs/[[stats]].md
-- Solución de problemas: docs/[[troubleshooting]].md
-- FAQ: docs/[[faq]].md
+- Guía rápida: docs/quickstart.md
+- Autoría (unificado/modular): docs/authoring.md
+- Taxonomía: docs/taxonomy.md
+- Blueprint y perfiles: docs/blueprint_profiles.md
+- Rúbricas: docs/rubrics.md
+- Estadísticas: docs/stats.md
+- Solución de problemas: docs/troubleshooting.md
+- FAQ: docs/faq.md
 
 ## Características
 - Motor agnóstico al dominio (sirve para cualquier materia).
@@ -27,15 +27,12 @@ Atajos de documentación
 
 Instalación rápida:
 - Crear y activar entorno virtual (opcional):
-
 ```shell
-  python -m venv .venv && source .venv/bin/activate
+python -m venv .venv && source .venv/bin/activate
 ```
-
 - Instalar dependencias:
-
 ```shell
-  pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Estructura
@@ -57,104 +54,38 @@ Para mover el proyecto y que funcione en cualquier ruta/PC, usa un entorno virtu
 
 ### Pasos rápidos (Linux/macOS):
 - Crear y activar entorno:
-
 ```shell
-  python3 -m venv .venv && source .venv/bin/activate
+python3 -m venv .venv && source .venv/bin/activate
 ```
 - Actualizar pip:
-
 ```shell
-  python -m pip install --upgrade pip
+python -m pip install --upgrade pip
 ```
 - Instalar dependencias (recomendado):
-
 ```shell
-  pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 - Alternativa mínima (según paquetes solicitados):
-
 ```shell
-  pip install numpy pytest pytest-cov ipywidgets jupyterlab rich black isort flake8 pydantic click toml inquirer streamlit fastapi uvicorn pandas matplotlib
+pip install numpy pytest pytest-cov ipywidgets jupyterlab rich black isort flake8 pydantic click toml inquirer streamlit fastapi uvicorn pandas matplotlib
 ```
 
 ### Windows (PowerShell):
-- Crear:
-
-```shell
-  python -m venv .venv
+- Crear y activar entorno:
+```powershell
+py -3 -m venv .venv; .venv\Scripts\Activate.ps1
 ```
-- Activar:
-
-```shell
-  .venv\Scripts\Activate.ps1
+- Instalar dependencias:
+```powershell
+python -m pip install --upgrade pip; pip install -r requirements.txt
 ```
-- Instalar:
-
-```shell
-  python -m pip install --upgrade pip && pip install -r requirements.txt
-```
-
-### Verificación rápida del entorno:
-
-```shell
-  python -m pip check
-```
-
-- Ejecutar validación del banco:
-
-```shell
-  python scripts/validate_questions.py
-```
-
-```shell
-  .venv\Scripts\Activate.ps1
-```
-
-- Instalar:
-
-```shell
-  python -m pip install --upgrade pip && pip install -r requirements.txt
-```
-
-### Verificación rápida del entorno:
-
-- Ejecutar validación del banco:
-
-```shell
-  python scripts/validate_questions.py
-```
-- Correr pruebas:
-
-```shell
-  pytest -q
-```
-- Iniciar el simulador:
-
-```shell
-  python -m src.main
+- Verificación rápida:
+```powershell
+python scripts/validate_questions.py; pytest -q; python -m src.main
 ```
 
 > Notas de portabilidad:
-
-- Ejecuta siempre los comandos desde la raíz del repo y usa
-
-```shell
-  python -m src.main
-```
-
-para respetar imports relativos.
-
-- No hagas commit del entorno `.venv/`. Si mueves el proyecto, recrea el entorno y reinstala.
-- Las rutas de datos son relativas (`src/data/...`), por lo que no dependen del path absoluto del repo.
-
-## Uso
-
-```shell
-  python -m src.main
-```
-
-para respetar imports relativos.
-
+- Ejecuta siempre los comandos desde la raíz del repo y usa `python -m src.main` para respetar imports relativos.
 - No hagas commit del entorno `.venv/`. Si mueves el proyecto, recrea el entorno y reinstala.
 - Las rutas de datos son relativas (`src/data/...`), por lo que no dependen del path absoluto del repo.
 
@@ -166,13 +97,7 @@ Ejecutar el motor con muestreo estratificado por temas:
 ```
 
 Por defecto intenta `src/data/questions.json` y toma 5 por área para las áreas definidas en `AREAS_DEFAULT` dentro de `src/main.py`. Si faltan preguntas en un área, toma todas las disponibles.
-El simulador avisará si detecta leaves con cobertura insuficiente y sugerirá ejecutar
-
-```shell
-  make data-check
-```
-
-para un reporte.
+El motor avisará si detecta leaves con cobertura insuficiente y sugerirá ejecutar `make data-check` para un reporte.
 
 Modos de ejecución:
 - Modo examen (por defecto): muestra explicación solo cuando fallas.
@@ -226,7 +151,7 @@ Orden del examen
 Esquema genérico y extensible para cualquier materia:
 
 ```json
-  {
+{
     "id": "py.fund.001",
     "text": "Pregunta...",
     "options": ["A", "B", "C", "D"],
@@ -239,7 +164,7 @@ Esquema genérico y extensible para cualquier materia:
     "explanation": "opcional: breve justificación que se muestra al fallar"
     ,"cognitive_level": "remember|understand|apply|analyze|evaluate|create (opcional)"
     ,"outcomes": ["PY.FUND.001"]
-  }
+}
 ```
 
 ## Desarrollo
@@ -318,56 +243,56 @@ Atajos cross‑platform para tareas comunes. Ejemplos:
 - Probar y cobertura:
 
 ```shell
-  make test && make cov
+make test && make cov
 ```
 
 - Formatear y lint:
 
 ```shell
-  make fmt && make lint
+make fmt && make lint
 ```
 
 - JupyterLab:
 
 ```shell
-  make lab
+make lab
 ```
 
 - Streamlit:
 
 ```shell
-  make streamlit
+make streamlit
 ```
 
 (o)
 
 ```shell
-  make streamlit APP=mi_app.py
+make streamlit APP=mi_app.py
 ```
 
 - FastAPI:
 
 ```shell
-  make fastapi
+make fastapi
 ```
 
 (o)
 
 ```shell
-  make fastapi MODULE=app APP_OBJECT=app PORT=8000
+make fastapi MODULE=app APP_OBJECT=app PORT=8000
 ```
 
 Para ver todos los comandos:
 
 ```shell
-  make help
+make help
 ```
 
 Sin Make instalado:
 - Ejecuta el flujo equivalente con bash:
 
 ```shell
-  bash scripts/workflow.sh
+bash scripts/workflow.sh
 ```
 
 ## Documentación ampliada
@@ -411,12 +336,7 @@ Esta es la hoja de ruta para aprovechar el entorno venv y las herramientas insta
 
 - Fase 1 — UX de consola + validación fuerte (COMPLETADA)
   - Pydantic: valida el esquema de preguntas al cargarlas (opciones, correcta, dificultad, normalización).
-  - Click: CLI con opciones `--mode` y `--seed` manteniendo compatibilidad con
-
-```shell
-  python -m src.main
-```
-
+  - Click: CLI con opciones `--mode` y `--seed` manteniendo compatibilidad con `python -m src.main`.
   - Rich: salida coloreada de preguntas/feedback y resumen en tablas.
 
 - Fase 2 — Persistencia + analítica
@@ -442,8 +362,8 @@ Configuración y estilo
   - Se agregó soporte para taxonomía jerárquica (`src/data/taxonomy.json`).
   - Pendiente: completar el banco unificado `src/data/questions.json` con suficientes preguntas por leaf y ampliar tests.
 
-## Índice Maestro sugerido (taxonomía)
-La taxonomía base se define en `src/data/taxonomy.json` y propone rutas como:
+## Ejemplo de taxonomía (dataset de ejemplo: Python)
+La taxonomía base se define en `src/data/taxonomy.json`. Ejemplo basado en Python:
 
 - Fundamentals:
   `fundamentals/data_structures`
