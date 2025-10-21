@@ -15,6 +15,14 @@ EOF/Aborted! durante ejecución
 Validación falla (coverage insuficiente)
 - Ejecuta `python scripts/validate_questions.py --strict-coverage` y completa preguntas en leaves con déficit.
 
+Errores del bundler/split
+- `[warn] No se pudo leer <archivo>.json`: JSON inválido (verifica comas, comillas y codificación UTF‑8).
+- Área faltante: el bundler infiere `area` desde la ruta del archivo por leaf; verifica que la ruta sea `src/data/questions/<leaf>.json`.
+- IDs duplicados: asegúrate de usar un prefijo por leaf (ej. `py.functions.definitions.XXX`) y numeración incremental.
+
+Sin preguntas seleccionadas
+- El motor mostrará un aviso si no encuentra preguntas para los parámetros; revisa taxonomía, blueprint/módulo, o `--questions-file`.
+
 JSON malformado
 - Usa un formateador/validador JSON. Revisa comas finales y comillas.
 
