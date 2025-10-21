@@ -10,6 +10,7 @@ Perfiles de ejecución
 - `--profile topic`: selecciona leaves específicas con `--leaves`.
 - `--profile quick`: como `topic` pero con `per-leaf` menor por defecto (3).
 - `--profile module`: lee un archivo TOML/JSON con áreas/cuotas personalizadas.
+   - Formato del módulo: claves en nivel raíz (`areas`, `per_leaf_min`, `overrides`, `difficulty_mix`, `max_total`).
 
 Ejemplos
 - Global acotado: `python -m src.main --profile global --max-total 60`
