@@ -20,6 +20,7 @@ Agregar un tema
 2) Crea preguntas en `questions.json` con `area` apuntando al nuevo leaf
 3) Ajusta cobertura en `blueprint.json` si es necesario
 4) Valida: `python scripts/validate_questions.py --strict-coverage`
+5) Si usas edición modular: crea el archivo `src/data/questions/<leaf>.json` y usa `make bundle`
 
 Sugerencia
 - Usa prefijos homogéneos (ej. `fundamentals`, `control_flow`, `functions`, `oop`, `data_science`, `web`, `other`).
