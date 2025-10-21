@@ -19,7 +19,7 @@ AREAS_DEFAULT = [
 ]
 
 
-@click.group(invoke_without_command=True, help="Simulador CUDA Python – NVIDIA DLI")
+@click.group(invoke_without_command=True, help="Motor de Exámenes (CLI)")
 @click.option("--mode", type=click.Choice(["exam", "formative"]), default="exam", show_default=True, help="Modo de ejecución (feedback)")
 @click.option("--seed", type=int, default=None, help="Semilla para reproducibilidad")
 @click.option("--profile", type=click.Choice(["global", "topic", "module", "quick"]), default="global", show_default=True, help="Tipo de evaluación")
@@ -31,12 +31,13 @@ AREAS_DEFAULT = [
 @click.option("--order", type=click.Choice(["random", "difficulty", "area"]), default="random", show_default=True, help="Ordenar preguntas por dificultad o agrupar por área")
 @click.option("--results-dir", type=click.Path(), default="src/data/results", show_default=True, help="Directorio donde guardar intentos (JSONL)")
 @click.pass_context
-def main(ctx, mode: str, seed: int | None, profile: str, leaves: str | None, per_leaf: int | None, max_total: int | None, module_file: str | None, exhaustive: bool, order: str, results_dir: str):
+@click.option("--questions-file", type=click.Path(exists=True), default=None, help="Ruta a un archivo questions.json alternativo")
+def main(ctx, mode: str, seed: int | None, profile: str, leaves: str | None, per_leaf: int | None, max_total: int | None, module_file: str | None, exhaustive: bool, order: str, results_dir: str, questions_file: str | None):
     # Si se invoca un subcomando (ej. stats), no ejecutar el flujo de 'run'
     if ctx.invoked_subcommand is not None:
         return
-    click.secho("=== Simulador CUDA Python – NVIDIA DLI ===", bold=True)
-    all_questions = load_questions()  # intenta unificado y hace fallback
+    click.secho("=== Motor de Exámenes (CLI) ===", bold=True)
+    all_questions = load_questions(questions_file) if questions_file else load_questions()  # intenta unificado y hace fallback
 
     # Política: mínimo por área y mezcla de dificultad objetivo
     default_min, overrides, difficulty_mix, rubric = load_blueprint()
@@ -103,7 +104,24 @@ def main(ctx, mode: str, seed: int | None, profile: str, leaves: str | None, per
         elif order == "area":
             selection = sorted(selection, key=lambda q: (q.area, q.difficulty))
 
-    title = "Python Holístico (estratificado por áreas)"
+    # Título dinámico
+    def _humanize(stem: str) -> str:
+        return stem.replace("_", " ").replace("-", " ").title()
+
+    if questions_file:
+        title = f"Examen: {_humanize(Path(questions_file).stem)}"
+    elif profile == "module" and module_file:
+        title = f"Módulo: {_humanize(Path(module_file).stem)}"
+    elif profile in ("topic", "quick") and areas:
+        short = ", ".join(areas[:3]) + ("…" if len(areas) > 3 else "")
+        title = f"Quiz por temas: {short}"
+    else:
+        title = "Examen estratificado por temas"
+
+    if not selection:
+        click.secho("No se encontraron preguntas para los parámetros seleccionados.", fg="yellow")
+        click.secho("Revisa la taxonomía, blueprint/módulo o el archivo de preguntas indicado.", fg="yellow")
+        return
     exam = Test(title, selection, formative=(mode == "formative"), rubric=rubric)
     result = exam.run()
 
