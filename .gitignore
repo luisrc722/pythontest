@@ -51,3 +51,6 @@ src/data/reports/
 *.egg-info/
 .mypy_cache/
 .ruff_cache/
+
+# === Documentación generada ===
+AGENTS.md
