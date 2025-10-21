@@ -55,7 +55,7 @@ Instalación rápida:
 ## Entorno y Portabilidad (venv)
 Para mover el proyecto y que funcione en cualquier ruta/PC, usa un entorno virtual local por carpeta. No copies/traslades el `.venv` entre máquinas: recrea el entorno e instala dependencias.
 
-Pasos rápidos (Linux/macOS):
+### Pasos rápidos (Linux/macOS):
 - Crear y activar entorno:
 
 ```shell
@@ -77,7 +77,7 @@ Pasos rápidos (Linux/macOS):
   pip install numpy pytest pytest-cov ipywidgets jupyterlab rich black isort flake8 pydantic click toml inquirer streamlit fastapi uvicorn pandas matplotlib
 ```
 
-Windows (PowerShell):
+### Windows (PowerShell):
 - Crear:
 
 ```shell
@@ -94,7 +94,7 @@ Windows (PowerShell):
   python -m pip install --upgrade pip && pip install -r requirements.txt
 ```
 
-Verificación rápida del entorno:
+### Verificación rápida del entorno:
 
 ```shell
   python -m pip check
@@ -111,11 +111,13 @@ Verificación rápida del entorno:
 ```
 
 - Instalar:
+
 ```shell
   python -m pip install --upgrade pip && pip install -r requirements.txt
 ```
 
-Verificación rápida del entorno:
+### Verificación rápida del entorno:
+
 - Ejecutar validación del banco:
 
 ```shell
@@ -132,7 +134,8 @@ Verificación rápida del entorno:
   python -m src.main
 ```
 
-Notas de portabilidad:
+> Notas de portabilidad:
+
 - Ejecuta siempre los comandos desde la raíz del repo y usa
 
 ```shell
@@ -145,6 +148,7 @@ para respetar imports relativos.
 - Las rutas de datos son relativas (`src/data/...`), por lo que no dependen del path absoluto del repo.
 
 ## Uso
+
 ```shell
   python -m src.main
 ```
@@ -172,6 +176,7 @@ para un reporte.
 
 Modos de ejecución:
 - Modo examen (por defecto): muestra explicación solo cuando fallas.
+
 ```shell
   python -m src.main --mode exam
 ```
@@ -199,7 +204,7 @@ Perfiles de ejecución (educativos)
 - Topic / Quick (fin de tema): centra el quiz en leaves específicas.
 
 ```shell
-python -m src.main --profile topic --leaves functions/definitions,control_flow/loops --per-leaf 5
+  python -m src.main --profile topic --leaves functions/definitions,control_flow/loops --per-leaf 5
 ```
 
   - Versión rápida: `--profile quick` usa por defecto 3 por leaf (ajustable con `--per-leaf`).
@@ -207,7 +212,7 @@ python -m src.main --profile topic --leaves functions/definitions,control_flow/l
 - Module (módulos de curso): usa un archivo TOML/JSON con áreas y cuotas.
 
 ```shell
-python -m src.main --profile module --module-file src/data/modules/python_fundamentals.toml
+  python -m src.main --profile module --module-file src/data/modules/python_fundamentals.toml
 ```
 
   - En el módulo puedes usar `per_leaf_min = "all"` u overrides con "all" para evaluar todo.
@@ -221,20 +226,20 @@ Orden del examen
 Esquema genérico y extensible para cualquier materia:
 
 ```json
-{
-  "id": "py.fund.001",
-  "text": "Pregunta...",
-  "options": ["A", "B", "C", "D"],
-  "correct": "Texto exacto de la opción correcta",
-  "area": "fundamentals/data_structures",
-  "difficulty": "basica",
-  "domain": "subject_code",
-  "tags": ["tipos", "int", "float"],
-  "source": "opcional",
-  "explanation": "opcional: breve justificación que se muestra al fallar"
-  ,"cognitive_level": "remember|understand|apply|analyze|evaluate|create (opcional)"
-  ,"outcomes": ["PY.FUND.001"]
-}
+  {
+    "id": "py.fund.001",
+    "text": "Pregunta...",
+    "options": ["A", "B", "C", "D"],
+    "correct": "Texto exacto de la opción correcta",
+    "area": "fundamentals/data_structures",
+    "difficulty": "basica",
+    "domain": "subject_code",
+    "tags": ["tipos", "int", "float"],
+    "source": "opcional",
+    "explanation": "opcional: breve justificación que se muestra al fallar"
+    ,"cognitive_level": "remember|understand|apply|analyze|evaluate|create (opcional)"
+    ,"outcomes": ["PY.FUND.001"]
+  }
 ```
 
 ## Desarrollo
@@ -248,7 +253,7 @@ Esquema genérico y extensible para cualquier materia:
 - Ejecuta el validador:
 
 ```shell
-python3 scripts/validate_questions.py
+  python3 scripts/validate_questions.py
 ```
 
 - Reporta cobertura por leaf vs mínimos definidos en `blueprint.json` y verifica esquema/datos (IDs duplicados, opciones, dificultades, etc.).
@@ -257,14 +262,14 @@ python3 scripts/validate_questions.py
 - Define criterios de aprobación en `src/data/blueprint.json` bajo la clave `rubric`, por ejemplo:
 
 ```json
-{
-  "per_leaf_min": 6,
-  "difficulty_mix": {"basica": 0.5, "intermedia": 0.35, "avanzada": 0.15},
-  "rubric": {
-    "global": {"min_score": 0.7},
-    "per_leaf_min_pct": 0.5
+  {
+    "per_leaf_min": 6,
+    "difficulty_mix": {"basica": 0.5, "intermedia": 0.35, "avanzada": 0.15},
+    "rubric": {
+      "global": {"min_score": 0.7},
+      "per_leaf_min_pct": 0.5
+    }
   }
-}
 ```
 
 - El resumen mostrará “APROBADO/REPROBADO” y los criterios no cumplidos.
@@ -279,21 +284,91 @@ Estas herramientas están en `requirements.txt` para que el entorno sea homogén
 
 ## Makefile (atajos)
 Atajos cross‑platform para tareas comunes. Ejemplos:
-- Crear venv e instalar: `make install`
-- Ejecutar simulador: `make run`
-- Validar banco: `make validate`
-- Validar y fallar si falta cobertura (CI): `make data-check`
-- Workflow local (instala deps, valida estricto y ejecuta tests con cobertura): `make workflow`
-- Probar y cobertura: `make test` / `make cov`
-- Formatear y lint: `make fmt && make lint`
-- JupyterLab: `make lab`
-- Streamlit: `make streamlit` (o `make streamlit APP=mi_app.py`)
-- FastAPI: `make fastapi` (o `make fastapi MODULE=app APP_OBJECT=app PORT=8000`)
 
-Para ver todos los comandos: `make help`.
+- Crear venv e instalar:
+
+```shell
+  make install
+```
+
+- Ejecutar simulador:
+
+```shell
+  make run
+```
+
+- Validar banco:
+
+```shell
+  make validate
+```
+
+- Validar y fallar si falta cobertura (CI):
+
+```shell
+  make data-check
+```
+
+- Workflow local (instala deps, valida estricto y ejecuta tests con cobertura):
+
+```shell
+  make workflow
+```
+
+- Probar y cobertura:
+
+```shell
+  make test && make cov
+```
+
+- Formatear y lint:
+
+```shell
+  make fmt && make lint
+```
+
+- JupyterLab:
+
+```shell
+  make lab
+```
+
+- Streamlit:
+
+```shell
+  make streamlit
+```
+
+(o)
+
+```shell
+  make streamlit APP=mi_app.py
+```
+
+- FastAPI:
+
+```shell
+  make fastapi
+```
+
+(o)
+
+```shell
+  make fastapi MODULE=app APP_OBJECT=app PORT=8000
+```
+
+Para ver todos los comandos:
+
+```shell
+  make help
+```
 
 Sin Make instalado:
-- Ejecuta el flujo equivalente con bash: `bash scripts/workflow.sh`
+- Ejecuta el flujo equivalente con bash:
+
+```shell
+  bash scripts/workflow.sh
+```
 
 ## Documentación ampliada
 - Guía rápida: `docs/quickstart.md`
@@ -322,7 +397,12 @@ Sin Make instalado:
 
 ## Persistencia y Estadísticas
 - Cada intento se guarda en `src/data/results/attempts.jsonl` con metadatos (perfil, seed, mezcla, desglose por área/dificultad y veredicto de rúbrica si existe).
-- Genera reportes con: `python -m src.main stats --results-dir src/data/results --reports-dir src/data/reports`
+- Genera reportes con:
+
+```shell
+  python -m src.main stats --results-dir src/data/results --reports-dir src/data/reports
+```
+
   - Exporta `overall.csv`, `by_area.csv`, `by_difficulty.csv` y gráficos PNG (si `matplotlib` está disponible).
   - Desactiva gráficos con `--no-plots`.
 
@@ -331,7 +411,12 @@ Esta es la hoja de ruta para aprovechar el entorno venv y las herramientas insta
 
 - Fase 1 — UX de consola + validación fuerte (COMPLETADA)
   - Pydantic: valida el esquema de preguntas al cargarlas (opciones, correcta, dificultad, normalización).
-  - Click: CLI con opciones `--mode` y `--seed` manteniendo compatibilidad con `python -m src.main`.
+  - Click: CLI con opciones `--mode` y `--seed` manteniendo compatibilidad con
+
+```shell
+  python -m src.main
+```
+
   - Rich: salida coloreada de preguntas/feedback y resumen en tablas.
 
 - Fase 2 — Persistencia + analítica
@@ -360,13 +445,46 @@ Configuración y estilo
 ## Índice Maestro sugerido (taxonomía)
 La taxonomía base se define en `src/data/taxonomy.json` y propone rutas como:
 
-- Fundamentals: `fundamentals/data_structures`, `fundamentals/operators`, `fundamentals/variables`
-- Control Flow: `control_flow/conditionals`, `control_flow/loops`, `control_flow/comprehensions`
-- Functions: `functions/definitions`, `functions/decorators`, `functions/generators`, `functions/async`
-- OOP: `oop/classes`, `oop/inheritance`, `oop/magic_methods`
-- Data Science: `data_science/numpy`, `data_science/pandas`, `data_science/visualization`
-- Web: `web/flask`, `web/django`, `web/fastapi`
-- Courses: `courses/cuda_python_course`
-- Other: `modules_packages`, `exceptions`, `file_io`, `testing`, `async_programming`, `best_practices`
+- Fundamentals:
+  `fundamentals/data_structures`
+  `fundamentals/operators`
+  `fundamentals/variables`
+
+- Control Flow:
+  `control_flow/conditionals`
+  `control_flow/loops`
+  `control_flow/comprehensions`
+
+- Functions:
+  `functions/definitions`
+  `functions/decorators`
+  `functions/generators`
+  `functions/async`
+
+- OOP:
+  `oop/classes`
+  `oop/inheritance`
+  `oop/magic_methods`
+
+- Data Science:
+  `data_science/numpy`
+  `data_science/pandas`
+  `data_science/visualization`
+
+- Web:
+  `web/flask`
+  `web/django`
+  `web/fastapi`
+
+- Courses:
+  `courses/cuda_python_course`
+
+- Other:
+  `modules_packages`
+  `exceptions`
+  `file_io`
+  `testing`
+  `async_programming`
+  `best_practices`
 
 Puedes ampliar esta lista y establecer mínimos deseados por leaf ajustando `per_area_min` en `src/main.py`. Cuando el banco crezca, considera subirlo a 6–8.
