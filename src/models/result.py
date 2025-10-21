@@ -34,6 +34,8 @@ class Result:
         self.by_out_correct = by_out_correct or {}
 
     def level(self):
+        if self.total == 0:
+            return "Sin preguntas"
         ratio = self.score / self.total
         if ratio >= 0.8:
             return "Óptimo ✅"
