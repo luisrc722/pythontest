@@ -1,6 +1,3 @@
-[areas]
-# Nota: esta sección es informativa; las áreas se declaran en la clave 'areas' inferior.
-
 areas = [
   "fundamentals/data_structures",
   "fundamentals/operators",
@@ -21,4 +18,3 @@ intermedia = 0.3
 avanzada = 0.1
 
 max_total = 24
-
