@@ -26,8 +26,17 @@ Atajos de documentación
 - Dependencias listadas en `requirements.txt`
 
 Instalación rápida:
-- Crear y activar entorno virtual (opcional): `python -m venv .venv && source .venv/bin/activate`
-- Instalar dependencias: `pip install -r requirements.txt`
+- Crear y activar entorno virtual (opcional):
+
+```shell
+  python -m venv .venv && source .venv/bin/activate
+```
+
+- Instalar dependencias:
+
+```shell
+  pip install -r requirements.txt
+```
 
 ## Estructura
 - `src/main.py`: CLI y políticas de muestreo/ejecución.
@@ -47,57 +56,160 @@ Instalación rápida:
 Para mover el proyecto y que funcione en cualquier ruta/PC, usa un entorno virtual local por carpeta. No copies/traslades el `.venv` entre máquinas: recrea el entorno e instala dependencias.
 
 Pasos rápidos (Linux/macOS):
-- Crear y activar entorno: `python3 -m venv .venv && source .venv/bin/activate`
-- Actualizar pip: `python -m pip install --upgrade pip`
-- Instalar dependencias (recomendado): `pip install -r requirements.txt`
+- Crear y activar entorno:
+
+```shell
+  python3 -m venv .venv && source .venv/bin/activate
+```
+- Actualizar pip:
+
+```shell
+  python -m pip install --upgrade pip
+```
+- Instalar dependencias (recomendado):
+
+```shell
+  pip install -r requirements.txt
+```
 - Alternativa mínima (según paquetes solicitados):
-  `pip install numpy pytest pytest-cov ipywidgets jupyterlab rich black isort flake8 pydantic click toml inquirer streamlit fastapi uvicorn pandas matplotlib`
+
+```shell
+  pip install numpy pytest pytest-cov ipywidgets jupyterlab rich black isort flake8 pydantic click toml inquirer streamlit fastapi uvicorn pandas matplotlib
+```
 
 Windows (PowerShell):
-- Crear: `py -3 -m venv .venv`
-- Activar: `.venv\Scripts\Activate.ps1`
-- Instalar: `python -m pip install --upgrade pip && pip install -r requirements.txt`
+- Crear:
+
+```shell
+  python -m venv .venv
+```
+- Activar:
+
+```shell
+  .venv\Scripts\Activate.ps1
+```
+- Instalar:
+
+```shell
+  python -m pip install --upgrade pip && pip install -r requirements.txt
+```
 
 Verificación rápida del entorno:
-- Ejecutar validación del banco: `python scripts/validate_questions.py`
-- Correr pruebas: `pytest -q`
-- Iniciar el simulador: `python -m src.main`
+
+```shell
+  python -m pip check
+```
+
+- Ejecutar validación del banco:
+
+```shell
+  python scripts/validate_questions.py
+```
+
+```shell
+  .venv\Scripts\Activate.ps1
+```
+
+- Instalar:
+```shell
+  python -m pip install --upgrade pip && pip install -r requirements.txt
+```
+
+Verificación rápida del entorno:
+- Ejecutar validación del banco:
+
+```shell
+  python scripts/validate_questions.py
+```
+- Correr pruebas:
+
+```shell
+  pytest -q
+```
+- Iniciar el simulador:
+
+```shell
+  python -m src.main
+```
 
 Notas de portabilidad:
-- Ejecuta siempre los comandos desde la raíz del repo y usa `python -m src.main` para respetar imports relativos.
+- Ejecuta siempre los comandos desde la raíz del repo y usa
+
+```shell
+  python -m src.main
+```
+
+para respetar imports relativos.
+
+- No hagas commit del entorno `.venv/`. Si mueves el proyecto, recrea el entorno y reinstala.
+- Las rutas de datos son relativas (`src/data/...`), por lo que no dependen del path absoluto del repo.
+
+## Uso
+```shell
+  python -m src.main
+```
+
+para respetar imports relativos.
+
 - No hagas commit del entorno `.venv/`. Si mueves el proyecto, recrea el entorno y reinstala.
 - Las rutas de datos son relativas (`src/data/...`), por lo que no dependen del path absoluto del repo.
 
 ## Uso
 Ejecutar el motor con muestreo estratificado por temas:
 
-```
-python -m src.main
+```shell
+  python -m src.main
 ```
 
 Por defecto intenta `src/data/questions.json` y toma 5 por área para las áreas definidas en `AREAS_DEFAULT` dentro de `src/main.py`. Si faltan preguntas en un área, toma todas las disponibles.
-El simulador avisará si detecta leaves con cobertura insuficiente y sugerirá ejecutar `make data-check` para un reporte.
+El simulador avisará si detecta leaves con cobertura insuficiente y sugerirá ejecutar
+
+```shell
+  make data-check
+```
+
+para un reporte.
 
 Modos de ejecución:
 - Modo examen (por defecto): muestra explicación solo cuando fallas.
-  `python -m src.main --mode exam`
+```shell
+  python -m src.main --mode exam
+```
+
 - Modo formativo: muestra explicación también cuando aciertas.
-  `python -m src.main --mode formative`
+
+```shell
+  python -m src.main --mode formative
+```
 
 Reproducibilidad: fija la semilla de aleatoriedad con `--seed`.
-`python -m src.main --mode formative --seed 42`
+
+```shell
+  python -m src.main --mode formative --seed 42
+```
 
 Perfiles de ejecución (educativos)
 - Global (acreditación): muestrea todas las leaves de `taxonomy.json` conforme a `blueprint.json`.
-  - `python -m src.main --profile global`
+
+```shell
+  python -m src.main --profile global
+```
   - Limitar total: `--max-total 60`
   - Exhaustivo (todas las preguntas): `--exhaustive`
 - Topic / Quick (fin de tema): centra el quiz en leaves específicas.
-  - `python -m src.main --profile topic --leaves functions/definitions,control_flow/loops --per-leaf 5`
+
+```shell
+python -m src.main --profile topic --leaves functions/definitions,control_flow/loops --per-leaf 5
+```
+
   - Versión rápida: `--profile quick` usa por defecto 3 por leaf (ajustable con `--per-leaf`).
   - Exhaustivo por tema: añade `--exhaustive` para tomar todas las preguntas de esas leaves.
 - Module (módulos de curso): usa un archivo TOML/JSON con áreas y cuotas.
-  - `python -m src.main --profile module --module-file src/data/modules/python_fundamentals.toml`
+
+```shell
+python -m src.main --profile module --module-file src/data/modules/python_fundamentals.toml
+```
+
   - En el módulo puedes usar `per_leaf_min = "all"` u overrides con "all" para evaluar todo.
 
 Orden del examen
@@ -108,7 +220,7 @@ Orden del examen
 ## Formato de preguntas (unificado)
 Esquema genérico y extensible para cualquier materia:
 
-```
+```json
 {
   "id": "py.fund.001",
   "text": "Pregunta...",
@@ -133,12 +245,18 @@ Esquema genérico y extensible para cualquier materia:
 - `tests/` incluye pruebas del muestreo estratificado.
 
 ### Validación del banco y cobertura
-- Ejecuta el validador: `python3 scripts/validate_questions.py`
+- Ejecuta el validador:
+
+```shell
+python3 scripts/validate_questions.py
+```
+
 - Reporta cobertura por leaf vs mínimos definidos en `blueprint.json` y verifica esquema/datos (IDs duplicados, opciones, dificultades, etc.).
 
 ### Rúbricas (opcional)
 - Define criterios de aprobación en `src/data/blueprint.json` bajo la clave `rubric`, por ejemplo:
-```
+
+```json
 {
   "per_leaf_min": 6,
   "difficulty_mix": {"basica": 0.5, "intermedia": 0.35, "avanzada": 0.15},
@@ -148,6 +266,7 @@ Esquema genérico y extensible para cualquier materia:
   }
 }
 ```
+
 - El resumen mostrará “APROBADO/REPROBADO” y los criterios no cumplidos.
 
 ## Herramientas incluidas (opcionales)
