@@ -48,6 +48,36 @@ Asistente interactivo (Inquirer)
 - Agrega una pregunta con guía: `python -m src.main add`
 - Elige leaf, redacta, selecciona correcta; el sistema guarda en el archivo de leaf y empaqueta.
 
+Formato modular por leaf (recomendado)
+- Estructura de carpetas:
+```
+src/
+  data/
+    questions/
+      functions/definitions.json
+      control_flow/loops.json
+      anatomy/cardiovascular.json
+```
+- Cada archivo `<leaf>.json` es un arreglo de objetos pregunta. Ejemplo mínimo:
+```
+[
+  {
+    "id": "py.functions.definitions.017",
+    "text": "¿Qué palabra clave define una función?",
+    "options": ["def", "func", "lambda", "define"],
+    "correct": "def"
+    // "area": "functions/definitions"  ← opcional, se infiere
+  }
+]
+```
+- Bundler e inferencia:
+  - Si `area` no está presente, se infiere desde la ruta del archivo.
+  - Los archivos se combinan ordenados por `area` e `id`.
+- Reglas prácticas:
+  - Codifica en UTF‑8; sin comas colgantes.
+  - IDs únicos y estables por leaf (formato sugerido: `xx.<leaf_con_puntos>.<nnn>`).
+  - Ejecuta `make bundle && make validate` después de editar.
+
 Criterios de dificultad
 - `basica`: recuerdo del concepto, 1 paso
 - `intermedia`: aplicación con 2–3 pasos
